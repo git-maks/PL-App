@@ -6,6 +6,17 @@ Jeden obraz Docker (`deploy/Dockerfile`): binarka Go z wbudowaną aplikacją web
 bez uprawnień na obrazie distroless. Wymaga tylko PostgreSQL 16. Migracje wykonują się automatycznie przy starcie
 (`serve`) albo ręcznie (`migrate`) — z blokadą doradczą, więc kilka instancji może startować równocześnie.
 
+Gotowy obraz publikuje workflow `.github/workflows/image.yml` w GitHub Container Registry:
+
+| Tag | Kiedy |
+|---|---|
+| `ghcr.io/git-maks/pl-app:latest` | każdy push na `main` |
+| `ghcr.io/git-maks/pl-app:1.2.3`, `:1.2` | tag `v1.2.3` (wydanie) |
+| `ghcr.io/git-maks/pl-app:sha-<commit>` | każdy opublikowany commit |
+
+Pakiet w GHCR jest domyślnie prywatny. Aby serwer mógł go pobrać bez logowania, ustaw widoczność na publiczną
+(*Packages → pl-app → Package settings → Change visibility*) albo zaloguj serwer: `docker login ghcr.io`.
+
 Podkomendy: `serve`, `migrate`, `seed [-date YYYY-MM-DD] [-activate] [-admin e-mail]`, `gen-vapid`, `cleanup`, `health`.
 
 ## 2. Konfiguracja (zmienne środowiskowe)
@@ -33,25 +44,21 @@ VM z Dockerem w Centrum Informatycznym, domena np. `uniquest.pollub.pl`, certyfi
 Kroki jak w wariancie B; zmienne SMTP — serwer pocztowy uczelni.
 
 ### B. VPS w UE (pilot)
+Serwer z Dockerem (np. 2 vCPU / 4 GB), rekord DNS domeny wskazujący na serwer, otwarte porty 80 i 443.
 ```bash
-git clone … && cd PL-App
-cat > deploy/.env <<'ENV'
-UQ_DOMAIN=uniquest.example.pl
-UQ_BASE_URL=https://uniquest.example.pl
-UQ_COOKIE_SECURE=true
-UQ_TRUST_PROXY=true
-UQ_DEV_LOGIN_CODES=false
-POSTGRES_PASSWORD=<losowe-hasło>
-UQ_SMTP_HOST=… UQ_SMTP_USER=… UQ_SMTP_PASSWORD=… UQ_SMTP_FROM="UniQuest <uniquest@example.pl>"
-UQ_VAPID_PUBLIC=… UQ_VAPID_PRIVATE=…
-ENV
-docker compose -f deploy/compose.yaml --env-file deploy/.env --profile https up -d --build
-docker compose -f deploy/compose.yaml --env-file deploy/.env run --rm app seed -date 2027-04-01 -admin organizator@example.pl
+git clone https://github.com/git-maks/PL-App.git && cd PL-App
+cp deploy/.env.example deploy/.env      # uzupełnij domenę, hasło bazy, SMTP, klucze VAPID
+C="docker compose -f deploy/compose.yaml --env-file deploy/.env --profile https"
+$C pull app                             # gotowy obraz z GHCR (albo: $C build app)
+$C run --rm app gen-vapid               # jednorazowo: klucze Web Push → wpisz do deploy/.env
+$C up -d --no-build
+$C run --rm app seed -date 2027-04-01 -admin organizator@example.pl
 ```
+Aktualizacja: `$C pull app && $C up -d --no-build`. W produkcji przypnij wersję (`UQ_IMAGE=ghcr.io/git-maks/pl-app:1.0.0`).
 Caddy sam pobiera certyfikat Let's Encrypt i nie buforuje SSE (`flush_interval -1`).
 
 ### C. PaaS (np. Fly.io w regionie Warszawa, Cloud Run europe-central2)
-Ten sam obraz; zarządzany PostgreSQL (Fly Postgres, Cloud SQL, Supabase — tylko jako baza). Ustaw zmienne z §2,
+Ten sam obraz (`ghcr.io/git-maks/pl-app`); zarządzany PostgreSQL (Fly Postgres, Cloud SQL, Supabase — tylko jako baza). Ustaw zmienne z §2,
 health check na `/api/v1/readyz`. Przy wielu instancjach realtime działa przez `LISTEN/NOTIFY` bez dodatkowego brokera.
 
 ## 4. Wydarzenie

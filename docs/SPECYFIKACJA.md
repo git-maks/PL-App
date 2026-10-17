@@ -4,7 +4,7 @@
 |---|---|
 | Projekt | **UniQuest** (Character Profiler) dla Politechniki Lubelskiej |
 | Wersja dokumentu | 1.0 — 2026-10-17 |
-| Wejście | `Brief Aplikacja.md`, `docs/BAZA_WIEDZY.md` (fakty o PL ze źródłami) |
+| Wejście | `docs/BRIEF.md`, `docs/BAZA_WIEDZY.md` (fakty o PL ze źródłami) |
 | Status | Decyzje podjęte. Warianty opisane tam, gdzie do celu prowadzi więcej niż jedna droga |
 
 Konwencja: każda kluczowa decyzja ma format **Decyzja → Dlaczego → Wariant B (kiedy go wybrać)**.
@@ -97,14 +97,14 @@ bez instalacji jako zwykła strona.
 
 | Możliwość | Android (Chrome) | iOS/iPadOS (Safari ≥ 16.4) | Uwagi |
 |---|---|---|---|
-| Kamera (skaner) | `getUserMedia` ✔ | `getUserMedia` ✔ (także w trybie standalone) | HTTPS wymagane. iOS potrafi ponownie pytać o zgodę po restarcie PWA (ryzyko UX, §16) |
-| Dekodowanie QR | `BarcodeDetector` natywnie ✔ | brak → polyfill WASM | Polyfill ładowany leniwie i dodawany do cache |
-| Selfie | `<input type="file" accept="image/*" capture="user">` ✔ | ✔ | Najprostsza i najbardziej niezawodna ścieżka (natywny aparat systemu) |
-| Web Push | ✔ | ✔ **tylko po instalacji na ekranie głównym** | Onboarding iOS pokazuje instrukcję instalacji |
+| Kamera (skaner) | tak (`getUserMedia`) | tak (`getUserMedia`, także w trybie standalone) | HTTPS wymagane. iOS potrafi ponownie pytać o zgodę po restarcie PWA (ryzyko UX, §16) |
+| Dekodowanie QR | tak (`BarcodeDetector` natywnie) | brak → polyfill WASM | Polyfill ładowany leniwie i dodawany do cache |
+| Selfie | tak (`<input type="file" accept="image/*" capture="user">`) | tak | Najprostsza i najbardziej niezawodna ścieżka (natywny aparat systemu) |
+| Web Push | tak | tak, **tylko po instalacji na ekranie głównym** | Onboarding iOS pokazuje instrukcję instalacji |
 | Instalacja | `beforeinstallprompt` (własny przycisk) | tylko ręcznie (Udostępnij → Do ekranu początkowego) | Własny ekran z instrukcją dla iOS |
-| Udostępnianie karty | Web Share API (pliki) ✔ | ✔ | Fallback: pobranie PNG |
-| Offline | Service Worker + Cache + IndexedDB ✔ | ✔ | Background Sync nie działa w Safari → synchronizacja przy zdarzeniu `online` i przy starcie aplikacji |
-| Wibracja (haptyka) | ✔ | ✗ | Tylko jako ozdobnik |
+| Udostępnianie karty | tak (Web Share API z plikami) | tak | Fallback: pobranie PNG |
+| Offline | tak (Service Worker, Cache, IndexedDB) | tak | Background Sync nie działa w Safari → synchronizacja przy zdarzeniu `online` i przy starcie aplikacji |
+| Wibracja (haptyka) | tak | nie | Tylko jako ozdobnik |
 
 **Wariant B (sklepy)**:
 - **Google Play**: ta sama PWA opakowana w **Trusted Web Activity** (Bubblewrap). Mały koszt, zero zmian w kodzie. Robić, jeśli klient chce ikony w sklepie.
@@ -259,7 +259,7 @@ Dolny **Navigation Bar (MD3)**: **Bohater** · **Zadania** · **[Skanuj]** (wyr�
 | `/hero` | Panel bohatera | Awatar, poziom i pasek XP, 8 statystyk (paski, wartości), „Do karty postaci: 3/5”, ostatnie aktywności, oczekujące oceny |
 | `/scan` | Skaner | Pełny ekran kamery, ramka celownika, latarka (jeśli dostępna), „Wpisz kod ręcznie”, obsługa braku zgody na kamerę |
 | `/scan/rate/[scanId]` | Ocena | Nazwa stacji, suwak 1–5 z etykietami, „Zatwierdź” → animacja przyrostu statystyk, +XP, ewentualny level-up |
-| `/quests` | Zadania i agenda | „Teraz / Za chwilę / Później”, filtr wydziału, ✓ odwiedzone, „Przypomnij mi” (push), przejście do mapy |
+| `/quests` | Zadania i agenda | „Teraz / Za chwilę / Później”, filtr wydziału, oznaczenie odwiedzonych, „Przypomnij mi” (push), przejście do mapy |
 | `/map` | Mapa kampusu | Własna ilustrowana mapa SVG (17 POI), stan stacji, „Nawiguj” (link `geo:` / Mapy Google / Apple) |
 | `/team` | Drużyna | Utwórz / Dołącz (skan lub kod) / Moja drużyna: członkowie na żywo, QR zaproszenia, ranking |
 | `/card` | Karta postaci | Zablokowana do N skanów (licznik), odsłonięcie z animacją, opis procentowy, „Pobierz PNG” / „Udostępnij” |

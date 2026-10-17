@@ -1,7 +1,9 @@
 # Local full stack or a single-VPS deployment (spec §14, variants A/B).
-#   docker compose -f deploy/compose.yaml up --build
-#   docker compose -f deploy/compose.yaml run --rm app seed -admin you@example.com
+#   Local build:     docker compose -f deploy/compose.yaml up --build
+#   Published image: docker compose -f deploy/compose.yaml --env-file deploy/.env pull app && … up -d --no-build
+#   Seed an event:   docker compose -f deploy/compose.yaml run --rm app seed -admin you@example.com
 # For HTTPS on a server set UQ_DOMAIN and start with the "https" profile (Caddy obtains certificates).
+# Copy deploy/.env.example to deploy/.env for production settings.
 name: uniquest
 
 services:
@@ -14,12 +16,13 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U uniquest"]
+      test: ["CMD-SHELL", "pg_isready -U uniquest -d uniquest"]
       interval: 5s
       retries: 10
     restart: unless-stopped
 
   app:
+    image: ${UQ_IMAGE:-ghcr.io/git-maks/pl-app:latest}
     build:
       context: ..
       dockerfile: deploy/Dockerfile
@@ -52,7 +55,7 @@ services:
     image: caddy:2-alpine
     profiles: ["https"]
     environment:
-      UQ_DOMAIN: ${UQ_DOMAIN:?set UQ_DOMAIN for the https profile}
+      UQ_DOMAIN: ${UQ_DOMAIN:-localhost} # set to the public domain on a server
     ports:
       - "80:80"
       - "443:443"

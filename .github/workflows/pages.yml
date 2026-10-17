@@ -1,6 +1,7 @@
 # Publishes the clickable demo (web app + in-browser backend) to GitHub Pages:
 #   https://<owner>.github.io/PL-App/
 # One-time setup: Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# Until that is done the build still runs and the deploy step is skipped (with a notice), so main stays green.
 name: Demo on GitHub Pages
 
 on:
@@ -18,6 +19,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      enabled: ${{ steps.pages.outputs.enabled }}
+    steps:
+      - id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${{ github.repository }}/pages" --jq .build_type >/dev/null 2>&1; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GitHub Pages is not enabled for this repository (Settings → Pages → Source: GitHub Actions); skipping the deploy."
+          fi
+
   build:
     runs-on: ubuntu-latest
     defaults:
@@ -44,7 +61,8 @@ jobs:
           path: apps/web/build
 
   deploy:
-    needs: build
+    needs: [check, build]
+    if: needs.check.outputs.enabled == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
