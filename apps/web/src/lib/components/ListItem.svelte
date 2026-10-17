@@ -58,8 +58,8 @@
 		align-items: center;
 		gap: 16px;
 		width: 100%;
-		min-height: 56px;
-		padding: 8px 16px;
+		min-height: 60px;
+		padding: 12px 20px;
 		border: none;
 		background: transparent;
 		color: var(--md-sys-color-on-surface);

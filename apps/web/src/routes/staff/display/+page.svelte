@@ -60,7 +60,7 @@
 			<p class="err" role="alert">{error}</p>
 		{:else if qr}
 			{#if !qr.scanOpen}
-				<p class="closed">Skanowanie jest zamknięte — otwórz je w panelu stacji.</p>
+				<p class="closed">Skanowanie jest zamknięte – otwórz je w panelu stacji.</p>
 			{/if}
 			<div class="qr" class:dim={!qr.scanOpen}>
 				{#key qr.payload}<QrCode text={qr.payload} size={520} label="Kod QR stacji {station?.name}" ecc="M" />{/key}

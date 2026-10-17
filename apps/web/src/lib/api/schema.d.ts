@@ -1708,7 +1708,7 @@ export interface components {
         };
         EmailStartResponse: {
             sent: boolean;
-            /** @description Only in development/demo mode — the code is shown instead of e-mailed */
+            /** @description Only in development/demo mode – the code is shown instead of e-mailed */
             devCode?: string;
         };
         EmailVerifyRequest: {

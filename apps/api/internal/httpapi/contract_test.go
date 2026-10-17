@@ -61,7 +61,7 @@ func TestRoutesMatchOpenAPI(t *testing.T) {
 		t.Errorf("implemented but missing from openapi.yaml: %v", undocumented)
 	}
 	if len(spec) < 40 {
-		t.Fatalf("parsed only %d operations — parser broken?", len(spec))
+		t.Fatalf("parsed only %d operations – parser broken?", len(spec))
 	}
 }
 

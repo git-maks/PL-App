@@ -38,25 +38,31 @@
 		position: relative;
 	}
 	.padding {
-		padding: 16px;
+		padding: 20px;
 	}
 	.filled {
-		background: var(--md-sys-color-surface-container-highest);
+		/* Read by text fields inside the card, so their floating label matches the background. */
+		--uq-container: var(--md-sys-color-surface-container-highest);
+		background: var(--uq-container);
 	}
 	.elevated {
-		background: var(--md-sys-color-surface-container-low);
+		--uq-container: var(--md-sys-color-surface-container-low);
+		background: var(--uq-container);
 		box-shadow: var(--md-sys-elevation-1);
 	}
 	.outlined {
-		background: var(--md-sys-color-surface);
+		--uq-container: var(--md-sys-color-surface);
+		background: var(--uq-container);
 		border: 1px solid var(--md-sys-color-outline-variant);
 	}
 	.primary {
-		background: var(--md-sys-color-primary-container);
+		--uq-container: var(--md-sys-color-primary-container);
+		background: var(--uq-container);
 		color: var(--md-sys-color-on-primary-container);
 	}
 	.tertiary {
-		background: var(--md-sys-color-tertiary-container);
+		--uq-container: var(--md-sys-color-tertiary-container);
+		background: var(--uq-container);
 		color: var(--md-sys-color-on-tertiary-container);
 	}
 </style>

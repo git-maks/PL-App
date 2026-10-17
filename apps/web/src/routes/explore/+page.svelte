@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { href } from '#lib/paths';
 	import { university, faculties, programs, clubs } from '#lib/content';
 	import { search, type SearchDoc } from '#lib/content/search';
@@ -7,14 +6,11 @@
 	import Card from '#lib/components/Card.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import ListItem from '#lib/components/ListItem.svelte';
+	import FactsCarousel from '#lib/components/FactsCarousel.svelte';
 	import type { IconName } from '#lib/icons/paths';
 
 	let q = $state('');
 	const results = $derived<SearchDoc[]>(q.trim().length >= 2 ? search(q) : []);
-	let fact = $state(0);
-	onMount(() => {
-		fact = Math.floor(Math.random() * university.didYouKnow.length);
-	});
 
 	const sections: { path: string; title: string; text: string; icon: IconName }[] = [
 		{ path: '/explore/uczelnia', title: 'O uczelni', text: 'Historia, liczby, władze, jednostki', icon: 'school' },
@@ -33,7 +29,7 @@
 	<meta name="description" content="Wydziały, kierunki studiów, koła naukowe i kampus Politechniki Lubelskiej w jednym miejscu." />
 </svelte:head>
 
-<TopAppBar title="Odkrywaj" />
+<TopAppBar title="Odkrywaj" compact />
 <div class="page">
 	<div class="search">
 		<Icon name="search" />
@@ -60,15 +56,7 @@
 			</div>
 		</Card>
 
-		<Card variant="tertiary">
-			<div class="row fact">
-				<Icon name="lightbulb" />
-				<div class="stack tight">
-					<p class="label-large">Czy wiesz, że…</p>
-					<p class="body-medium">{university.didYouKnow[fact]?.text}</p>
-				</div>
-			</div>
-		</Card>
+		<FactsCarousel facts={university.didYouKnow} />
 
 		<div class="grid">
 			{#each sections as s (s.path)}
@@ -107,22 +95,16 @@
 	.search:focus-within {
 		outline: 2px solid var(--md-sys-color-primary);
 	}
-	.fact {
-		align-items: flex-start;
-	}
-	.tight {
-		gap: 4px;
-	}
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-		gap: 12px;
+		gap: 14px;
 	}
 	.tile {
 		display: flex;
 		flex-direction: column;
 		gap: 4px;
-		padding: 16px;
+		padding: 18px;
 		min-height: 120px;
 		border-radius: var(--md-sys-shape-corner-large);
 		background: var(--md-sys-color-surface-container-low);

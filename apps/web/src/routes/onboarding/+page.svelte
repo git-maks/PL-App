@@ -6,6 +6,7 @@
 	import { app, errorMessage } from '#lib/state/app.svelte';
 	import { href } from '#lib/paths';
 	import { pixelateFile } from '#lib/avatar/pixelate';
+	import { AVATAR_PRESETS, renderPreset } from '#lib/avatar/presets';
 	import { prefetchDetector } from '#lib/scanner/detector';
 	import { STAT_CODES } from '#lib/game/types';
 	import { emptyStats } from '#lib/game/scoring';
@@ -34,6 +35,14 @@
 	let zoom = $state(1.2);
 	let photoInput: HTMLInputElement | undefined = $state();
 	let galleryInput: HTMLInputElement | undefined = $state();
+	let preset = $state<string | null>(null);
+	const presetImages = $derived(step === 2 ? AVATAR_PRESETS.map((p) => ({ ...p, src: renderPreset(p) })) : []);
+
+	function pickPreset(id: string, src: string) {
+		photo = null;
+		preset = id;
+		preview = src;
+	}
 
 	const STEPS = 4;
 	const stats = emptyStats();
@@ -86,6 +95,7 @@
 	function onFile(e: Event) {
 		const f = (e.currentTarget as HTMLInputElement).files?.[0];
 		if (!f) return;
+		preset = null;
 		photo = f; // the $effect below renders the preview
 	}
 	$effect(() => {
@@ -142,7 +152,7 @@
 			{:else if step === 1}
 				<h1 class="headline-medium">Jak mamy Cię nazywać?</h1>
 				<p class="body-medium muted">
-					Pseudonim zobaczą członkowie Twojej drużyny i ranking. Nie podawaj imienia i nazwiska — e-mail też nie jest potrzebny.
+					Pseudonim zobaczą członkowie Twojej drużyny i ranking. Nie podawaj imienia i nazwiska – e-mail też nie jest potrzebny.
 				</p>
 				<form class="stack" onsubmit={createProfile}>
 					<TextField
@@ -156,7 +166,7 @@
 						<input type="checkbox" bind:checked={terms} />
 						<span>
 							Akceptuję <a href={href('/legal')} target="_blank">zasady gry i politykę prywatności</a>. Grę może prowadzić
-							osoba w każdym wieku — konto gościa nie zawiera danych osobowych.
+							osoba w każdym wieku – konto gościa nie zawiera danych osobowych.
 						</span>
 					</label>
 					{#if error}<p class="error body-medium" role="alert">{error}</p>{/if}
@@ -164,13 +174,26 @@
 				</form>
 			{:else if step === 2}
 				<h1 class="headline-medium">Twój awatar</h1>
-				<p class="body-medium muted">
-					Zrób selfie, a zamienimy je w pixel-art. Zdjęcie przetwarzamy wyłącznie na Twoim telefonie i od razu je odrzucamy — do
-					gry trafia tylko mały obrazek 48×48 pikseli.
-				</p>
+				<p class="body-medium muted">Wybierz gotową postać albo zrób selfie, a zamienimy je w pixel-art.</p>
 				<div class="avatar-box">
-					<PixelAvatar src={preview ?? app.me?.avatarUrl} seed={app.me?.id ?? 'x'} size={168} label="Podgląd awatara" />
+					<PixelAvatar src={preview ?? app.me?.avatarUrl} seed={app.me?.id ?? 'x'} size={144} label="Podgląd awatara" />
 				</div>
+				<div class="presets" role="radiogroup" aria-label="Gotowe postacie">
+					{#each presetImages as p (p.id)}
+						<button
+							type="button"
+							role="radio"
+							aria-checked={preset === p.id}
+							aria-label="Postać: {p.label}"
+							class="preset interactive"
+							class:on={preset === p.id}
+							onclick={() => pickPreset(p.id, p.src)}
+						>
+							<img src={p.src} alt="" width="48" height="48" />
+						</button>
+					{/each}
+				</div>
+				<p class="body-small muted">Zdjęcie przetwarzamy wyłącznie na Twoim telefonie i od razu je odrzucamy – do gry trafia tylko obrazek 48×48 pikseli.</p>
 				<input bind:this={photoInput} class="visually-hidden" type="file" accept="image/*" capture="user" onchange={onFile} />
 				<input bind:this={galleryInput} class="visually-hidden" type="file" accept="image/*" onchange={onFile} />
 				<div class="row wrap center">
@@ -189,7 +212,7 @@
 				{/if}
 				{#if error}<p class="error body-medium" role="alert">{error}</p>{/if}
 				<div class="spacer"></div>
-				<Button full icon="check" loading={busy} onclick={saveAvatar}>{preview ? 'Zapisz awatar' : 'Pomiń — użyję pixelowego herbu'}</Button>
+				<Button full icon="check" loading={busy} onclick={saveAvatar}>{preview ? 'Zapisz awatar' : 'Pomiń – użyję pixelowego herbu'}</Button>
 			{:else}
 				<h1 class="headline-medium">Gotowe, {app.me?.nickname}!</h1>
 				<p class="body-medium muted">
@@ -270,7 +293,33 @@
 	.avatar-box {
 		display: grid;
 		place-items: center;
-		padding: 16px 0;
+		padding: 8px 0;
+	}
+	.presets {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 88px));
+		justify-content: center;
+		gap: 12px;
+	}
+	.preset {
+		aspect-ratio: 1;
+		padding: 0;
+		border: 2px solid transparent;
+		border-radius: var(--md-sys-shape-corner-medium);
+		overflow: hidden;
+		background: none;
+		transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+	}
+	.preset img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		image-rendering: pixelated;
+	}
+	.preset.on {
+		border-color: var(--md-sys-color-primary);
+		box-shadow: 0 0 0 2px var(--md-sys-color-primary);
+		transform: scale(1.04);
 	}
 	.center {
 		justify-content: center;

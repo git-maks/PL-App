@@ -1,7 +1,7 @@
 /*
  * QR detection: the native BarcodeDetector where available (Chrome/Android), otherwise the
- * standards-compliant ponyfill (zxing-wasm), loaded lazily and served from our own origin —
- * never from a CDN — so it works offline and under a strict CSP.
+ * standards-compliant ponyfill (zxing-wasm), loaded lazily and served from our own origin –
+ * never from a CDN – so it works offline and under a strict CSP.
  */
 export interface QrDetector {
 	native: boolean;

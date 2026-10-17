@@ -1,10 +1,10 @@
-# UniQuest — wdrożenie i eksploatacja
+# UniQuest – wdrożenie i eksploatacja
 
 ## 1. Artefakt
 
 Jeden obraz Docker (`deploy/Dockerfile`): binarka Go z wbudowaną aplikacją webową, uruchamiana jako użytkownik
 bez uprawnień na obrazie distroless. Wymaga tylko PostgreSQL 16. Migracje wykonują się automatycznie przy starcie
-(`serve`) albo ręcznie (`migrate`) — z blokadą doradczą, więc kilka instancji może startować równocześnie.
+(`serve`) albo ręcznie (`migrate`) – z blokadą doradczą, więc kilka instancji może startować równocześnie.
 
 Gotowy obraz publikuje workflow `.github/workflows/image.yml` w GitHub Container Registry:
 
@@ -29,9 +29,9 @@ Podkomendy: `serve`, `migrate`, `seed [-date YYYY-MM-DD] [-activate] [-admin e-m
 | `UQ_COOKIE_SECURE` | `true` | cookie `__Host-` + `Secure` + HSTS. `false` tylko dla lokalnego http |
 | `UQ_TRUST_PROXY` | `false` | ufaj `X-Forwarded-For` (włącz za Caddy/nginx) |
 | `UQ_SESSION_TTL` | `720h` | przesuwana ważność sesji |
-| `UQ_SMTP_HOST`, `UQ_SMTP_PORT`, `UQ_SMTP_USER`, `UQ_SMTP_PASSWORD`, `UQ_SMTP_FROM` | — / 587 | wysyłka kodów logowania |
+| `UQ_SMTP_HOST`, `UQ_SMTP_PORT`, `UQ_SMTP_USER`, `UQ_SMTP_PASSWORD`, `UQ_SMTP_FROM` | – / 587 | wysyłka kodów logowania |
 | `UQ_DEV_LOGIN_CODES` | `false` | **tylko dev/demo**: kod logowania wraca w odpowiedzi API zamiast e-maila |
-| `UQ_VAPID_PUBLIC`, `UQ_VAPID_PRIVATE`, `UQ_VAPID_SUBJECT` | — | Web Push (`uniquest gen-vapid`); bez kluczy push jest wyłączony, powiadomienia działają w aplikacji |
+| `UQ_VAPID_PUBLIC`, `UQ_VAPID_PRIVATE`, `UQ_VAPID_SUBJECT` | – | Web Push (`uniquest gen-vapid`); bez kluczy push jest wyłączony, powiadomienia działają w aplikacji |
 | `UQ_OPEN_ALL_STATIONS` | `false` | **tylko testy**: wszystkie stacje przyjmują skany niezależnie od harmonogramu |
 | `UQ_RATE_LIMITS` | `true` | **tylko testy obciążeniowe** mogą je wyłączyć |
 | `UQ_LOG_LEVEL` | `info` | logi JSON na stdout (bez danych osobowych) |
@@ -41,7 +41,7 @@ Podkomendy: `serve`, `migrate`, `seed [-date YYYY-MM-DD] [-activate] [-admin e-m
 
 ### A. Infrastruktura Politechniki Lubelskiej (docelowo)
 VM z Dockerem w Centrum Informatycznym, domena np. `uniquest.pollub.pl`, certyfikat uczelniany lub Caddy.
-Kroki jak w wariancie B; zmienne SMTP — serwer pocztowy uczelni.
+Kroki jak w wariancie B; zmienne SMTP – serwer pocztowy uczelni.
 
 ### B. VPS w UE (pilot)
 Serwer z Dockerem (np. 2 vCPU / 4 GB), rekord DNS domeny wskazujący na serwer, otwarte porty 80 i 443.
@@ -58,12 +58,12 @@ Aktualizacja: `$C pull app && $C up -d --no-build`. W produkcji przypnij wersję
 Caddy sam pobiera certyfikat Let's Encrypt i nie buforuje SSE (`flush_interval -1`).
 
 ### C. PaaS (np. Fly.io w regionie Warszawa, Cloud Run europe-central2)
-Ten sam obraz (`ghcr.io/git-maks/pl-app`); zarządzany PostgreSQL (Fly Postgres, Cloud SQL, Supabase — tylko jako baza). Ustaw zmienne z §2,
+Ten sam obraz (`ghcr.io/git-maks/pl-app`); zarządzany PostgreSQL (Fly Postgres, Cloud SQL, Supabase – tylko jako baza). Ustaw zmienne z §2,
 health check na `/api/v1/readyz`. Przy wielu instancjach realtime działa przez `LISTEN/NOTIFY` bez dodatkowego brokera.
 
 ## 4. Wydarzenie
 
-1. Utwórz wydarzenie: `uniquest seed -date RRRR-MM-DD -activate` (z `content/demo-event.json` — edytuj stacje, sesje i wagi
+1. Utwórz wydarzenie: `uniquest seed -date RRRR-MM-DD -activate` (z `content/demo-event.json` – edytuj stacje, sesje i wagi
    razem z wydziałami; ponowny seed zachowuje identyfikatory i sekrety stacji, więc wydrukowane plakaty pozostają ważne).
 2. Nadaj role: konto organizatora loguje się e-mailem, admin w `/admin` → *Uprawnienia* (rola *Obsługa stacji*), a w edycji
    stacji przypisuje e-maile obsługi (`staffEmails` w API).

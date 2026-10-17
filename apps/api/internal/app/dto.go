@@ -6,7 +6,7 @@ import (
 	"github.com/git-maks/pl-app/apps/api/internal/game"
 )
 
-// DTOs — JSON shapes from packages/contracts/openapi.yaml (components.schemas).
+// DTOs – JSON shapes from packages/contracts/openapi.yaml (components.schemas).
 
 type Consents struct {
 	Terms         bool `json:"terms"`

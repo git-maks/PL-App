@@ -35,7 +35,7 @@ export function registerServiceWorker() {
 			});
 			let reloaded = false;
 			navigator.serviceWorker.addEventListener('controllerchange', () => {
-				// The first install also fires controllerchange (clients.claim) — never reload then,
+				// The first install also fires controllerchange (clients.claim) – never reload then,
 				// only when the user accepted an update.
 				if (reloaded || !updateAccepted) return;
 				reloaded = true;

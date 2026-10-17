@@ -41,7 +41,7 @@
 			theme = t === 'light' || t === 'dark' ? t : 'system';
 			reducedMotion = localStorage.getItem('uq.motion') === 'reduced';
 		} catch {
-			/* storage unavailable — defaults apply */
+			/* storage unavailable – defaults apply */
 		}
 		push = pushPermission() === 'granted' && !!app.me?.consents.notifications;
 	});
@@ -90,7 +90,7 @@
 			push = r === 'enabled';
 			if (r === 'denied') toast('Powiadomienia są zablokowane w ustawieniach przeglądarki.');
 			else if (r === 'unsupported') toast('To urządzenie nie obsługuje powiadomień push. Na iPhonie zainstaluj aplikację na ekranie głównym.');
-			else if (r === 'unavailable') toast('Powiadomienia push nie są dostępne w tej wersji — będziesz je widzieć w aplikacji.');
+			else if (r === 'unavailable') toast('Powiadomienia push nie są dostępne w tej wersji – będziesz je widzieć w aplikacji.');
 		} else {
 			await disablePush(app.api);
 			push = false;
@@ -124,7 +124,7 @@
 			await app.setMe(await app.api.emailVerify(email.trim(), code.trim()));
 			await app.refresh();
 			emailOpen = false;
-			toast('Konto zapisane — możesz się zalogować na innym urządzeniu.');
+			toast('Konto zapisane – możesz się zalogować na innym urządzeniu.');
 		} catch (err) {
 			emailError = errorMessage(err);
 		} finally {
@@ -189,7 +189,7 @@
 			<Card variant="primary">
 				<div class="stack">
 					<p class="title-small">Zapisz postęp</p>
-					<p class="body-medium">Dodaj e-mail, aby nie stracić bohatera przy zmianie telefonu. Wyślemy jednorazowy kod — bez haseł.</p>
+					<p class="body-medium">Dodaj e-mail, aby nie stracić bohatera przy zmianie telefonu. Wyślemy jednorazowy kod – bez haseł.</p>
 					<Button icon="mail" onclick={() => ((emailOpen = true), (stage = 'email'))}>Dodaj e-mail</Button>
 				</div>
 			</Card>
@@ -199,7 +199,7 @@
 				<ListItem icon="logout" headline="Wyloguj" onclick={() => logout()} />
 				<ListItem icon="shield" headline="Wyloguj na wszystkich urządzeniach" onclick={() => logout(true)} />
 			{:else}
-				<ListItem icon="account_circle" headline="Mam już konto — zaloguj e-mailem" supporting="Postęp z tego urządzenia zostanie połączony" onclick={() => ((emailOpen = true), (stage = 'email'))} />
+				<ListItem icon="account_circle" headline="Mam już konto – zaloguj e-mailem" supporting="Postęp z tego urządzenia zostanie połączony" onclick={() => ((emailOpen = true), (stage = 'email'))} />
 			{/if}
 		</Card>
 

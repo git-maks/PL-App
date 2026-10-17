@@ -98,7 +98,7 @@
 			{/each}
 		</svg>
 	</div>
-	<p class="body-small muted">Mapa poglądowa — położenie budynków wg OpenStreetMap (© współtwórcy OSM). Pulsujące punkty mają aktywne zadania, zielone są już odwiedzone.</p>
+	<p class="body-small muted">Mapa poglądowa – położenie budynków wg OpenStreetMap (© współtwórcy OSM). Pulsujące punkty mają aktywne zadania, zielone są już odwiedzone.</p>
 
 	<ul class="legend">
 		{#each campus.pois as p (p.id)}

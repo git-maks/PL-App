@@ -86,3 +86,37 @@ test('hero and landing have no WCAG 2.1 AA violations', async ({ page }) => {
 	r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();
 	expect(r.violations.map((v) => `${v.id}: ${v.help}`)).toEqual([]);
 });
+
+test('preset avatar, team emblems, facts carousel and the MoAI profile', async ({ page }) => {
+	await page.goto('/onboarding');
+	await page.getByRole('button', { name: 'Stwórz bohatera' }).click();
+	await page.getByLabel('Pseudonim (opcjonalnie)').fill('Pikselka');
+	await page.getByRole('checkbox').check();
+	await page.getByRole('button', { name: 'Dalej' }).click();
+	await expect(page.getByRole('radio', { name: /^Postać:/ })).toHaveCount(9);
+	await page.getByRole('radio', { name: 'Postać: Leśny' }).click();
+	await expect(page.getByRole('radio', { name: 'Postać: Leśny' })).toHaveAttribute('aria-checked', 'true');
+	await page.getByRole('button', { name: 'Zapisz awatar' }).click();
+	await page.getByRole('button', { name: 'Do panelu bohatera' }).click();
+	await page.waitForURL('**/hero');
+	await expect(page.locator('.avatar img').first()).toHaveAttribute('src', /^data:image\/png/);
+
+	await page.goto('/team');
+	await expect(page.getByRole('radiogroup', { name: 'Emblemat drużyny' }).getByRole('radio')).toHaveCount(24);
+	let a11y = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();
+	expect(a11y.violations.map((v) => `${v.id}: ${v.help}`)).toEqual([]);
+
+	await page.goto('/explore');
+	const counter = page.locator('.carousel .num');
+	const before = await counter.textContent();
+	await page.getByRole('button', { name: 'Następna ciekawostka' }).click();
+	await expect(counter).not.toHaveText(before!);
+	a11y = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();
+	expect(a11y.violations.map((v) => `${v.id}: ${v.help}`)).toEqual([]);
+
+	await page.goto('/explore/kola/sztucznej-inteligencji-moai');
+	await expect(page.getByRole('heading', { name: 'Koło Naukowe Sztucznej Inteligencji „MoAI”', level: 1 })).toBeVisible();
+	await expect(page.getByRole('link', { name: /Strona koła/ })).toHaveAttribute('href', 'https://moai-pl.github.io');
+	for (const name of ['Sztuczna inteligencja w biznesie', 'Cyberbezpieczeństwo', 'Informatyka', 'Inżynieria i analiza danych', 'Sztuczna inteligencja w energetyce', 'Marketing i komunikacja rynkowa', 'Mechatronika'])
+		await expect(page.getByRole('link', { name: new RegExp('^' + name) })).toBeVisible();
+});

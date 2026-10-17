@@ -102,7 +102,7 @@
 								<tr>
 									<td>{s.name}<span class="bar" style="width: {(s.visits / maxVisits) * 100}%"></span></td>
 									<td>{s.visits}</td>
-									<td>{s.avgRating ? s.avgRating.toFixed(2) : '—'}</td>
+									<td>{s.avgRating ? s.avgRating.toFixed(2) : '–'}</td>
 								</tr>
 							{/each}
 						</tbody>
@@ -131,7 +131,7 @@
 					<label class="body-medium sel">
 						Stacja
 						<select bind:value={editId} onchange={() => pick(editId)}>
-							<option value="">— wybierz —</option>
+							<option value="">– wybierz –</option>
 							{#each app.stations as st (st.id)}<option value={st.id}>{st.name}</option>{/each}
 						</select>
 					</label>

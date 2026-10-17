@@ -1,6 +1,6 @@
 /*
  * Character card rendered on a <canvas> in the browser (spec §8.6): 1080×1350 (4:5, social feeds).
- * Nothing is uploaded — the PNG is shared with the Web Share API or downloaded.
+ * Nothing is uploaded – the PNG is shared with the Web Share API or downloaded.
  */
 import { STAT_CODES, type Stats } from '#lib/game/types';
 import { statByCode } from '#lib/content/archetypes';

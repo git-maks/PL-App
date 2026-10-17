@@ -112,7 +112,7 @@
 				{/each}
 				{#each app.queue as q (q.id)}
 					<Card variant="outlined" padding={false}>
-						<ListItem headline="Skan zapisany offline" supporting={q.rating ? `Ocena ${q.rating}/5 — wyślemy po odzyskaniu zasięgu` : 'Wyślemy po odzyskaniu zasięgu'} icon="cloud_upload" />
+						<ListItem headline="Skan zapisany offline" supporting={q.rating ? `Ocena ${q.rating}/5 – wyślemy po odzyskaniu zasięgu` : 'Wyślemy po odzyskaniu zasięgu'} icon="cloud_upload" />
 					</Card>
 				{/each}
 			</section>

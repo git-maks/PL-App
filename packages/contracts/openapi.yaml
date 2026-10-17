@@ -506,7 +506,7 @@ components:
       required: [sent]
       properties:
         sent: { type: boolean }
-        devCode: { type: string, description: Only in development/demo mode — the code is shown instead of e-mailed }
+        devCode: { type: string, description: Only in development/demo mode – the code is shown instead of e-mailed }
     EmailVerifyRequest:
       type: object
       required: [email, code]

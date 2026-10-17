@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>{p.name} — Politechnika Lubelska · UniQuest</title>
+	<title>{p.name} – Politechnika Lubelska · UniQuest</title>
 	<meta name="description" content={p.description.slice(0, 160)} />
 </svelte:head>
 

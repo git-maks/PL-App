@@ -6,6 +6,7 @@
 		title,
 		back,
 		large = false,
+		compact = false,
 		heading = true,
 		actions
 	}: {
@@ -13,6 +14,8 @@
 		/** href to go back to, or true to use history.back() */
 		back?: string | true;
 		large?: boolean;
+		/** Small all-caps title in a low bar, for top-level tabs where the content speaks for itself. */
+		compact?: boolean;
 		/** Render the title as the page's <h1>. Set false when the page has its own h1. */
 		heading?: boolean;
 		actions?: Snippet;
@@ -26,7 +29,7 @@
 
 <svelte:window {onscroll} />
 
-<header class="bar" class:scrolled class:large>
+<header class="bar" class:scrolled class:large class:compact>
 	<div class="inner">
 		{#if back === true}
 			<IconButton icon="arrow_back" label="Wstecz" onclick={() => history.back()} />
@@ -67,6 +70,16 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+	.compact .inner {
+		height: 48px;
+		padding: 0 8px 0 calc(var(--uq-gutter) - 8px);
+	}
+	.compact .title {
+		font: var(--md-sys-typescale-label-large);
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--md-sys-color-on-surface-variant);
 	}
 	.spacer {
 		flex: 1;

@@ -79,7 +79,7 @@
 		top: 16px;
 		padding: 0 4px;
 		color: var(--md-sys-color-on-surface-variant);
-		background: var(--md-sys-color-surface);
+		background: var(--uq-container, var(--md-sys-color-surface));
 		pointer-events: none;
 		transform-origin: left top;
 		transition:

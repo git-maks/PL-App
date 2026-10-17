@@ -1,12 +1,12 @@
 /*
  * Material Design 3 tokens for UniQuest.
  * Seed colour: working navy for Politechnika Lubelska (replace with the official brand colour
- * from the university's identity guidelines when available — only this file changes).
+ * from the university's identity guidelines when available – only this file changes).
  */
 :root {
 	color-scheme: light;
 
-	/* Colour roles — light */
+	/* Colour roles – light */
 	--md-sys-color-primary: #1f5aa6;
 	--md-sys-color-on-primary: #ffffff;
 	--md-sys-color-primary-container: #d6e3ff;
@@ -51,14 +51,14 @@
 	--md-sys-typescale-headline-medium: 400 1.75rem/2.25rem var(--md-ref-typeface-plain);
 	--md-sys-typescale-headline-small: 400 1.5rem/2rem var(--md-ref-typeface-plain);
 	--md-sys-typescale-title-large: 400 1.375rem/1.75rem var(--md-ref-typeface-plain);
-	--md-sys-typescale-title-medium: 500 1rem/1.5rem var(--md-ref-typeface-plain);
-	--md-sys-typescale-title-small: 500 0.875rem/1.25rem var(--md-ref-typeface-plain);
-	--md-sys-typescale-body-large: 400 1rem/1.5rem var(--md-ref-typeface-plain);
-	--md-sys-typescale-body-medium: 400 0.875rem/1.25rem var(--md-ref-typeface-plain);
-	--md-sys-typescale-body-small: 400 0.75rem/1rem var(--md-ref-typeface-plain);
-	--md-sys-typescale-label-large: 500 0.875rem/1.25rem var(--md-ref-typeface-plain);
-	--md-sys-typescale-label-medium: 500 0.75rem/1rem var(--md-ref-typeface-plain);
-	--md-sys-typescale-label-small: 500 0.6875rem/1rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-title-medium: 500 1.0625rem/1.625rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-title-small: 500 0.9375rem/1.375rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-body-large: 400 1.0625rem/1.65rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-body-medium: 400 0.9375rem/1.5rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-body-small: 400 0.8125rem/1.25rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-label-large: 500 0.9375rem/1.375rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-label-medium: 500 0.8125rem/1.125rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-label-small: 500 0.75rem/1rem var(--md-ref-typeface-plain);
 
 	/* Shape */
 	--md-sys-shape-corner-extra-small: 4px;
@@ -89,7 +89,7 @@
 	--md-sys-motion-duration-long2: 500ms;
 
 	/* Layout */
-	--uq-gutter: 16px;
+	--uq-gutter: 20px;
 	--uq-max-width: 720px;
 	--uq-nav-height: 80px;
 	--uq-top-bar-height: 64px;
