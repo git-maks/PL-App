@@ -621,3 +621,34 @@ Dzięki temu udostępniamy:
 Kod w TS/Go zgodny z lintem i typami · testy jednostkowe i (dla ścieżek użytkownika) e2e · zgodność z OpenAPI ·
 dostępność (axe bez błędów, obsługa klawiaturą) · budżet wydajności zachowany · działa offline tam, gdzie to ma sens ·
 teksty po polsku bez literówek · zaktualizowana dokumentacja.
+
+---
+
+## 19. Stan realizacji (2026-10-17) i odstępstwa od pierwotnego planu
+
+Zrealizowane etapy M0–M3 oraz większość M4 (szczegóły w `README.md` i `docs/WDROZENIE.md`):
+
+| Obszar | Stan |
+|---|---|
+| PWA (SvelteKit 3, Svelte 5, TS strict) | wszystkie ekrany z §6, MD3 + animacje, offline, instalacja, service worker |
+| Backend Go + PostgreSQL | całe API z OpenAPI (test zgodności tras), sesje, gość + e-mail z łączeniem kont, QR HMAC, okna skanowania, drużyny, SSE, Web Push, przypomnienia, analityka, CSV, RODO |
+| Logika gry | identyczna w TS i Go — 7 golden fixtures (statystyki, poziomy, archetypy, tytuły, rekomendacje) + wektory QR |
+| Testy | Vitest (25), Go z PostgreSQL i `-race`, Playwright demo (8, w tym kamera i axe/WCAG) i full-stack (2) |
+| Demo | tryb `DemoApi` + workflow GitHub Pages |
+| Wdrożenie | Dockerfile (distroless), Compose + Caddy, Makefile, CI, k6 |
+
+Świadome odstępstwa (uzasadnione prostotą i minimalną liczbą zależności):
+
+1. **Zapytania SQL pisane jawnie w `pgx`** zamiast generowanych przez `sqlc` — przy ~60 zapytaniach skupionych w `internal/app`
+   koszt dodatkowego narzędzia (generator z kompilacją C) przewyższał korzyść. `sqlc` można dołożyć bez zmian schematu.
+2. **Własny migrator (~60 linii)** zamiast `goose` — wbudowane pliki SQL, transakcja na migrację, blokada doradcza.
+3. **Bonus drużynowy**: punkty za stację zespołową naliczane są od razu, a bonus ×1,2 dopisywany całej drużynie w chwili
+   osiągnięcia kworum (zamiast „wstrzymania” skanu) — gracz od razu widzi postęp, a wynik końcowy jest ten sam.
+4. **SvelteKit 3**: aliasy `#lib/*` (subpath imports) zamiast `$lib`, moduły `$app/manifest`/`$app/env` w service workerze,
+   CSP oparta na hashach generowanych przez SvelteKit + nagłówki bezpieczeństwa z Go.
+5. **Mapa kampusu**: realne współrzędne budynków z OpenStreetMap/Nominatim rzutowane na ilustrowaną mapę SVG; położenie kilku
+   obiektów bez adresu w OSM (hala sportowa, stołówka, Spichlerz) jest przybliżone i oznaczone w danych (`approximate: true`).
+6. **Kolor marki**: roboczy granat `#1f5aa6` (księga znaku PL nie jest publicznie dostępna) — zmiana w jednym pliku tokenów.
+
+Do zrobienia po stronie uczelni / w kolejnej fazie: logowanie Google i Microsoft 365, wersja EN, publiczna strona karty z
+obrazkiem OG, testy na fizycznych urządzeniach iOS/Android, konsultacja RODO z IOD, właściwe wagi stacji z wydziałami.

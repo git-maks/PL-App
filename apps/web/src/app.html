@@ -13,13 +13,7 @@
 		<link rel="manifest" href="%sveltekit.assets%/manifest.webmanifest" />
 		<link rel="icon" href="%sveltekit.assets%/icons/icon.svg" type="image/svg+xml" />
 		<link rel="apple-touch-icon" href="%sveltekit.assets%/icons/apple-touch-icon.png" />
-		<script>
-			try {
-				const t = localStorage.getItem('uq.theme');
-				if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
-				if (localStorage.getItem('uq.motion') === 'reduced') document.documentElement.dataset.motion = 'reduced';
-			} catch {}
-		</script>
+		<script src="%sveltekit.assets%/theme.js"></script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

@@ -22,6 +22,7 @@
 	let editId = $state('');
 	let weights = $state<Record<StatCode, number>>({ STR: 0, INT: 0, MAN: 0, KRE: 0, ENE: 0, CHA: 0, WIS: 0, VIT: 0 });
 	let basePoints = $state(100);
+	let staffEmails = $state('');
 
 	$effect(() => {
 		if (app.me && app.event && !data) {
@@ -45,7 +46,8 @@
 		if (!editing || sum <= 0) return;
 		const normalized = Object.fromEntries(STAT_CODES.filter((c) => weights[c] > 0).map((c) => [c, Math.round((weights[c] / sum) * 1000) / 1000]));
 		try {
-			await app.api.patchStation(editing.id, { basePoints, weights: normalized });
+			const emails = staffEmails.split(/[\s,;]+/).map((x) => x.trim()).filter((x) => x.includes('@'));
+			await app.api.patchStation(editing.id, { basePoints, weights: normalized, ...(emails.length ? { staffEmails: emails } : {}) });
 			app.stations = await app.api.stations(app.event!.id);
 			toast('Zapisano wagi stacji.');
 		} catch (e) {
@@ -144,6 +146,7 @@
 								</label>
 							{/each}
 						</div>
+						<TextField label="E-maile obsługi stacji (po przecinku)" bind:value={staffEmails} supporting="Zweryfikowane konta dostaną dostęp do panelu tej stacji" />
 						<Button icon="check" disabled={sum === 0} onclick={saveWeights}>Zapisz (wagi normalizujemy do 100%)</Button>
 					{/if}
 				</div>

@@ -14,7 +14,9 @@ export default defineConfig({
 			paths: { base, relative: false },
 			prerender: { handleHttpError: 'warn', handleMissingId: 'warn' },
 			version: { name: process.env.APP_VERSION ?? String(Date.now()) },
-			serviceWorker: { register: false }
+			serviceWorker: { register: false },
+			// Hash-based CSP for SvelteKit's own inline bootstrap script (the Go server adds the other directives).
+			csp: { mode: 'hash', directives: { 'script-src': ['self', 'wasm-unsafe-eval'] } }
 		})
 	],
 	server: {

@@ -1,0 +1,68 @@
+# Local full stack or a single-VPS deployment (spec §14, variants A/B).
+#   docker compose -f deploy/compose.yaml up --build
+#   docker compose -f deploy/compose.yaml run --rm app seed -admin you@example.com
+# For HTTPS on a server set UQ_DOMAIN and start with the "https" profile (Caddy obtains certificates).
+name: uniquest
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: uniquest
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-uniquest}
+      POSTGRES_DB: uniquest
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U uniquest"]
+      interval: 5s
+      retries: 10
+    restart: unless-stopped
+
+  app:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      args:
+        APP_VERSION: ${APP_VERSION:-local}
+    environment:
+      DATABASE_URL: postgres://uniquest:${POSTGRES_PASSWORD:-uniquest}@db:5432/uniquest?sslmode=disable
+      UQ_BASE_URL: ${UQ_BASE_URL:-http://localhost:8080}
+      # Plain http on localhost needs a non-__Host- cookie; keep true behind HTTPS.
+      UQ_COOKIE_SECURE: ${UQ_COOKIE_SECURE:-false}
+      UQ_TRUST_PROXY: ${UQ_TRUST_PROXY:-false}
+      UQ_DEV_LOGIN_CODES: ${UQ_DEV_LOGIN_CODES:-true}
+      UQ_OPEN_ALL_STATIONS: ${UQ_OPEN_ALL_STATIONS:-false}
+      UQ_SMTP_HOST: ${UQ_SMTP_HOST:-}
+      UQ_SMTP_PORT: ${UQ_SMTP_PORT:-587}
+      UQ_SMTP_USER: ${UQ_SMTP_USER:-}
+      UQ_SMTP_PASSWORD: ${UQ_SMTP_PASSWORD:-}
+      UQ_SMTP_FROM: ${UQ_SMTP_FROM:-UniQuest <no-reply@localhost>}
+      UQ_VAPID_PUBLIC: ${UQ_VAPID_PUBLIC:-}
+      UQ_VAPID_PRIVATE: ${UQ_VAPID_PRIVATE:-}
+      UQ_VAPID_SUBJECT: ${UQ_VAPID_SUBJECT:-mailto:uniquest@pollub.pl}
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2-alpine
+    profiles: ["https"]
+    environment:
+      UQ_DOMAIN: ${UQ_DOMAIN:?set UQ_DOMAIN for the https profile}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy:/data
+    depends_on:
+      - app
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  caddy:
