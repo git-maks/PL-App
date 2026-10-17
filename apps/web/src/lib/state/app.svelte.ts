@@ -1,6 +1,6 @@
 /*
  * Application state (Svelte 5 runes). One instance per tab; screens read from it and call its
- * actions. The server stays authoritative — this class caches its answers, keeps the offline
+ * actions. The server stays authoritative – this class caches its answers, keeps the offline
  * scan queue and applies live updates from the event stream.
  */
 import { browser } from '$app/env';
@@ -29,7 +29,7 @@ export type ScanOutcome =
 
 export const ERROR_MESSAGES: Partial<Record<ApiError['code'], string>> = {
 	qr_invalid: 'Ten kod nie należy do UniQuest albo jest uszkodzony.',
-	qr_expired: 'Kod już się zmienił — zeskanuj ten, który jest teraz na ekranie.',
+	qr_expired: 'Kod już się zmienił – zeskanuj ten, który jest teraz na ekranie.',
 	scan_window_closed: 'Skanowanie na tej stacji jest teraz zamknięte. Kod pojawia się pod koniec zajęć.',
 	no_active_event: 'Teraz nie trwa żadne wydarzenie UniQuest.',
 	rating_locked: 'Ocenę można zmienić tylko przez 15 minut od skanu.',
@@ -37,9 +37,9 @@ export const ERROR_MESSAGES: Partial<Record<ApiError['code'], string>> = {
 	already_in_team: 'Należysz już do drużyny.',
 	invite_invalid: 'Zaproszenie jest nieważne lub wygasło.',
 	not_captain: 'Tylko kapitan może to zrobić.',
-	rate_limited: 'Za dużo prób — odczekaj chwilę.',
+	rate_limited: 'Za dużo prób – odczekaj chwilę.',
 	invalid_code: 'Kod jest niepoprawny.',
-	code_expired: 'Kod wygasł — wyślij nowy.',
+	code_expired: 'Kod wygasł – wyślij nowy.',
 	invalid_email: 'Sprawdź adres e-mail.',
 	invalid_nickname: 'Pseudonim musi mieć 2–24 znaki.'
 };
@@ -62,7 +62,7 @@ class AppState {
 	reminders = $state<string[]>([]);
 	queue = $state<QueuedScan[]>([]);
 	online = $state(true);
-	/** Stat gains from the last rating — consumed by the hero screen animation. */
+	/** Stat gains from the last rating – consumed by the hero screen animation. */
 	lastDeltas = $state<Stats | null>(null);
 
 	unread = $derived(this.notifications.filter((n) => !n.readAt).length);

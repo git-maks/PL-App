@@ -51,7 +51,7 @@
 						<div class="stats row wrap label-large">
 							<span>Skany: <strong>{s.scansCount}</strong></span>
 							<span>Ocenione: <strong>{s.ratedCount}</strong></span>
-							<span>Średnia: <strong>{s.avgRating ? s.avgRating.toFixed(1) : '—'}</strong></span>
+							<span>Średnia: <strong>{s.avgRating ? s.avgRating.toFixed(1) : '–'}</strong></span>
 						</div>
 						<Switch label="Skanowanie otwarte" supporting={s.scanOpenUntil ? `do ${time(s.scanOpenUntil)}` : 'Okno skanowania wg harmonogramu lub ręcznie'} checked={s.scanOpen} onchange={(v) => toggle(s, v)} />
 						<div class="row wrap">

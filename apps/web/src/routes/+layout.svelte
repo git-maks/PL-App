@@ -61,7 +61,7 @@
 <Snackbar />
 
 {#if !app.online}
-	<div class="offline label-medium" role="status">Tryb offline — skany zapiszemy i wyślemy później</div>
+	<div class="offline label-medium" role="status">Tryb offline – skany zapiszemy i wyślemy później</div>
 {/if}
 
 <style>

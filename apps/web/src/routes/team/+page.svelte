@@ -18,8 +18,7 @@
 	import PixelAvatar from '#lib/components/PixelAvatar.svelte';
 	import Chip from '#lib/components/Chip.svelte';
 	import QrCode from '#lib/qr/QrCode.svelte';
-
-	const EMBLEMS: IconName[] = ['shield', 'star', 'science', 'lightbulb', 'sports_soccer', 'casino', 'public', 'military_tech'];
+	import { EMBLEMS } from '#lib/game/emblems';
 
 	let name = $state('');
 	let emblem = $state<IconName>('shield');
@@ -111,22 +110,22 @@
 <svelte:head><title>Drużyna · UniQuest</title></svelte:head>
 
 <AuthGate reason="Drużyny są dostępne dla bohaterów.">
-	<TopAppBar title="Drużyna" />
+	<TopAppBar title="Drużyna" compact />
 	<div class="page">
 		{#if !app.event}
 			<Card variant="tertiary"><p class="body-medium">Drużyny tworzy się podczas wydarzenia UniQuest.</p></Card>
 		{:else if !team}
 			<p class="body-medium muted">
-				Niektóre zadania są drużynowe — gdy dotrze na nie co najmniej {app.event.teamMin} osoby z drużyny, każdy dostaje bonus ×{app.event.config.teamBonus.toLocaleString('pl-PL')}. Drużyna liczy do {app.event.teamMax} osób.
+				Niektóre zadania są drużynowe – gdy dotrze na nie co najmniej {app.event.teamMin} osoby z drużyny, każdy dostaje bonus ×{app.event.config.teamBonus.toLocaleString('pl-PL')}. Drużyna liczy do {app.event.teamMax} osób.
 			</p>
 			<Card variant="filled">
 				<form class="stack" onsubmit={create}>
 					<h2 class="title-medium">Załóż drużynę</h2>
 					<TextField label="Nazwa drużyny" bind:value={name} maxlength={24} autocomplete="off" />
 					<div class="emblems" role="radiogroup" aria-label="Emblemat drużyny">
-						{#each EMBLEMS as em (em)}
-							<button type="button" role="radio" aria-checked={emblem === em} aria-label={em} class="em interactive" class:on={emblem === em} onclick={() => (emblem = em)}>
-								<Icon name={em} />
+						{#each EMBLEMS as em (em.icon)}
+							<button type="button" role="radio" aria-checked={emblem === em.icon} aria-label={em.label} class="em interactive" class:on={emblem === em.icon} onclick={() => (emblem = em.icon)}>
+								<Icon name={em.icon} />
 							</button>
 						{/each}
 					</div>

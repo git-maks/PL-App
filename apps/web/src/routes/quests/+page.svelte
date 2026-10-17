@@ -62,7 +62,7 @@
 			const on = await app.toggleReminder(sessionId);
 			if (on) {
 				const res = await enablePush(app.api).catch(() => 'unsupported' as const);
-				toast(res === 'enabled' ? 'Przypomnimy Ci 10 minut przed startem.' : 'Przypomnienie zapisane — zobaczysz je w aplikacji.');
+				toast(res === 'enabled' ? 'Przypomnimy Ci 10 minut przed startem.' : 'Przypomnienie zapisane – zobaczysz je w aplikacji.');
 			}
 		} catch (e) {
 			toast(errorMessage(e));
@@ -72,7 +72,7 @@
 
 <svelte:head><title>Zadania · UniQuest</title></svelte:head>
 
-<TopAppBar title="Zadania">
+<TopAppBar title="Zadania" compact>
 	{#snippet actions()}
 		<IconButton icon="map" label="Mapa kampusu" href={href('/map')} />
 	{/snippet}

@@ -147,7 +147,7 @@ func run(args []string) error {
 func serve(ctx context.Context, cfg config.Config, log *slog.Logger, svc *app.Service, hub *realtime.Hub) error {
 	static := webui.FS()
 	if static == nil {
-		log.Warn("web app not embedded — serving the API only")
+		log.Warn("web app not embedded – serving the API only")
 	}
 	api := httpapi.New(svc, hub, cfg, log, static)
 	srv := &http.Server{

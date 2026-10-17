@@ -15,7 +15,7 @@
 		<li>Punkty zdobywa się, skanując kod QR wyświetlany na stacji pod koniec zajęć i oceniając zajęcia w skali 1–5. Każdą stację zalicza się raz.</li>
 		<li>Kody rotują co 30 sekund. Przesyłanie zdjęć kodów osobom nieobecnym jest niezgodne z zasadami gry.</li>
 		<li>Profil postaci i rekomendacje kierunków mają charakter informacyjny i nie wpływają na rekrutację na studia.</li>
-		<li>Pseudonimy i nazwy drużyn nie mogą naruszać dóbr osobistych ani zawierać treści obraźliwych — organizator może je zmienić.</li>
+		<li>Pseudonimy i nazwy drużyn nie mogą naruszać dóbr osobistych ani zawierać treści obraźliwych – organizator może je zmienić.</li>
 	</ol>
 
 	<h2 class="title-large">Prywatność</h2>

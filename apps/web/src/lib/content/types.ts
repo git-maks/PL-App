@@ -75,6 +75,11 @@ export interface Club {
 	name: string;
 	faculty: string;
 	tags: string[];
+	/** Optional richer profile, when the club provided one. */
+	description?: string;
+	website?: string;
+	/** Related programmes chosen by the club; otherwise derived from the stat vector. */
+	programs?: string[];
 	vector: StatVector;
 	sources: Source[];
 	verifiedAt: string;

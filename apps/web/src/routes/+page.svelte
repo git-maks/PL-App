@@ -12,7 +12,7 @@
 	});
 </script>
 
-<svelte:head><title>UniQuest — Politechnika Lubelska</title></svelte:head>
+<svelte:head><title>UniQuest – Politechnika Lubelska</title></svelte:head>
 
 <div class="landing">
 	<div class="hero">
@@ -24,13 +24,13 @@
 
 	<ul class="features">
 		<li><span class="ic"><Icon name="qr_code_scanner" /></span><span><strong>Skanuj</strong> kod QR na koniec warsztatu lub pokazu</span></li>
-		<li><span class="ic"><StatIcon code="STR" /></span><span><strong>Oceniaj</strong>, jak bardzo Ci się podobało — tak rosną Twoje statystyki</span></li>
+		<li><span class="ic"><StatIcon code="STR" /></span><span><strong>Oceniaj</strong>, jak bardzo Ci się podobało – tak rosną Twoje statystyki</span></li>
 		<li><span class="ic"><Icon name="workspace_premium" /></span><span><strong>Odkryj</strong> swoją ścieżkę: kierunki i koła naukowe dla Ciebie</span></li>
 	</ul>
 
 	<div class="cta">
 		<Button full icon="play_arrow" href={href('/onboarding')}>Zaczynamy</Button>
-		<Button full variant="text" href={href('/explore')}>Tylko się rozglądam — poznaj uczelnię</Button>
+		<Button full variant="text" href={href('/explore')}>Tylko się rozglądam – poznaj uczelnię</Button>
 	</div>
 
 	{#if isDemo}

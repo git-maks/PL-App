@@ -1,5 +1,5 @@
 /*
- * DemoApi — the whole backend simulated in the browser (IndexedDB), used for the public
+ * DemoApi – the whole backend simulated in the browser (IndexedDB), used for the public
  * GitHub Pages demo. It follows the same contract and rules as the Go backend, including real
  * HMAC validation of rotating QR codes, so the demo exercises the genuine scanning flow.
  * Simulated extras: bot team-mates who join and scan, and synthetic leaderboard rivals.
@@ -307,7 +307,7 @@ export class DemoApi implements ApiClient {
 		if (!safeEqual(await macFor(secret, rotatingMessage(st.id, p.window)), p.mac)) throw new ApiError(400, 'qr_invalid', 'Kod nie jest autentyczny');
 		const age = windowAt(now) - p.window;
 		const maxAge = queued ? QUEUED_GRACE_WINDOWS : 1;
-		if (age > maxAge || age < -1) throw new ApiError(422, 'qr_expired', 'Kod wygasł — zeskanuj aktualny');
+		if (age > maxAge || age < -1) throw new ApiError(422, 'qr_expired', 'Kod wygasł – zeskanuj aktualny');
 		return st;
 	}
 
@@ -349,7 +349,7 @@ export class DemoApi implements ApiClient {
 				if (sc.teamScanned >= required) {
 					sc.teamComplete = true;
 					await this.awardBadges();
-					await this.notify('team', 'Zadanie drużynowe zaliczone!', 'Cała drużyna dotarła — dostajecie bonus ×1,2.', '/hero');
+					await this.notify('team', 'Zadanie drużynowe zaliczone!', 'Cała drużyna dotarła – dostajecie bonus ×1,2.', '/hero');
 				}
 				await this.save();
 				this.emit({ type: 'scan.confirmed', data: await this.scanDto(sc) });
@@ -589,7 +589,7 @@ export class DemoApi implements ApiClient {
 			scansCount: s.scans.filter((x) => x.stationId === st.id).length
 		};
 	}
-	/** Static (poster) payload — used by the demo's printable test sheet. */
+	/** Static (poster) payload – used by the demo's printable test sheet. */
 	async staticPayload(stationId: string) {
 		const w = await demoWorld();
 		const st = w.stationById.get(stationId)!;

@@ -17,7 +17,7 @@
 		<Card variant="primary">
 			<div class="stack">
 				<h2 class="title-large">Zacznij przygodę</h2>
-				<p class="body-medium">{reason} Profil gościa założysz w kilka sekund — bez e-maila i hasła.</p>
+				<p class="body-medium">{reason} Profil gościa założysz w kilka sekund – bez e-maila i hasła.</p>
 				<Button icon="play_arrow" href={href('/onboarding?next=' + encodeURIComponent(page.url.pathname + page.url.search))}>Utwórz bohatera</Button>
 			</div>
 		</Card>

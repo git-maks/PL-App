@@ -1,9 +1,9 @@
-# UniQuest — specyfikacja techniczna i decyzje architektoniczne
+# UniQuest – specyfikacja techniczna i decyzje architektoniczne
 
 | | |
 |---|---|
 | Projekt | **UniQuest** (Character Profiler) dla Politechniki Lubelskiej |
-| Wersja dokumentu | 1.0 — 2026-10-17 |
+| Wersja dokumentu | 1.0 – 2026-10-17 |
 | Wejście | `docs/BRIEF.md`, `docs/BAZA_WIEDZY.md` (fakty o PL ze źródłami) |
 | Status | Decyzje podjęte. Warianty opisane tam, gdzie do celu prowadzi więcej niż jedna droga |
 
@@ -18,17 +18,17 @@ Słowa „musi” i „powinien” znaczą odpowiednio wymaganie twarde i miękk
 |---|---|---|
 | Dystrybucja | **PWA** (Android + iOS + desktop) z jednej bazy kodu. Bez sklepów w MVP | Google Play przez TWA (Bubblewrap), gdy potrzebna obecność w sklepie; App Store przez Capacitor tylko na wyraźne żądanie klienta |
 | Frontend | **SvelteKit + Svelte 5 + TypeScript (strict)**, `adapter-static`, własny service worker | React + Vite + `vite-plugin-pwa`, jeśli zespół zna tylko Reacta |
-| UI | Własne komponenty na **tokenach Material Design 3** (kolor, typografia, kształt, elewacja, ruch). Bez ciężkiej biblioteki UI | Angular Material / MUI — odrzucone jako zbyt ciężkie |
-| Animacje | Wbudowane `svelte/transition` i `svelte/motion` + **View Transitions API** + CSS. Tylko `transform`/`opacity` | — |
-| Język | **TypeScript w 100% frontendu**, skryptów i narzędzi; typy API generowane z OpenAPI | — |
-| Backend | **Go** (stdlib `net/http`, `pgx`, `sqlc`) — jeden statyczny plik binarny, który serwuje też frontend | Rust (axum) — odrzucony: przyrost wydajności bez znaczenia przy tej skali, dużo wolniejszy rozwój. Node/TS (Hono) — gdy zespół nie zna Go |
+| UI | Własne komponenty na **tokenach Material Design 3** (kolor, typografia, kształt, elewacja, ruch). Bez ciężkiej biblioteki UI | Angular Material / MUI – odrzucone jako zbyt ciężkie |
+| Animacje | Wbudowane `svelte/transition` i `svelte/motion` + **View Transitions API** + CSS. Tylko `transform`/`opacity` | – |
+| Język | **TypeScript w 100% frontendu**, skryptów i narzędzi; typy API generowane z OpenAPI | – |
+| Backend | **Go** (stdlib `net/http`, `pgx`, `sqlc`) – jeden statyczny plik binarny, który serwuje też frontend | Rust (axum) – odrzucony: przyrost wydajności bez znaczenia przy tej skali, dużo wolniejszy rozwój. Node/TS (Hono) – gdy zespół nie zna Go |
 | Baza danych | **PostgreSQL 16+** | Supabase **wyłącznie jako hosting Postgresa**. Firebase odrzucony |
 | Realtime | **Server-Sent Events** + Postgres `LISTEN/NOTIFY` (rozsyłanie między instancjami) | WebSocket (`coder/websocket`), gdyby pojawiła się gra wymagająca komunikacji klient→serwer w czasie rzeczywistym |
 | Uwierzytelnianie | **Konto gościa od pierwszego uruchomienia** → opcjonalny upgrade: e-mail + 6-cyfrowy kod (bez haseł) → później Google / konto uczelniane Microsoft 365 | Passkeys (WebAuthn) w fazie 2 |
-| Sesje | **Sesje po stronie serwera** (Postgres), cookie `__Host-` HttpOnly Secure SameSite=Lax. Bez JWT | — |
-| QR obecności | **Rotujący kod HMAC** (zmiana co 30 s) wyświetlany przez stację. Statyczny wydruk jako tryb awaryjny | — |
-| Skaner QR | Natywne **`BarcodeDetector`**, a gdy go brak (iOS, Firefox) — leniwie ładowany polyfill `barcode-detector` (zxing-wasm) | `jsQR` (mniejszy, wolniejszy) — wybór po pomiarze w M1 |
-| Awatar | Filtr **pixel-art liczony na urządzeniu** (Canvas). Na serwer trafia tylko wynik ~64×64 px; zdjęcie nigdy nie opuszcza telefonu | Stylizacja AI po stronie serwera — poza MVP (koszt, RODO) |
+| Sesje | **Sesje po stronie serwera** (Postgres), cookie `__Host-` HttpOnly Secure SameSite=Lax. Bez JWT | – |
+| QR obecności | **Rotujący kod HMAC** (zmiana co 30 s) wyświetlany przez stację. Statyczny wydruk jako tryb awaryjny | – |
+| Skaner QR | Natywne **`BarcodeDetector`**, a gdy go brak (iOS, Firefox) – leniwie ładowany polyfill `barcode-detector` (zxing-wasm) | `jsQR` (mniejszy, wolniejszy) – wybór po pomiarze w M1 |
+| Awatar | Filtr **pixel-art liczony na urządzeniu** (Canvas). Na serwer trafia tylko wynik ~64×64 px; zdjęcie nigdy nie opuszcza telefonu | Stylizacja AI po stronie serwera – poza MVP (koszt, RODO) |
 | Baza wiedzy o PL | **Statyczne treści JSON w repozytorium** (wersjonowane, ze źródłem przy każdym fakcie), prerenderowane i dostępne offline | CMS headless, gdy treści ma edytować dział marketingu |
 | Powiadomienia | **Web Push (VAPID)** + powiadomienia w aplikacji przez SSE | E-mail jako trzeci kanał |
 | Hosting | **Jeden obraz Docker** (Go + wbudowany frontend) + Postgres. Pilot: VPS lub PaaS w UE. Produkcja: docelowo infrastruktura PL | Cloud Run (europe-central2) + Cloud SQL |
@@ -80,7 +80,7 @@ publiczna strona karty `/c/{id}` z obrazkiem OG · stylizacja awatara AI · CMS 
 odznaki sezonowe między wydarzeniami.
 
 ### Świadomie poza zakresem
-Funkcje wirtualnego dziekanatu, mLegitymacji, planu zajęć — ma je istniejąca aplikacja **„Kampus Pollub”**.
+Funkcje wirtualnego dziekanatu, mLegitymacji, planu zajęć – ma je istniejąca aplikacja **„Kampus Pollub”**.
 UniQuest do niej linkuje i jej nie dubluje.
 
 ---
@@ -187,9 +187,9 @@ Bez narzędzi monorepo (Nx, Turborepo). Wystarczą `npm workspaces` dla części
 - **Service worker jest wspierany natywnie** (`$service-worker`: lista plików builda do precache), więc Workbox nie jest potrzebny.
 - Pełne wsparcie TypeScript (`svelte-check`), dojrzała dokumentacja, standardowe narzędzia (Vite, Vitest, Playwright).
 
-**Wariant B**: React 19 + Vite + `vite-plugin-pwa` — większa pula programistów, ale większy runtime i animacje wymagałyby dodatkowej biblioteki. Architektura (ApiClient, tokeny, SW, czyste funkcje gry) przenosi się 1:1.
+**Wariant B**: React 19 + Vite + `vite-plugin-pwa` – większa pula programistów, ale większy runtime i animacje wymagałyby dodatkowej biblioteki. Architektura (ApiClient, tokeny, SW, czyste funkcje gry) przenosi się 1:1.
 
-### 5.2 TypeScript — zakres
+### 5.2 TypeScript – zakres
 - 100% kodu frontendu, service workera, skryptów narzędziowych i testów w TS (`strict: true`, `noUncheckedIndexedAccess: true`).
 - Typy DTO API generowane z OpenAPI (zakaz ręcznego pisania typów odpowiedzi).
 - Treści kompendium walidowane JSON Schemą podczas builda (z JSON Schemy powstają też typy TS).
@@ -199,7 +199,7 @@ Bez narzędzi monorepo (Nx, Turborepo). Wystarczą `npm workspaces` dla części
 Runtime (trafia do przeglądarki):
 | Pakiet | Po co | Uwagi |
 |---|---|---|
-| `svelte`, `@sveltejs/kit` | framework | — |
+| `svelte`, `@sveltejs/kit` | framework | – |
 | `barcode-detector` | polyfill standardowego `BarcodeDetector` (zxing-wasm) | ładowany dynamicznie **tylko**, gdy brak natywnego API |
 | Generator QR Nayuki (`qrcodegen`, plik TS dołączony do repo) | rysowanie QR zaproszeń i stacji | referencyjna implementacja, bez zależności |
 
@@ -207,10 +207,10 @@ Dev: `typescript`, `vite`, `vitest`, `@playwright/test`, `svelte-check`, `eslint
 Wszystko inne (IndexedDB, i18n, wyszukiwarka, router, ikony, stan) piszemy sami, bo kod jest mały i prosty.
 Dodanie nowej zależności runtime wymaga uzasadnienia w PR.
 
-### 5.4 Design system — „jasny, przyjazny, material z nutą RPG”
+### 5.4 Design system – „jasny, przyjazny, material z nutą RPG”
 - **Tokeny MD3** jako CSS custom properties: role kolorów (`--md-sys-color-primary`, `on-primary`, `surface`, `surface-container-*`…), skala typografii (display/headline/title/body/label), kształty (corner 4/8/12/16/28 px), elewacja (1–5), stany (hover/focus/pressed jako warstwa).
-- **Paleta** generowana raz (Material Theme Builder / `material-color-utilities` uruchomione jednorazowo, wynik zapisany jako CSS — nie jest zależnością runtime) z koloru bazowego z **księgi znaku PL** (do pozyskania od Centrum Komunikacji i Marketingu; roboczo granat uczelniany). Motyw **jasny jako domyślny**, ciemny dostępny.
-- **Typografia**: Roboto Flex (UI) + font pixelowy **tylko** na nagłówki i liczby statystyk (kandydaci: Pixelify Sans, Silkscreen — warunek: pełne polskie znaki, licencja OFL). Fonty self-hosted, subset latin + latin-ext, `font-display: swap`.
+- **Paleta** generowana raz (Material Theme Builder / `material-color-utilities` uruchomione jednorazowo, wynik zapisany jako CSS – nie jest zależnością runtime) z koloru bazowego z **księgi znaku PL** (do pozyskania od Centrum Komunikacji i Marketingu; roboczo granat uczelniany). Motyw **jasny jako domyślny**, ciemny dostępny.
+- **Typografia**: Roboto Flex (UI) + font pixelowy **tylko** na nagłówki i liczby statystyk (kandydaci: Pixelify Sans, Silkscreen – warunek: pełne polskie znaki, licencja OFL). Fonty self-hosted, subset latin + latin-ext, `font-display: swap`.
 - **Ikony**: Material Symbols (Apache 2.0) jako **sprite SVG tylko z użytymi ikonami** (nie cały font). 8 ikon atrybutów rysujemy sami w pixel-art (SVG).
 - **Elementy RPG** dawkowane: segmentowane paski statystyk, ramka karty postaci, pixelowy awatar, „toast” z +XP. Reszta interfejsu to czytelny Material.
 - **Komponenty bazowe** (własne, ok. 20): Button (filled/tonal/text), IconButton, FAB, Card, NavigationBar, TopAppBar, Slider, Chip, Dialog, BottomSheet, Snackbar, TextField, Switch, ProgressBar (liniowy, segmentowy), List, Tabs, Avatar, Badge, Skeleton.
@@ -227,7 +227,7 @@ Zgodnie z MD3 motion:
 | `--motion-duration-long` | 450–600 ms | wyłącznie odsłonięcie karty i level-up |
 
 Reguły: animujemy tylko `transform` i `opacity` (kompozytor GPU, brak reflow). Przejścia ekranów przez
-**View Transitions API** (progresywnie — bez wsparcia po prostu brak animacji). Liczniki statystyk przez
+**View Transitions API** (progresywnie – bez wsparcia po prostu brak animacji). Liczniki statystyk przez
 `svelte/motion` `Tween`. **`prefers-reduced-motion: reduce` wyłącza wszystko poza zmianą opacity.**
 Animacja nigdy nie blokuje interakcji. Budżet: 60 fps na telefonie klasy Moto G.
 
@@ -235,16 +235,16 @@ Animacja nigdy nie blokuje interakcji. Budżet: 60 fps na telefonie klasy Moto G
 - JS początkowy (powłoka aplikacji) ≤ **80 KB gzip**, każda trasa ≤ 50 KB gzip. Polyfill skanera poza budżetem (ładowany warunkowo).
 - Lighthouse mobile (profil Moto G Power / Slow 4G): Performance ≥ 95, Accessibility ≥ 95, Best Practices ≥ 95.
 - LCP ≤ 2,0 s · INP ≤ 200 ms · CLS ≤ 0,05.
-- Pixelizacja awatara ≤ 300 ms. Od wykrycia QR do ekranu oceny ≤ 300 ms (bez czekania na sieć — optymistycznie).
+- Pixelizacja awatara ≤ 300 ms. Od wykrycia QR do ekranu oceny ≤ 300 ms (bez czekania na sieć – optymistycznie).
 
 ### 5.7 Offline i service worker
 - **Precache**: powłoka aplikacji, fonty, sprite ikon, treści kompendium (JSON + prerenderowane strony), mapa SVG; polyfill skanera dociągany w tle po pierwszym uruchomieniu na przeglądarkach bez `BarcodeDetector`.
 - **API GET** (profil, agenda): network-first z fallbackiem do cache.
-- **Kolejka skanów**: skan offline trafia do IndexedDB `{payload, scannedAtClient, rating}` i jest wysyłany przy `online`, przy starcie aplikacji i co 30 s. UI pokazuje „Zapisano — wyślemy, gdy wróci zasięg”.
+- **Kolejka skanów**: skan offline trafia do IndexedDB `{payload, scannedAtClient, rating}` i jest wysyłany przy `online`, przy starcie aplikacji i co 30 s. UI pokazuje „Zapisano – wyślemy, gdy wróci zasięg”.
 - Aktualizacja SW: nowa wersja czeka, a snackbar „Dostępna nowa wersja → Odśwież” pojawia się dopiero poza ekranem skanera.
 
 ### 5.8 Dostępność
-Wymaganie twarde: **WCAG 2.1 AA** — PL jako podmiot publiczny podlega ustawie o dostępności cyfrowej (konieczna jest też deklaracja dostępności). W praktyce: kontrast ≥ 4.5:1, pełna obsługa czytnikiem ekranu (etykiety, role ARIA, kolejność fokusa), cele dotyku ≥ 48 px, suwak oceny obsługiwany klawiaturą i czytnikiem, alternatywa dla QR (ręczne wpisanie kodu), brak informacji przekazywanej wyłącznie kolorem, testy `axe` w Playwright.
+Wymaganie twarde: **WCAG 2.1 AA** – PL jako podmiot publiczny podlega ustawie o dostępności cyfrowej (konieczna jest też deklaracja dostępności). W praktyce: kontrast ≥ 4.5:1, pełna obsługa czytnikiem ekranu (etykiety, role ARIA, kolejność fokusa), cele dotyku ≥ 48 px, suwak oceny obsługiwany klawiaturą i czytnikiem, alternatywa dla QR (ręczne wpisanie kodu), brak informacji przekazywanej wyłącznie kolorem, testy `axe` w Playwright.
 
 ---
 
@@ -255,7 +255,7 @@ Dolny **Navigation Bar (MD3)**: **Bohater** · **Zadania** · **[Skanuj]** (wyr�
 | Trasa | Ekran | Kluczowe elementy |
 |---|---|---|
 | `/` | Start | Gość → onboarding; zalogowany → `/hero` |
-| `/onboarding` | 4 kroki | 1) Witaj (czym jest UniQuest) 2) Pseudonim + zgody 3) Selfie → podgląd pixel-art (lub gotowy awatar) 4) „Twoje statystyki są na zero — ruszaj na kampus!” + instrukcja instalacji (iOS/Android) |
+| `/onboarding` | 4 kroki | 1) Witaj (czym jest UniQuest) 2) Pseudonim + zgody 3) Selfie → podgląd pixel-art (lub gotowy awatar) 4) „Twoje statystyki są na zero – ruszaj na kampus!” + instrukcja instalacji (iOS/Android) |
 | `/hero` | Panel bohatera | Awatar, poziom i pasek XP, 8 statystyk (paski, wartości), „Do karty postaci: 3/5”, ostatnie aktywności, oczekujące oceny |
 | `/scan` | Skaner | Pełny ekran kamery, ramka celownika, latarka (jeśli dostępna), „Wpisz kod ręcznie”, obsługa braku zgody na kamerę |
 | `/scan/rate/[scanId]` | Ocena | Nazwa stacji, suwak 1–5 z etykietami, „Zatwierdź” → animacja przyrostu statystyk, +XP, ewentualny level-up |
@@ -283,13 +283,13 @@ Dolny **Navigation Bar (MD3)**: **Bohater** · **Zadania** · **[Skanuj]** (wyr�
 - Goroutine na połączenie SSE to idiomatyczny i tani model.
 - Jeden statyczny plik binarny (z wbudowanym frontendem) w obrazie distroless ~20 MB, start < 100 ms, łatwe wdrożenie gdziekolwiek.
 
-**Wariant B**: Node.js + Hono + TypeScript — jedyny argument to wspólny język z frontendem. Wybrać, jeśli w zespole nie ma nikogo, kto czuje się pewnie w Go.
+**Wariant B**: Node.js + Hono + TypeScript – jedyny argument to wspólny język z frontendem. Wybrać, jeśli w zespole nie ma nikogo, kto czuje się pewnie w Go.
 
 ### 7.2 Dozwolone zależności Go
 | Moduł | Po co |
 |---|---|
 | `github.com/jackc/pgx/v5` | sterownik PostgreSQL (standard de facto), pula połączeń, LISTEN/NOTIFY |
-| `sqlc` (narzędzie, generuje kod) | typowane zapytania z czystego SQL — bez ORM |
+| `sqlc` (narzędzie, generuje kod) | typowane zapytania z czystego SQL – bez ORM |
 | `github.com/pressly/goose/v3` | migracje SQL (wbudowane przez `embed`) |
 | `github.com/SherClockHolmes/webpush-go` | szyfrowanie i wysyłka Web Push (RFC 8291/8292) |
 | `golang.org/x/time/rate` | limity zapytań (token bucket) |
@@ -297,15 +297,15 @@ Dolny **Navigation Bar (MD3)**: **Bohater** · **Zadania** · **[Skanuj]** (wyr�
 
 ### 7.3 Uwierzytelnianie i sesje
 1. **Gość**: pierwsze uruchomienie → `POST /api/v1/auth/guest` tworzy użytkownika `kind=guest` z losowym pseudonimem (np. „Dzielny Konstruktor 4821”) i sesję. Zero danych osobowych.
-2. **Upgrade e-mail** (opcjonalny — „zapisz postęp, odbierz kartę na maila”): `POST /auth/email/start {email}` → 6-cyfrowy kod (ważny 10 min, maks. 5 prób, hash SHA-256 w bazie) → `POST /auth/email/verify` → e-mail dopięty do **tego samego** użytkownika, więc postęp zostaje. Logowanie na nowym urządzeniu tą samą ścieżką.
-3. **Social login** (faza 2): Google (OIDC); **konto uczelniane Microsoft 365** dla obecnych studentów — wymaga rejestracji aplikacji przez Centrum Informatyczne PL. Facebook pomijamy (kosztowny review aplikacji Meta, niska wartość).
+2. **Upgrade e-mail** (opcjonalny – „zapisz postęp, odbierz kartę na maila”): `POST /auth/email/start {email}` → 6-cyfrowy kod (ważny 10 min, maks. 5 prób, hash SHA-256 w bazie) → `POST /auth/email/verify` → e-mail dopięty do **tego samego** użytkownika, więc postęp zostaje. Logowanie na nowym urządzeniu tą samą ścieżką.
+3. **Social login** (faza 2): Google (OIDC); **konto uczelniane Microsoft 365** dla obecnych studentów – wymaga rejestracji aplikacji przez Centrum Informatyczne PL. Facebook pomijamy (kosztowny review aplikacji Meta, niska wartość).
 4. **Sesja**: token 32 losowe bajty → cookie `__Host-uq_session` (HttpOnly, Secure, SameSite=Lax, Path=/). W bazie trzymamy tylko `SHA-256(token)`. Wygaśnięcie przesuwane: 30 dni, odnawiane przy aktywności (zapis maks. raz na godzinę). Wylogowanie i „wyloguj wszędzie” kasują rekordy.
 5. **CSRF**: SameSite=Lax + kontrola nagłówka `Origin` na wszystkich mutacjach + wymagany nagłówek `X-Requested-With: uniquest`.
 6. **Role**: `participant`, `staff` (przypisany do stacji), `admin`. Rolę nadaje admin, a konto staff musi mieć zweryfikowany e-mail.
 
 ### 7.4 Kody QR
 
-**A. QR obecności (stacja)** — anty-oszustwo bez uciążliwości:
+**A. QR obecności (stacja)** – anty-oszustwo bez uciążliwości:
 - Ekran stacji (`/staff/stations/{id}/display`) co 30 s pobiera z serwera token i rysuje QR. Tablet nie zna sekretu.
 - Treść QR to URL (działa też ze zwykłego aparatu telefonu):
   `https://{host}/q/1.{stationId}.{window}.{mac}`
@@ -313,7 +313,7 @@ Dolny **Navigation Bar (MD3)**: **Bohater** · **Zadania** · **[Skanuj]** (wyr�
 - Akceptujemy `window ∈ {teraz, teraz−1}` (≤ 60 s). Skany z kolejki offline: do **10 min** wstecz (konfigurowalne per wydarzenie, z flagą `queued`).
 - Dodatkowo: stacja musi mieć **otwarte okno skanowania** (staff klika „Otwórz skanowanie” na koniec zajęć lub działa harmonogram sesji), a para **(użytkownik, stacja) jest unikalna** (ograniczenie w bazie).
 - Porównanie MAC w czasie stałym (`hmac.Equal`).
-- **Tryb awaryjny „static”** (wydruk na plakacie bez tabletu): `https://{host}/q/s.{stationId}.{sessionId}.{mac}`. Ważny tylko w oknie sesji i oznaczany niższym poziomem zaufania. Gdyby za ranking były nagrody — tryb statyczny wyłączyć.
+- **Tryb awaryjny „static”** (wydruk na plakacie bez tabletu): `https://{host}/q/s.{stationId}.{sessionId}.{mac}`. Ważny tylko w oknie sesji i oznaczany niższym poziomem zaufania. Gdyby za ranking były nagrody – tryb statyczny wyłączyć.
 - Ręczne wpisanie: 6-znakowy kod pod QR (alfabet bez 0/O/1/I) mapowany na bieżące okno.
 
 **B. QR zaproszenia do drużyny**:
@@ -328,7 +328,7 @@ Dolny **Navigation Bar (MD3)**: **Bohater** · **Zadania** · **[Skanuj]** (wyr�
 |---|---|
 | `POST /auth/guest` | utwórz gościa + sesję |
 | `POST /auth/email/start` · `POST /auth/email/verify` | kod jednorazowy |
-| `POST /auth/logout` · `POST /auth/logout-all` | — |
+| `POST /auth/logout` · `POST /auth/logout-all` | – |
 | `GET /me` · `PATCH /me` | profil (pseudonim, zgody, preferencje) |
 | `PUT /me/avatar` · `DELETE /me/avatar` | PNG ≤ 16 KB, ≤ 128×128 |
 | `GET /me/export` · `DELETE /me` | RODO: eksport JSON, usunięcie konta |
@@ -359,7 +359,7 @@ Błędy: `application/problem+json` (RFC 9457) z kodem domenowym (`qr_expired`, 
 - **Web Push**: klucze VAPID (`uniquest gen-vapid`). Prośba o zgodę **dopiero po akcji użytkownika** („Przypomnij mi” przy zajęciach), nigdy przy starcie. Rodzaje: przypomnienie 10 min przed zapisaną sesją (worker co minutę), „karta postaci odblokowana”, „ktoś dołączył do drużyny”, komunikat organizatora (broadcast z panelu admina, z limitem).
 - Wygasłe subskrypcje (HTTP 404/410) usuwamy automatycznie.
 
-### 7.8 Bezpieczeństwo — lista kontrolna
+### 7.8 Bezpieczeństwo – lista kontrolna
 CSP: `default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; img-src 'self' data: blob:; connect-src 'self'; frame-ancestors 'none'` · HSTS · `Permissions-Policy: camera=(self)` ·
 limity zapytań: `auth/email/start` 3/min/IP i 10/h/e-mail, `scans` 20/min/użytkownik, globalnie per IP · limity rozmiaru body · walidacja wejścia na granicy (pseudonimy: długość, filtr wulgaryzmów, Unicode NFC) ·
 sekrety stacji 32 B losowe, rotowalne · zapytania tylko parametryzowane (sqlc) · logi bez danych osobowych (`slog`, ID zamiast e-maili) · `govulncheck` i `npm audit` w CI · przegląd bezpieczeństwa przed pilotem.
@@ -406,18 +406,18 @@ XP   = Σ_k S_k ;   poziom = 1 + floor( sqrt(XP / 25) )
 
 To realizuje brief („suma punktów z lokalizacji pomnożona przez subiektywną ocenę”), przy czym tablica `M`
 zamiast samego `r` daje 8-krotną różnicę między „nie dla mnie” a „chcę to robić”. Słabo oceniona wizyta
-prawie nie przesuwa profilu, ale nadal liczy się do progu karty. Wariant: `M = [1,2,3,4,5]` (ściśle liniowo) — jedna zmiana konfiguracji.
+prawie nie przesuwa profilu, ale nadal liczy się do progu karty. Wariant: `M = [1,2,3,4,5]` (ściśle liniowo) – jedna zmiana konfiguracji.
 
 Skan bez oceny nie daje punktów (UI przypomina „Oceń 2 aktywności”). Ocenę można zmienić w ciągu 15 min.
 
-### 8.4 Wynik — opis procentowy
+### 8.4 Wynik – opis procentowy
 1. `p_k = S_k / Σ S`.
 2. Wybierz archetypy z `p_k ≥ 15%`, maks. 3, min. 1 (najwyższy).
 3. Renormalizuj do 100% i zaokrąglij do pełnych 5% metodą największych reszt (suma = 100).
 4. Tytuł hybrydowy z pary top-2 (tabela w `content/archetypes.json`, np. Konstruktor+Technomag = **„Mechatronik”**, Konstruktor+Architekt = **„Mistrz Formy”**, Analityk+Strateg = **„Strateg Liczb”**, Technomag+Strażnik Energii = **„Inżynier Sieci Przyszłości”**). Brak pary w tabeli → „Konstruktor-Analityk”.
 5. Opis: *„Twoja ścieżka to w 70% Konstruktor, w 30% Analityk”* + 2–3 zdania z szablonów archetypów.
 
-**Przykład** (5 skanów): WM r=5 (`STR .7 INT .2 KRE .1`), WEiI r=3 (`MAN .6 INT .4`), Hala r=4 (`VIT .7 CHA .3`, skan solo — bez bonusu),
+**Przykład** (5 skanów): WM r=5 (`STR .7 INT .2 KRE .1`), WEiI r=3 (`MAN .6 INT .4`), Hala r=4 (`VIT .7 CHA .3`, skan solo – bez bonusu),
 Biblioteka r=2 (`WIS .6 CHA .4`), WBiA r=4 (`KRE .7 STR .3`)
 → STR 185, KRE 125, VIT 105, INT 80, CHA 65, MAN 60, WIS 30, ENE 0 (Σ 650, XP 650, poziom 6)
 → ≥15%: STR 28,5%, KRE 19,2%, VIT 16,2% → **45% Konstruktor, 30% Architekt, 25% Atleta**, tytuł „Mistrz Formy”.
@@ -483,12 +483,12 @@ Na urządzeniu, w `src/lib/avatar/` (Canvas 2D, bez bibliotek):
 1. Zdjęcie z `<input capture="user">` → `createImageBitmap` → przycięcie do kwadratu (środek, opcjonalnie ręczne przesunięcie).
 2. Zmniejszenie do 48×48 (wygładzanie włączone) → korekta kontrastu i nasycenia.
 3. Kwantyzacja do **stałej palety 16–24 kolorów** (spójny styl wszystkich awatarów, odcienie skóry w palecie) + opcjonalny dithering Floyda–Steinberga (przełącznik).
-4. Kontur 1 px (wykrywanie krawędzi alfa po usunięciu tła — w MVP tło zastępowane jednolitym kolorem klasy przez prosty próg luminancji; segmentacja AI poza MVP).
+4. Kontur 1 px (wykrywanie krawędzi alfa po usunięciu tła – w MVP tło zastępowane jednolitym kolorem klasy przez prosty próg luminancji; segmentacja AI poza MVP).
 5. Powiększenie ×N metodą najbliższego sąsiada (`imageSmoothingEnabled = false`) → PNG ~2–6 KB.
-6. Ramka klasy (wybór 1 z 8, zmienia się po odblokowaniu karty — „ewolucja postaci”).
+6. Ramka klasy (wybór 1 z 8, zmienia się po odblokowaniu karty – „ewolucja postaci”).
 
 Na serwer trafia **tylko** wynikowy PNG (≤ 16 KB, trzymany w Postgresie jako `bytea`, bez S3). Oryginał jest odrzucany.
-Alternatywa bez selfie: kreator z gotowych elementów (fryzura, kolor, akcesoria) — ważne dla osób, które nie chcą zdjęcia.
+Alternatywa bez selfie: kreator z gotowych elementów (fryzura, kolor, akcesoria) – ważne dla osób, które nie chcą zdjęcia.
 
 ---
 
@@ -571,8 +571,8 @@ Supabase może pełnić rolę zarządzanego Postgresa w wariantach B/C (używamy
 ## 15. Demo / proof of concept
 
 Frontend ma interfejs `ApiClient` z dwiema implementacjami wybieranymi podczas builda (`PUBLIC_API_MODE`):
-- `HttpApi` — prawdziwy backend Go.
-- `DemoApi` — „backend w przeglądarce”: IndexedDB + te same czyste funkcje gry (`src/lib/game`) + dane z `content/`. Symuluje stacje, okna QR i boty-członków drużyny.
+- `HttpApi` – prawdziwy backend Go.
+- `DemoApi` – „backend w przeglądarce”: IndexedDB + te same czyste funkcje gry (`src/lib/game`) + dane z `content/`. Symuluje stacje, okna QR i boty-członków drużyny.
 
 Dzięki temu udostępniamy:
 1. **Publiczne klikalne demo na GitHub Pages**: `https://git-maks.github.io/PL-App/`. Pełna ścieżka: onboarding → awatar → skan → ocena → karta → rekomendacje → drużyna → kompendium. Działa na telefonie (HTTPS, kamera). Zawiera stronę **„Arkusz stacji testowych”** z QR do wydruku lub wyświetlenia na drugim ekranie. Wymaga jednorazowo: *Settings → Pages → Source: GitHub Actions* w repozytorium.
@@ -598,7 +598,7 @@ Dzięki temu udostępniamy:
 2. Domena i hosting: czy Centrum Informatyczne udostępni VM (wariant A)?
 3. Docelowe wydarzenie pilotażowe, lista stacji, kto ustala wagi z wydziałami.
 4. Czy przewidziane są nagrody? (decyduje o poziomie zabezpieczeń anty-oszustwo).
-5. Logowanie kontem uczelnianym (Microsoft 365) dla studentów — czy IT PL zarejestruje aplikację?
+5. Logowanie kontem uczelnianym (Microsoft 365) dla studentów – czy IT PL zarejestruje aplikację?
 6. Wersja angielska w MVP czy w fazie 2?
 7. Kto po stronie PL jest właścicielem treści kompendium?
 
@@ -609,7 +609,7 @@ Dzięki temu udostępniamy:
 | Etap | Zakres | Kryterium ukończenia |
 |---|---|---|
 | **M0 Fundamenty** | szkielet repo, CI, OpenAPI v0, tokeny MD3 i komponenty bazowe, powłoka PWA (manifest, SW, ikony), deploy demo na Pages | Lighthouse ≥ 95, instalowalna PWA na Androidzie i iOS |
-| **M1 Pętla gry (demo)** | onboarding, awatar, panel bohatera, skaner + ocena, scoring + golden fixtures, karta + share, rekomendacje, kompendium z pełnymi treściami, mapa, agenda — wszystko na `DemoApi` | pełna ścieżka klikalna na telefonie z publicznego linku |
+| **M1 Pętla gry (demo)** | onboarding, awatar, panel bohatera, skaner + ocena, scoring + golden fixtures, karta + share, rekomendacje, kompendium z pełnymi treściami, mapa, agenda – wszystko na `DemoApi` | pełna ścieżka klikalna na telefonie z publicznego linku |
 | **M2 Backend** | Go API, Postgres, migracje, sesje, gość i e-mail, QR HMAC + panel stacji, kolejka offline, `HttpApi`, Docker Compose | e2e na prawdziwym backendzie zielone, zgodność fixtures Go↔TS |
 | **M3 Zespoły i realtime** | drużyny, zaproszenia QR, SSE, stacje zespołowe, ranking, Web Push, przypomnienia | e2e drużyny w 2 przeglądarkach, push na Androidzie i zainstalowanym iOS |
 | **M4 Admin i gotowość produkcyjna** | panel admina, eksport analityki, RODO (eksport/usunięcie), audyt a11y, test k6, przegląd bezpieczeństwa, instrukcja wdrożenia | gotowość do pilota |
@@ -632,23 +632,23 @@ Zrealizowane etapy M0–M3 oraz większość M4 (szczegóły w `README.md` i `do
 |---|---|
 | PWA (SvelteKit 3, Svelte 5, TS strict) | wszystkie ekrany z §6, MD3 + animacje, offline, instalacja, service worker |
 | Backend Go + PostgreSQL | całe API z OpenAPI (test zgodności tras), sesje, gość + e-mail z łączeniem kont, QR HMAC, okna skanowania, drużyny, SSE, Web Push, przypomnienia, analityka, CSV, RODO |
-| Logika gry | identyczna w TS i Go — 7 golden fixtures (statystyki, poziomy, archetypy, tytuły, rekomendacje) + wektory QR |
+| Logika gry | identyczna w TS i Go – 7 golden fixtures (statystyki, poziomy, archetypy, tytuły, rekomendacje) + wektory QR |
 | Testy | Vitest (25), Go z PostgreSQL i `-race`, Playwright demo (8, w tym kamera i axe/WCAG) i full-stack (2) |
 | Demo | tryb `DemoApi` + workflow GitHub Pages |
 | Wdrożenie | Dockerfile (distroless), Compose + Caddy, Makefile, CI, k6 |
 
 Świadome odstępstwa (uzasadnione prostotą i minimalną liczbą zależności):
 
-1. **Zapytania SQL pisane jawnie w `pgx`** zamiast generowanych przez `sqlc` — przy ~60 zapytaniach skupionych w `internal/app`
+1. **Zapytania SQL pisane jawnie w `pgx`** zamiast generowanych przez `sqlc` – przy ~60 zapytaniach skupionych w `internal/app`
    koszt dodatkowego narzędzia (generator z kompilacją C) przewyższał korzyść. `sqlc` można dołożyć bez zmian schematu.
-2. **Własny migrator (~60 linii)** zamiast `goose` — wbudowane pliki SQL, transakcja na migrację, blokada doradcza.
+2. **Własny migrator (~60 linii)** zamiast `goose` – wbudowane pliki SQL, transakcja na migrację, blokada doradcza.
 3. **Bonus drużynowy**: punkty za stację zespołową naliczane są od razu, a bonus ×1,2 dopisywany całej drużynie w chwili
-   osiągnięcia kworum (zamiast „wstrzymania” skanu) — gracz od razu widzi postęp, a wynik końcowy jest ten sam.
+   osiągnięcia kworum (zamiast „wstrzymania” skanu) – gracz od razu widzi postęp, a wynik końcowy jest ten sam.
 4. **SvelteKit 3**: aliasy `#lib/*` (subpath imports) zamiast `$lib`, moduły `$app/manifest`/`$app/env` w service workerze,
    CSP oparta na hashach generowanych przez SvelteKit + nagłówki bezpieczeństwa z Go.
 5. **Mapa kampusu**: realne współrzędne budynków z OpenStreetMap/Nominatim rzutowane na ilustrowaną mapę SVG; położenie kilku
    obiektów bez adresu w OSM (hala sportowa, stołówka, Spichlerz) jest przybliżone i oznaczone w danych (`approximate: true`).
-6. **Kolor marki**: roboczy granat `#1f5aa6` (księga znaku PL nie jest publicznie dostępna) — zmiana w jednym pliku tokenów.
+6. **Kolor marki**: roboczy granat `#1f5aa6` (księga znaku PL nie jest publicznie dostępna) – zmiana w jednym pliku tokenów.
 
 Do zrobienia po stronie uczelni / w kolejnej fazie: logowanie Google i Microsoft 365, wersja EN, publiczna strona karty z
 obrazkiem OG, testy na fizycznych urządzeniach iOS/Android, konsultacja RODO z IOD, właściwe wagi stacji z wydziałami.

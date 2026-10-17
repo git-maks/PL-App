@@ -12,7 +12,7 @@
       "kind": "workshop",
       "faculty": "WM",
       "poi": "wm",
-      "description": "Zobacz, jak z projektu CAD powstaje gotowa część — od drukarki 3D po frezarkę CNC.",
+      "description": "Zobacz, jak z projektu CAD powstaje gotowa część – od drukarki 3D po frezarkę CNC.",
       "weights": { "STR": 0.7, "INT": 0.2, "KRE": 0.1 },
       "sessions": [{ "start": "10:00", "end": "10:45", "room": "hala laboratoryjna WM" }, { "start": "13:00", "end": "13:45", "room": "hala laboratoryjna WM" }]
     },
@@ -48,7 +48,7 @@
     },
     {
       "slug": "wbia-makiety-vr",
-      "name": "Pracownia architektury — makiety i VR",
+      "name": "Pracownia architektury – makiety i VR",
       "kind": "workshop",
       "faculty": "WBiA",
       "poi": "wbia",
@@ -58,11 +58,11 @@
     },
     {
       "slug": "wisie-oze",
-      "name": "Laboratorium OZE — fotowoltaika i pompy ciepła",
+      "name": "Laboratorium OZE – fotowoltaika i pompy ciepła",
       "kind": "presentation",
       "faculty": "WIŚiE",
       "poi": "wisie",
-      "description": "Jak działa panel PV, magazyn energii i pompa ciepła — z pomiarami na żywo.",
+      "description": "Jak działa panel PV, magazyn energii i pompa ciepła – z pomiarami na żywo.",
       "weights": { "ENE": 0.7, "WIS": 0.2, "MAN": 0.1 },
       "sessions": [{ "start": "10:00", "end": "10:40", "room": "laboratorium OZE" }, { "start": "12:30", "end": "13:10", "room": "laboratorium OZE" }]
     },
@@ -83,13 +83,13 @@
       "kind": "show",
       "faculty": "WMiIT",
       "poi": "wmiit",
-      "description": "Zobacz, jak wygląda włamanie do sieci — i jak się przed nim bronić.",
+      "description": "Zobacz, jak wygląda włamanie do sieci – i jak się przed nim bronić.",
       "weights": { "MAN": 0.6, "INT": 0.4 },
       "sessions": [{ "start": "10:15", "end": "10:45", "room": "laboratorium sieci" }, { "start": "13:15", "end": "13:45", "room": "laboratorium sieci" }]
     },
     {
       "slug": "wmiit-ai-dane",
-      "name": "Matematyka danych — AI w praktyce",
+      "name": "Matematyka danych – AI w praktyce",
       "kind": "presentation",
       "faculty": "WMiIT",
       "poi": "wmiit",
@@ -99,7 +99,7 @@
     },
     {
       "slug": "cizt-escape-room",
-      "name": "Biblioteka i CIZT — escape room z wiedzą",
+      "name": "Biblioteka i CIZT – escape room z wiedzą",
       "kind": "workshop",
       "poi": "cizt",
       "description": "Drużynowy escape room w Bibliotece: szyfry, katalogi i źródła wiedzy.",
@@ -109,7 +109,7 @@
     },
     {
       "slug": "sport-sztafeta",
-      "name": "Centrum Sportowe — sztafeta drużynowa",
+      "name": "Centrum Sportowe – sztafeta drużynowa",
       "kind": "workshop",
       "poi": "sport",
       "description": "Drużynowe wyzwanie sportowe z AZS Politechnika Lubelska.",
@@ -119,19 +119,19 @@
     },
     {
       "slug": "rektorat-qa",
-      "name": "Rektorat — jak działa uczelnia (Q&A)",
+      "name": "Rektorat – jak działa uczelnia (Q&A)",
       "kind": "presentation",
       "poi": "rektorat",
-      "description": "Rekrutacja, stypendia, wymiany zagraniczne — pytania do zespołu uczelni.",
+      "description": "Rekrutacja, stypendia, wymiany zagraniczne – pytania do zespołu uczelni.",
       "weights": { "CHA": 0.5, "WIS": 0.5 },
       "sessions": [{ "start": "11:00", "end": "11:30", "room": "sala senacka" }, { "start": "14:00", "end": "14:30", "room": "sala senacka" }]
     },
     {
       "slug": "centech-laboratoria",
-      "name": "CEN-TECH — laboratoria badawcze",
+      "name": "CEN-TECH – laboratoria badawcze",
       "kind": "show",
       "poi": "centech",
-      "description": "Mikroskopy, kamery ultraszybkie i badania materiałów — zajrzyj do laboratoriów.",
+      "description": "Mikroskopy, kamery ultraszybkie i badania materiałów – zajrzyj do laboratoriów.",
       "weights": { "WIS": 0.5, "STR": 0.3, "MAN": 0.2 },
       "sessions": [{ "start": "10:30", "end": "11:00", "room": "CEN-TECH" }, { "start": "13:30", "end": "14:00", "room": "CEN-TECH" }]
     }

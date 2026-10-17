@@ -22,7 +22,7 @@ export async function uuidFrom(name: string): Promise<string> {
 	return `${h.slice(0, 8)}-${h.slice(8, 12)}-${h.slice(12, 16)}-${h.slice(16, 20)}-${h.slice(20)}`;
 }
 
-/** Per-station secret for the demo. Public by design — the demo has no secrets to protect. */
+/** Per-station secret for the demo. Public by design – the demo has no secrets to protect. */
 export function stationSecret(slug: string): Promise<Uint8Array> {
 	return sha256('uniquest-demo-secret|' + slug);
 }

@@ -15,7 +15,8 @@ import (
 
 const inviteTTL = 15 * time.Minute
 
-var allowedEmblems = map[string]bool{"shield": true, "star": true, "science": true, "lightbulb": true, "sports_soccer": true, "casino": true, "public": true, "military_tech": true}
+// Keep in sync with apps/web/src/lib/game/emblems.ts.
+var allowedEmblems = map[string]bool{"shield": true, "star": true, "rocket_launch": true, "bolt": true, "science": true, "psychology": true, "memory": true, "smart_toy": true, "code": true, "satellite_alt": true, "lightbulb": true, "eco": true, "forest": true, "public": true, "pets": true, "owl": true, "palette": true, "music_note": true, "sports_soccer": true, "sports_esports": true, "casino": true, "chess_knight": true, "crown": true, "military_tech": true}
 
 func (s *Service) teamDTO(ctx context.Context, q interface {
 	QueryRow(context.Context, string, ...any) pgx.Row
@@ -384,7 +385,7 @@ func (s *Service) checkTeamCompletion(ctx context.Context, ev Event, teamID stri
 		return
 	}
 	for _, x := range completed {
-		s.Notify(ctx, x.userID, "team", "Zadanie drużynowe zaliczone!", st.Name+" — dostajecie bonus ×1,2.", "/hero")
+		s.Notify(ctx, x.userID, "team", "Zadanie drużynowe zaliczone!", st.Name+" – dostajecie bonus ×1,2.", "/hero")
 		if sc, err := s.scanByID(ctx, x.userID, x.scanID); err == nil {
 			s.Pub.Publish(ctx, []string{x.userID}, "scan.confirmed", sc)
 		}

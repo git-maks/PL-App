@@ -41,7 +41,7 @@
     {
       "id": "centech",
       "n": 3,
-      "name": "CEN-TECH — Centrum Technologii Informatycznych i Lingwistyki Technicznej",
+      "name": "CEN-TECH – Centrum Technologii Informatycznych i Lingwistyki Technicznej",
       "address": "ul. Nadbystrzycka 38B",
       "kind": "lab",
       "lat": 51.23631,
@@ -171,7 +171,7 @@
     {
       "id": "cizt",
       "n": 13,
-      "name": "Centrum Innowacji i Zaawansowanych Technologii („Rdzewiak”) — Biblioteka",
+      "name": "Centrum Innowacji i Zaawansowanych Technologii („Rdzewiak”) – Biblioteka",
       "address": "ul. Nadbystrzycka 36C",
       "kind": "library",
       "lat": 51.2362,

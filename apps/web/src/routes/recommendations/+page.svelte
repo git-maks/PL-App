@@ -39,7 +39,7 @@
 			<Card variant="tertiary"><p class="body-medium">Oceń kilka aktywności, a dopasujemy kierunki i koła naukowe do Twojego profilu.</p></Card>
 		{:else}
 			{#if !character.unlocked}
-				<Card variant="tertiary"><p class="body-medium">To wstępne dopasowanie — stanie się dokładniejsze z każdą oceną.</p></Card>
+				<Card variant="tertiary"><p class="body-medium">To wstępne dopasowanie – stanie się dokładniejsze z każdą oceną.</p></Card>
 			{/if}
 			<p class="body-medium muted">Dopasowanie liczymy, porównując Twoje statystyki z profilem kierunku (podobieństwo cosinusowe). Procent pokazuje, jak bardzo się pokrywają.</p>
 

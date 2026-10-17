@@ -7,7 +7,7 @@
     "poi": "wm",
     "website": "https://wm.pollub.pl",
     "founded": 1953,
-    "description": "Najstarszy wydział uczelni — powstał razem z nią w 1953 r. Kształci konstruktorów, mechatroników, specjalistów od pojazdów, transportu, robotyzacji i inżynierii biomedycznej. Dyscyplina inżynieria mechaniczna uzyskała w ewaluacji 2022 najwyższą kategorię A+.",
+    "description": "Najstarszy wydział uczelni – powstał razem z nią w 1953 r. Kształci konstruktorów, mechatroników, specjalistów od pojazdów, transportu, robotyzacji i inżynierii biomedycznej. Dyscyplina inżynieria mechaniczna uzyskała w ewaluacji 2022 najwyższą kategorię A+.",
     "vector": {
       "STR": 0.7,
       "MAN": 0.15,
@@ -62,7 +62,7 @@
     "poi": "weii",
     "website": "https://weii.pollub.pl",
     "founded": 1964,
-    "description": "Wywodzi się z Wydziału Elektrycznego założonego w 1964 r.; od 2003 r. nosi obecną nazwę. Elektrotechnika, informatyka, inżynieria multimediów i zastosowania informatyki w elektrotechnice — od wysokich napięć po aplikacje mobilne.",
+    "description": "Wywodzi się z Wydziału Elektrycznego założonego w 1964 r.; od 2003 r. nosi obecną nazwę. Elektrotechnika, informatyka, inżynieria multimediów i zastosowania informatyki w elektrotechnice – od wysokich napięć po aplikacje mobilne.",
     "vector": {
       "MAN": 0.7,
       "INT": 0.2,
@@ -192,7 +192,7 @@
     "poi": "wz",
     "website": "https://wz.pollub.pl",
     "founded": 1988,
-    "description": "Wywodzi się z Wydziału Zarządzania i Podstaw Techniki (1988). Zarządzanie, logistyka, finanse, marketing oraz sztuczna inteligencja w biznesie — także w języku angielskim (AI in business solutions).",
+    "description": "Wywodzi się z Wydziału Zarządzania i Podstaw Techniki (1988). Zarządzanie, logistyka, finanse, marketing oraz sztuczna inteligencja w biznesie – także w języku angielskim (AI in business solutions).",
     "vector": {
       "CHA": 0.7,
       "INT": 0.3
@@ -211,7 +211,7 @@
       "menedzerow",
       "zarzadzania-produkcja",
       "zarzadzania-finansami-profit",
-      "managerow-sztucznej-inteligencji-moai"
+      "sztucznej-inteligencji-moai"
     ],
     "sources": [
       {

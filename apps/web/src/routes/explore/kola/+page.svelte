@@ -16,12 +16,12 @@
 
 <svelte:head>
 	<title>Koła naukowe Politechniki Lubelskiej · UniQuest</title>
-	<meta name="description" content="Studenckie koła naukowe Politechniki Lubelskiej — od dronów i rakiet po AI i architekturę." />
+	<meta name="description" content="Studenckie koła naukowe Politechniki Lubelskiej – od dronów i rakiet po AI i architekturę." />
 </svelte:head>
 
 <TopAppBar title="Koła naukowe" back={href('/explore')} />
 <div class="page">
-	<p class="body-medium muted">Koła naukowe to miejsca, gdzie studenci budują drony, roboty i bolidy, piszą oprogramowanie i jeżdżą na konkursy — często już od pierwszego roku.</p>
+	<p class="body-medium muted">Koła naukowe to miejsca, gdzie studenci budują drony, roboty i bolidy, piszą oprogramowanie i jeżdżą na konkursy – często już od pierwszego roku.</p>
 	<TextField type="search" label="Filtruj (np. drony, AI, architektura)" bind:value={q} autocomplete="off" />
 	{#each groups as g (g.f.code)}
 		<h2 class="section-title">{g.f.name}</h2>

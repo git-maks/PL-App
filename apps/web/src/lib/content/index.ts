@@ -1,6 +1,6 @@
 /*
  * Knowledge-base catalogue (faculties, programmes, clubs, campus, …). Heavier than the game
- * content — import it from screens that need it, not from shared components.
+ * content – import it from screens that need it, not from shared components.
  */
 import facultiesJson from '#content/faculties.json';
 import programsJson from '#content/programs.json';

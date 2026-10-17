@@ -14,7 +14,7 @@
 	const c = $derived(data.club);
 	const faculty = $derived(facultyByCode[c.faculty]);
 	const attrs = $derived(STAT_CODES.filter((s) => (c.vector[s] ?? 0) > 0).sort((a, b) => (c.vector[b] ?? 0) - (c.vector[a] ?? 0)));
-	const related = $derived(recommend({ ...emptyStats(), ...c.vector }, programs, 3));
+	const related = $derived(c.programs?.map((slug) => ({ slug })) ?? recommend({ ...emptyStats(), ...c.vector }, programs, 3));
 </script>
 
 <svelte:head><title>{c.name} · UniQuest</title></svelte:head>
@@ -32,7 +32,14 @@
 			<span class="stat-chip label-medium" style="--c: {statByCode[s].color}"><StatIcon code={s} size={16} />{statByCode[s].archetype}</span>
 		{/each}
 	</div>
-	<p class="body-medium muted">Koła działają przy katedrach wydziału — o dołączenie najłatwiej zapytać opiekuna koła lub starszych studentów na zajęciach. Aktualne informacje znajdziesz na stronie wydziału.</p>
+	{#if c.description}<p class="body-large">{c.description}</p>{/if}
+	<p class="body-medium muted">
+		{#if c.website}
+			O dołączenie najłatwiej zapytać przez stronę koła albo starszych studentów na zajęciach.
+		{:else}
+			Koła działają przy katedrach wydziału – o dołączenie najłatwiej zapytać opiekuna koła lub starszych studentów na zajęciach. Aktualne informacje znajdziesz na stronie wydziału.
+		{/if}
+	</p>
 	<h2 class="section-title">Pokrewne kierunki</h2>
 	<Card variant="filled" padding={false}>
 		{#each related as r (r.slug)}
@@ -41,7 +48,11 @@
 		{/each}
 	</Card>
 	<Card variant="outlined" padding={false}>
-		<ListItem icon="public" headline="Strona wydziału" supporting={faculty?.website} href={faculty?.website} external />
+		{#if c.website}
+			<ListItem icon="public" headline="Strona koła" supporting={c.website.replace(/^https?:\/\//, '')} href={c.website} external />
+		{:else}
+			<ListItem icon="public" headline="Strona wydziału" supporting={faculty?.website} href={faculty?.website} external />
+		{/if}
 	</Card>
 	<Sources sources={c.sources} verifiedAt={c.verifiedAt} />
 </div>

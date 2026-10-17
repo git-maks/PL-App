@@ -69,7 +69,7 @@
   "hybrids": {
     "STR+INT": {
       "title": "Inżynier Precyzji",
-      "description": "Łączysz siłę konstruktora z chłodną analizą — obliczysz, zaprojektujesz i zbudujesz."
+      "description": "Łączysz siłę konstruktora z chłodną analizą – obliczysz, zaprojektujesz i zbudujesz."
     },
     "STR+MAN": {
       "title": "Mechatronik",
@@ -77,7 +77,7 @@
     },
     "STR+KRE": {
       "title": "Mistrz Formy",
-      "description": "Masz zmysł konstruktora i oko projektanta — tworzysz rzeczy solidne i piękne."
+      "description": "Masz zmysł konstruktora i oko projektanta – tworzysz rzeczy solidne i piękne."
     },
     "STR+ENE": {
       "title": "Energomechanik",
@@ -85,7 +85,7 @@
     },
     "STR+CHA": {
       "title": "Kapitan Produkcji",
-      "description": "Rozumiesz maszyny i ludzi — idealny lider hali produkcyjnej i projektów inżynierskich."
+      "description": "Rozumiesz maszyny i ludzi – idealny lider hali produkcyjnej i projektów inżynierskich."
     },
     "STR+WIS": {
       "title": "Wynalazca",
@@ -93,7 +93,7 @@
     },
     "STR+VIT": {
       "title": "Tytan Warsztatu",
-      "description": "Niezmordowany praktyk — najlepiej uczysz się, działając rękami."
+      "description": "Niezmordowany praktyk – najlepiej uczysz się, działając rękami."
     },
     "INT+MAN": {
       "title": "Haker Algorytmów",
@@ -101,7 +101,7 @@
     },
     "INT+KRE": {
       "title": "Projektant Modeli",
-      "description": "Tworzysz modele — matematyczne i przestrzenne — które pomagają zrozumieć świat."
+      "description": "Tworzysz modele – matematyczne i przestrzenne – które pomagają zrozumieć świat."
     },
     "INT+ENE": {
       "title": "Analityk Klimatu",
@@ -109,7 +109,7 @@
     },
     "INT+CHA": {
       "title": "Strateg Liczb",
-      "description": "Finanse, dane i decyzje biznesowe — widzisz trend, zanim stanie się oczywisty."
+      "description": "Finanse, dane i decyzje biznesowe – widzisz trend, zanim stanie się oczywisty."
     },
     "INT+WIS": {
       "title": "Uczony",
@@ -125,19 +125,19 @@
     },
     "MAN+ENE": {
       "title": "Inżynier Sieci Przyszłości",
-      "description": "Inteligentne sieci energetyczne, OZE i AI — budujesz energetykę jutra."
+      "description": "Inteligentne sieci energetyczne, OZE i AI – budujesz energetykę jutra."
     },
     "MAN+CHA": {
       "title": "Technolider",
-      "description": "Rozumiesz technologię i potrafisz ją sprzedać — lider zespołów IT i startupów."
+      "description": "Rozumiesz technologię i potrafisz ją sprzedać – lider zespołów IT i startupów."
     },
     "MAN+WIS": {
       "title": "Cyfrowy Odkrywca",
-      "description": "Eksperymentujesz z technologią, żeby odkrywać nowe rzeczy — badania i innowacje."
+      "description": "Eksperymentujesz z technologią, żeby odkrywać nowe rzeczy – badania i innowacje."
     },
     "MAN+VIT": {
       "title": "Cyberatleta",
-      "description": "Szybki, zwinny i techniczny — e-sport, drony i systemy czasu rzeczywistego."
+      "description": "Szybki, zwinny i techniczny – e-sport, drony i systemy czasu rzeczywistego."
     },
     "KRE+ENE": {
       "title": "Ekoarchitekt",
@@ -149,19 +149,19 @@
     },
     "KRE+WIS": {
       "title": "Strażnik Dziedzictwa",
-      "description": "Szanujesz historię i nadajesz jej nowe życie — konserwacja, rewitalizacja, architektura."
+      "description": "Szanujesz historię i nadajesz jej nowe życie – konserwacja, rewitalizacja, architektura."
     },
     "KRE+VIT": {
       "title": "Twórca w Ruchu",
-      "description": "Tworzysz w biegu — projekty, wydarzenia, działanie."
+      "description": "Tworzysz w biegu – projekty, wydarzenia, działanie."
     },
     "ENE+CHA": {
       "title": "Lider Zielonej Transformacji",
-      "description": "Organizujesz zmianę na lepsze — energia, środowisko i ludzie."
+      "description": "Organizujesz zmianę na lepsze – energia, środowisko i ludzie."
     },
     "ENE+WIS": {
       "title": "Badacz Natury",
-      "description": "Woda, powietrze, materiały — badasz procesy, od których zależy nasze życie."
+      "description": "Woda, powietrze, materiały – badasz procesy, od których zależy nasze życie."
     },
     "ENE+VIT": {
       "title": "Strażnik Żywiołów",
@@ -169,11 +169,11 @@
     },
     "CHA+WIS": {
       "title": "Mędrzec Organizacji",
-      "description": "Wiedza i ludzie — doradzasz, organizujesz i uczysz innych."
+      "description": "Wiedza i ludzie – doradzasz, organizujesz i uczysz innych."
     },
     "CHA+VIT": {
       "title": "Kapitan Drużyny",
-      "description": "Zespół idzie za Tobą — sport, organizacja i przywództwo."
+      "description": "Zespół idzie za Tobą – sport, organizacja i przywództwo."
     },
     "WIS+VIT": {
       "title": "Wędrowny Badacz",

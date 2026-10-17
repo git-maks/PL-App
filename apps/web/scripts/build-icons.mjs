@@ -13,7 +13,9 @@ const ICONS = [
 	'menu_book', 'account_circle', 'mail', 'apartment', 'sports_soccer', 'lightbulb', 'casino', 'tune', 'bar_chart',
 	'admin_panel_settings', 'play_arrow', 'stop', 'event', 'ios_share', 'add_box', 'zoom_in',
 	'zoom_out', 'my_location', 'filter_list', 'arrow_forward', 'shield', 'visibility', 'public',
-	'link', 'face', 'image', 'upload', 'restart_alt', 'leaderboard', 'military_tech', 'hourglass_empty', 'how_to_reg', 'campaign', 'trophy', 'keyboard_arrow_down', 'stars', 'call', 'wand_stars'
+	'link', 'face', 'image', 'upload', 'restart_alt', 'leaderboard', 'military_tech', 'hourglass_empty', 'how_to_reg', 'campaign', 'trophy', 'keyboard_arrow_down', 'stars', 'call', 'wand_stars',
+	'rocket_launch', 'bolt', 'psychology', 'memory', 'smart_toy', 'code', 'satellite_alt', 'eco', 'forest', 'pets', 'owl',
+	'palette', 'music_note', 'sports_esports', 'chess_knight', 'crown'
 ];
 
 const dir = fileURLToPath(new URL('../node_modules/@material-symbols/svg-400/rounded/', import.meta.url));

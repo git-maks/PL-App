@@ -75,7 +75,7 @@
 			<Card variant="tertiary">
 				<div class="row">
 					<Icon name="wifi_off" />
-					<p class="body-medium">Brak zasięgu — skan zapisaliśmy na telefonie i wyślemy, gdy wróci internet.</p>
+					<p class="body-medium">Brak zasięgu – skan zapisaliśmy na telefonie i wyślemy, gdy wróci internet.</p>
 				</div>
 			</Card>
 			{#if queuedSaved}
