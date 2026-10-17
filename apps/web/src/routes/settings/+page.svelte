@@ -89,6 +89,7 @@
 			const r = await enablePush(app.api).catch(() => 'unsupported' as const);
 			push = r === 'enabled';
 			if (r === 'denied') toast('Powiadomienia są zablokowane w ustawieniach przeglądarki.');
+			else if (r === 'dismissed') return;
 			else if (r === 'unsupported') toast('To urządzenie nie obsługuje powiadomień push. Na iPhonie zainstaluj aplikację na ekranie głównym.');
 			else if (r === 'unavailable') toast('Powiadomienia push nie są dostępne w tej wersji – będziesz je widzieć w aplikacji.');
 		} else {

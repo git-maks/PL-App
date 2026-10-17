@@ -50,7 +50,9 @@ test('manual code from the station display is accepted', async ({ page }) => {
 	const code = (await page.locator('.code').first().textContent())!.trim();
 	expect(code).toMatch(/^[A-Z2-9]{6}$/);
 	await page.goto('/scan');
-	await page.getByRole('button', { name: 'Wpisz kod ręcznie' }).click();
+	// Our own modal explains the camera before the browser asks; choose the manual code instead.
+	const cameraModal = page.getByRole('dialog', { name: 'Dostęp do aparatu' });
+	await cameraModal.getByRole('button', { name: 'Wpisz kod ręcznie' }).click();
 	await page.getByRole('textbox', { name: 'Kod stacji' }).fill(code);
 	await page.getByRole('button', { name: 'Zatwierdź', exact: true }).click();
 	await page.waitForURL(/\/scan\/rate\?id=/);

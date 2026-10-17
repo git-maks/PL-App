@@ -1,9 +1,12 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import type { IconName } from '#lib/icons/paths';
+	import Icon from './Icon.svelte';
 
 	let {
 		open = $bindable(false),
 		title,
+		icon,
 		sheet = false,
 		children,
 		actions,
@@ -11,6 +14,8 @@
 	}: {
 		open?: boolean;
 		title?: string;
+		/** MD3 hero icon above a centred title. */
+		icon?: IconName;
 		/** Render as an MD3 bottom sheet instead of a centred dialog. */
 		sheet?: boolean;
 		children: Snippet;
@@ -39,7 +44,8 @@
 <dialog bind:this={el} class:sheet onclose={handleClose} onclick={backdrop} aria-labelledby={title ? titleId : undefined}>
 	<div class="content">
 		{#if sheet}<div class="handle" aria-hidden="true"></div>{/if}
-		{#if title}<h2 id={titleId} class="headline-small">{title}</h2>{/if}
+		{#if icon}<span class="hero" aria-hidden="true"><Icon name={icon} size={24} /></span>{/if}
+		{#if title}<h2 id={titleId} class="headline-small" class:centered={!!icon}>{title}</h2>{/if}
 		<div class="body">{@render children()}</div>
 		{#if actions}<div class="actions">{@render actions()}</div>{/if}
 	</div>
@@ -66,6 +72,14 @@
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
+	}
+	.hero {
+		align-self: center;
+		color: var(--md-sys-color-secondary);
+		margin-bottom: -4px;
+	}
+	.centered {
+		text-align: center;
 	}
 	.body {
 		color: var(--md-sys-color-on-surface-variant);

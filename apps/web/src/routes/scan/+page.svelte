@@ -12,8 +12,9 @@
 	import TextField from '#lib/components/TextField.svelte';
 	import AuthGate from '#lib/components/AuthGate.svelte';
 	import Icon from '#lib/components/Icon.svelte';
+	import { ask } from '#lib/state/modal.svelte';
 
-	type Status = 'starting' | 'scanning' | 'working' | 'error';
+	type Status = 'starting' | 'scanning' | 'working' | 'error' | 'off';
 	let video: HTMLVideoElement | undefined = $state();
 	let camera: Camera | null = null;
 	let stopLoop: (() => void) | null = null;
@@ -35,6 +36,48 @@
 		other: 'Nie udało się uruchomić aparatu. Spróbuj ponownie albo wpisz kod ręcznie.'
 	};
 
+	const CAMERA_OK = 'uq-camera-ok';
+
+	/** True when the camera may start without explaining first (already allowed, or already decided). */
+	async function cameraDecided(): Promise<boolean> {
+		try {
+			if (localStorage.getItem(CAMERA_OK)) return true;
+		} catch {
+			/* storage unavailable */
+		}
+		try {
+			const st = await navigator.permissions?.query({ name: 'camera' as PermissionName });
+			// "denied" too: start() then shows how to re-enable the camera.
+			if (st && st.state !== 'prompt') return true;
+		} catch {
+			/* Permissions API without "camera" (e.g. Firefox) */
+		}
+		return false;
+	}
+
+	let consentPending = false;
+	/** Starts the camera, first explaining it in our own modal before the browser's permission prompt. */
+	async function begin() {
+		if (consentPending || status === 'off') return;
+		if (!(await cameraDecided())) {
+			consentPending = true;
+			const ok = await ask({
+				icon: 'photo_camera',
+				title: 'Dostęp do aparatu',
+				body: 'Aparat posłuży tylko do odczytania kodu QR stacji – obraz nie jest nigdzie zapisywany ani wysyłany. Za chwilę przeglądarka poprosi o zgodę.',
+				confirm: 'Włącz aparat',
+				cancel: 'Wpisz kod ręcznie'
+			});
+			consentPending = false;
+			if (!ok) {
+				status = 'off';
+				manualOpen = true;
+				return;
+			}
+		}
+		await start();
+	}
+
 	async function start() {
 		if (!video) return;
 		status = 'starting';
@@ -44,6 +87,11 @@
 			const [cam, detector] = await Promise.all([openCamera(video), loadDetector()]);
 			camera = cam;
 			torchSupported = cam.torchSupported;
+			try {
+				localStorage.setItem(CAMERA_OK, '1');
+			} catch {
+				/* storage unavailable */
+			}
 			status = 'scanning';
 			stopLoop = frameLoop(video, 8, async () => {
 				if (status !== 'scanning' || !video) return;
@@ -126,13 +174,13 @@
 	onMount(() => {
 		const onVisibility = () => {
 			if (document.visibilityState === 'hidden') stop();
-			else if (!camera && status !== 'working') void start();
+			else if (!camera && status !== 'working') void begin();
 		};
 		document.addEventListener('visibilitychange', onVisibility);
 		return () => document.removeEventListener('visibilitychange', onVisibility);
 	});
 	$effect(() => {
-		if (video && app.me && !camera) void start();
+		if (video && app.me && !camera) void begin();
 	});
 	onDestroy(stop);
 </script>
@@ -160,7 +208,15 @@
 		</div>
 
 		<div class="bottom">
-			{#if status === 'error' && cameraError}
+			{#if status === 'off'}
+				<div class="panel">
+					<Icon name="photo_camera" />
+					<p class="body-medium">Aparat jest wyłączony. Możesz wpisać kod ręcznie albo włączyć aparat.</p>
+					<div class="row wrap">
+						<Button variant="tonal" icon="photo_camera" onclick={() => ((status = 'starting'), void start())}>Włącz aparat</Button>
+					</div>
+				</div>
+			{:else if status === 'error' && cameraError}
 				<div class="panel">
 					<Icon name="photo_camera" />
 					<p class="body-medium">{CAMERA_HELP[cameraError]}</p>

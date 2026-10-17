@@ -116,13 +116,19 @@ self.addEventListener('push', (event) => {
 		data = { body: event.data?.text() };
 	}
 	event.waitUntil(
-		self.registration.showNotification(data.title ?? 'UniQuest', {
-			body: data.body ?? '',
-			icon: BASE + '/icons/icon-192.png',
-			badge: BASE + '/icons/badge-72.png',
-			tag: data.tag,
-			data: { url: data.url ?? BASE + '/hero' }
-		})
+		(async () => {
+			// While the app is on screen it shows the same notification itself (live event stream),
+			// so the system notification is only for when the app is closed or in the background.
+			const windows = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+			if (windows.some((c) => c.visibilityState === 'visible')) return;
+			await self.registration.showNotification(data.title ?? 'UniQuest', {
+				body: data.body ?? '',
+				icon: BASE + '/icons/icon-192.png',
+				badge: BASE + '/icons/badge-72.png',
+				tag: data.tag,
+				data: { url: data.url ?? BASE + '/hero' }
+			});
+		})()
 	);
 });
 

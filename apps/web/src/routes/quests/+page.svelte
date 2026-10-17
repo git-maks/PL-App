@@ -61,7 +61,8 @@
 		try {
 			const on = await app.toggleReminder(sessionId);
 			if (on) {
-				const res = await enablePush(app.api).catch(() => 'unsupported' as const);
+				// Ask about push once; after "Nie teraz" reminders stay in-app only (settings can still enable push).
+				const res = await enablePush(app.api, { skipIfDismissed: true }).catch(() => 'unsupported' as const);
 				toast(res === 'enabled' ? 'Przypomnimy Ci 10 minut przed startem.' : 'Przypomnienie zapisane – zobaczysz je w aplikacji.');
 			}
 		} catch (e) {
