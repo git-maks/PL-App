@@ -29,7 +29,9 @@ test('staff display → manual code → rating → XP, against the Go backend', 
 	const page = await (await browser.newContext()).newPage();
 	await onboard(page, 'Gracz z kodu');
 	await page.goto('/scan');
-	await page.getByRole('button', { name: 'Wpisz kod ręcznie' }).click();
+	// Our own modal explains the camera before the browser asks; choose the manual code instead.
+	const cameraModal = page.getByRole('dialog', { name: 'Dostęp do aparatu' });
+	await cameraModal.getByRole('button', { name: 'Wpisz kod ręcznie' }).click();
 	await page.getByRole('textbox', { name: 'Kod stacji' }).fill(code);
 	await page.getByRole('button', { name: 'Zatwierdź', exact: true }).click();
 	await page.waitForURL(/\/scan\/rate\?id=/);

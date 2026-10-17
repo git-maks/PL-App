@@ -1,12 +1,34 @@
 import { dev } from '$app/env';
 import { href } from '#lib/paths';
-import { toast } from '#lib/state/toast.svelte';
+import { ask } from '#lib/state/modal.svelte';
 
 /**
  * Registers the service worker. A new version waits until the user agrees to reload
  * (never in the middle of scanning), as described in spec §5.7.
  */
 let updateAccepted = false;
+let waiting: ServiceWorker | null = null;
+let asking = false;
+
+/** Offers a downloaded update in a modal, unless the player is scanning (then after they leave). */
+export async function offerUpdate() {
+	if (!waiting || asking || updateAccepted || location.pathname.includes('/scan')) return;
+	asking = true;
+	const ok = await ask({
+		icon: 'refresh',
+		title: 'Nowa wersja UniQuest',
+		body: 'Pobraliśmy aktualizację aplikacji. Odśwież teraz, aby z niej skorzystać – Twój postęp zostanie zachowany.',
+		confirm: 'Odśwież teraz',
+		cancel: 'Później'
+	});
+	asking = false;
+	if (ok && waiting) {
+		updateAccepted = true;
+		waiting.postMessage({ type: 'SKIP_WAITING' });
+	}
+	// "Później": the update installs on the next start of the app.
+	waiting = null;
+}
 
 export function registerServiceWorker() {
 	if (dev || !('serviceWorker' in navigator)) return;
@@ -14,17 +36,8 @@ export function registerServiceWorker() {
 		.register(href('/service-worker.js'), { type: 'module', scope: href('/') })
 		.then((reg) => {
 			const offer = (worker: ServiceWorker) => {
-				if (location.pathname.includes('/scan')) return;
-				toast('Dostępna nowa wersja UniQuest', {
-					duration: 0,
-					action: {
-						label: 'Odśwież',
-						run: () => {
-							updateAccepted = true;
-							worker.postMessage({ type: 'SKIP_WAITING' });
-						}
-					}
-				});
+				waiting = worker;
+				void offerUpdate();
 			};
 			if (reg.waiting && navigator.serviceWorker.controller) offer(reg.waiting);
 			reg.addEventListener('updatefound', () => {

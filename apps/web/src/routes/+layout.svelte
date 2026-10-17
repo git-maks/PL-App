@@ -11,11 +11,16 @@
 	import Snackbar from '#lib/components/Snackbar.svelte';
 	import { app } from '#lib/state/app.svelte';
 	import { href, routePath } from '#lib/paths';
-	import { registerServiceWorker } from '#lib/pwa/register';
+	import { registerServiceWorker, offerUpdate } from '#lib/pwa/register';
+	import ModalHost from '#lib/components/ModalHost.svelte';
 
 	let { children } = $props();
 
 	const path = $derived(routePath(page.url.pathname));
+	// An update postponed while scanning is offered as soon as the player leaves the scanner.
+	$effect(() => {
+		if (!path.startsWith('/scan')) void offerUpdate();
+	});
 	const chromeless = $derived(
 		path.startsWith('/onboarding') || path.startsWith('/scan') || path.startsWith('/staff/display') || path.startsWith('/staff/poster') || path === '/' || path.startsWith('/q/') || path.startsWith('/t/')
 	);
@@ -59,6 +64,7 @@
 	<NavigationBar {items} />
 {/if}
 <Snackbar />
+<ModalHost />
 
 {#if !app.online}
 	<div class="offline label-medium" role="status">Tryb offline – skany zapiszemy i wyślemy później</div>

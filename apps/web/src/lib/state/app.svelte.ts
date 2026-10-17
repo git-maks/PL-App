@@ -4,6 +4,7 @@
  * scan queue and applies live updates from the event stream.
  */
 import { browser } from '$app/env';
+import { goto } from '$app/navigation';
 import {
 	api,
 	ApiError,
@@ -21,6 +22,7 @@ import {
 import { enqueue, listQueue, removeQueued, updateQueued, type QueuedScan } from '#lib/offline/queue';
 import type { Stats } from '#lib/game/types';
 import { toast } from './toast.svelte';
+import { href } from '#lib/paths';
 
 export type ScanOutcome =
 	| { kind: 'ok'; result: ScanResult }
@@ -147,7 +149,13 @@ class AppState {
 		switch (e.type) {
 			case 'notification':
 				this.notifications = [e.data, ...this.notifications.filter((n) => n.id !== e.data.id)];
-				toast(e.data.title);
+				{
+					// In-app notice (the service worker skips the system notification while the app is open).
+					const n = e.data;
+					toast(n.body ? `${n.title} – ${n.body}` : n.title, {
+						action: { label: 'Pokaż', run: () => void goto(n.url ? href(n.url) : href('/notifications')) }
+					});
+				}
 				break;
 			case 'team.updated':
 				this.team = e.data;
