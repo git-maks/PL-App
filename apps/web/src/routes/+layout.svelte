@@ -17,7 +17,7 @@
 
 	const path = $derived(routePath(page.url.pathname));
 	const chromeless = $derived(
-		path.startsWith('/onboarding') || path.startsWith('/scan') || path.startsWith('/staff/display') || path === '/' || path.startsWith('/q/') || path.startsWith('/t/')
+		path.startsWith('/onboarding') || path.startsWith('/scan') || path.startsWith('/staff/display') || path.startsWith('/staff/poster') || path === '/' || path.startsWith('/q/') || path.startsWith('/t/')
 	);
 
 	const items: NavItem[] = $derived([

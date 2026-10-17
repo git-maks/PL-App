@@ -176,6 +176,9 @@ export class HttpApi implements ApiClient {
 	stationQr(stationId: string) {
 		return this.req<Awaited<ReturnType<ApiClient['stationQr']>>>('GET', `/staff/stations/${stationId}/qr`);
 	}
+	async stationPoster(stationId: string) {
+		return (await this.req<{ payload: string }>('GET', `/staff/stations/${stationId}/poster`)).payload;
+	}
 	setScanWindow(stationId: string, open: boolean, minutes = 15) {
 		return this.req<Awaited<ReturnType<ApiClient['setScanWindow']>>>('POST', `/staff/stations/${stationId}/window`, { open, minutes });
 	}

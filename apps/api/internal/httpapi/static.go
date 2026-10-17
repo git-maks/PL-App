@@ -54,7 +54,9 @@ func (s *Server) staticHandler() http.Handler {
 			serveFile(w, r, path.Join(p, "index.html"))
 			return
 		}
-		if path.Ext(p) != "" {
+		// Missing assets are 404s, but QR deep links (/q/1.hex.window.mac, /q/s.hex.mac) contain
+		// dots too and must reach the app.
+		if path.Ext(p) != "" && !strings.HasPrefix(p, "q/") && !strings.HasPrefix(p, "t/") {
 			http.NotFound(w, r)
 			return
 		}

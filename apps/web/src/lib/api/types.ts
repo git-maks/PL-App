@@ -97,6 +97,8 @@ export interface ApiClient {
 
 	staffStations(): Promise<StaffStation[]>;
 	stationQr(stationId: string): Promise<StationQr>;
+	/** Static poster payload for stations without a screen (valid only while the scan window is open). */
+	stationPoster(stationId: string): Promise<string>;
 	setScanWindow(stationId: string, open: boolean, minutes?: number): Promise<StaffStation>;
 
 	analytics(eventId: string): Promise<Analytics>;

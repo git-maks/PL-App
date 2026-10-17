@@ -71,7 +71,7 @@ health check na `/api/v1/readyz`. Przy wielu instancjach realtime działa przez 
 - [ ] Kopia zapasowa bazy (`pg_dump` co noc + przed wydarzeniem), test odtworzenia.
 - [ ] SMTP: test wysyłki kodu; VAPID: test powiadomienia na Androidzie i na zainstalowanej PWA na iPhonie.
 - [ ] Zasięg Wi-Fi/LTE w salach; aplikacja działa offline (kolejka skanów), ale stacje potrzebują sieci do wyświetlania kodów.
-- [ ] Plakaty z kodem statycznym (`GET /api/v1/staff/stations/{id}/poster`) dla stacji bez ekranu.
+- [ ] Plakaty z kodem statycznym dla stacji bez ekranu: `/staff` → *Plakat do druku* (API: `GET /api/v1/staff/stations/{id}/poster`); kod działa tylko w oknie skanowania.
 - [ ] Deklaracja dostępności i polityka prywatności zatwierdzone przez PL i IOD.
 
 ## 6. Utrzymanie

@@ -54,7 +54,10 @@
 							<span>Średnia: <strong>{s.avgRating ? s.avgRating.toFixed(1) : '—'}</strong></span>
 						</div>
 						<Switch label="Skanowanie otwarte" supporting={s.scanOpenUntil ? `do ${time(s.scanOpenUntil)}` : 'Okno skanowania wg harmonogramu lub ręcznie'} checked={s.scanOpen} onchange={(v) => toggle(s, v)} />
-						<Button icon="qr_code_2" href={href('/staff/display?id=' + s.station.id)}>Wyświetl kod QR</Button>
+						<div class="row wrap">
+							<Button icon="qr_code_2" href={href('/staff/display?id=' + s.station.id)}>Wyświetl kod QR</Button>
+							<Button variant="text" icon="download" href={href('/staff/poster?id=' + s.station.id)}>Plakat do druku</Button>
+						</div>
 					</div>
 				</Card>
 			{/each}

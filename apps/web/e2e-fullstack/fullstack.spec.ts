@@ -17,13 +17,17 @@ async function loginAsAdmin(page: Page) {
 	await expect(page.getByText('admin@pollub.test', { exact: true })).toBeVisible();
 }
 
-test('staff display → manual code → rating → XP, against the Go backend', async ({ page }) => {
-	await loginAsAdmin(page);
-	await page.goto('/staff');
-	await page.getByRole('link', { name: 'Wyświetl kod QR' }).first().click();
-	const code = (await page.locator('.code').first().textContent())!.trim();
+test('staff display → manual code → rating → XP, against the Go backend', async ({ browser }) => {
+	// Staff and player are separate accounts, so the test does not depend on earlier runs' scans.
+	const staff = await (await browser.newContext()).newPage();
+	await loginAsAdmin(staff);
+	await staff.goto('/staff');
+	await staff.getByRole('link', { name: 'Wyświetl kod QR' }).first().click();
+	const code = (await staff.locator('.code').first().textContent())!.trim();
 	expect(code).toMatch(/^[A-Z2-9]{6}$/);
 
+	const page = await (await browser.newContext()).newPage();
+	await onboard(page, 'Gracz z kodu');
 	await page.goto('/scan');
 	await page.getByRole('button', { name: 'Wpisz kod ręcznie' }).click();
 	await page.getByRole('textbox', { name: 'Kod stacji' }).fill(code);
@@ -57,4 +61,23 @@ test('team invite: a second player joins and the captain sees it live (SSE)', as
 	// No reload: the captain's page updates from the event stream.
 	await expect(captain.getByText('2/5 członków', { exact: false })).toBeVisible();
 	await expect(captain.getByText('Marynarz', { exact: true })).toBeVisible();
+});
+
+test('printable poster: the static station code is accepted by the server', async ({ browser }) => {
+	const staff = await (await browser.newContext()).newPage();
+	await loginAsAdmin(staff);
+	await staff.goto('/staff');
+	await staff.getByRole('link', { name: 'Plakat do druku' }).nth(1).click();
+	await expect(staff.getByRole('img', { name: /^Kod QR stacji/ })).toBeVisible();
+	const id = new URL(staff.url()).searchParams.get('id')!;
+	const res = await staff.request.get(`/api/v1/staff/stations/${id}/poster`, { headers: { 'X-Requested-With': 'uniquest' } });
+	expect(res.ok()).toBe(true);
+	const { payload } = (await res.json()) as { payload: string };
+	expect(payload).toMatch(/\/q\/s\.[0-9a-f]{32}\.[\w-]{12}$/);
+
+	const player = await (await browser.newContext()).newPage();
+	await onboard(player, 'Gracz z plakatu');
+	await player.goto(new URL(payload).pathname);
+	await player.waitForURL(/\/scan\/rate\?id=/);
+	await expect(player.getByRole('button', { name: 'Zatwierdź ocenę' })).toBeVisible();
 });

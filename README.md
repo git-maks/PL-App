@@ -50,7 +50,7 @@ Logowanie jako organizator: w aplikacji *Profil → Dodaj e-mail* → `admin@pol
 ```bash
 make test           # svelte-check + Vitest + go vet + testy Go (z PostgreSQL)
 make e2e            # Playwright na buildzie demo: onboarding, skan przez symulowaną kamerę, karta, drużyny, axe (WCAG)
-make e2e-fullstack  # Playwright na prawdziwym backendzie Go (panel stacji → kod → ocena; drużyna na żywo przez SSE)
+make e2e-fullstack  # Playwright na prawdziwym backendzie Go (panel stacji → kod → ocena; plakat; drużyna na żywo przez SSE)
 ```
 
 CI (`.github/workflows/ci.yml`) uruchamia to wszystko oraz budżet rozmiaru JS, `govulncheck` i budowę obrazu Docker.

@@ -596,6 +596,9 @@ export class DemoApi implements ApiClient {
 		const secret = await stationSecret(st.slug);
 		return `${this.origin}/q/s.${st.id.replaceAll('-', '')}.${await macFor(secret, staticMessage(st.id))}`;
 	}
+	async stationPoster(stationId: string) {
+		return this.staticPayload(stationId);
+	}
 	async setScanWindow(stationId: string, open: boolean) {
 		const s = await this.load();
 		s.closedStations = open ? s.closedStations.filter((x) => x !== stationId) : [...new Set([...s.closedStations, stationId])];
