@@ -49,7 +49,7 @@
 				{#if prog}
 					<Card variant={i === 0 ? 'primary' : 'filled'}>
 						<div class="rec">
-							<div class="score pixel" aria-label="Dopasowanie {r.score}%">{r.score}%</div>
+							<div class="score num" aria-label="Dopasowanie {r.score}%">{r.score}%</div>
 							<div class="grow stack tight">
 								<span class="label-small muted">{facultyByCode[prog.faculty]?.name}</span>
 								<h3 class="title-medium">{prog.name}</h3>
@@ -75,7 +75,7 @@
 				{#if club}
 					<Card variant="outlined" href={href('/explore/kola/' + club.slug)}>
 						<div class="rec">
-							<div class="score small pixel">{r.score}%</div>
+							<div class="score small num">{r.score}%</div>
 							<div class="grow">
 								<span class="label-small muted">{facultyByCode[club.faculty]?.name}</span>
 								<h3 class="title-small">{club.name}</h3>

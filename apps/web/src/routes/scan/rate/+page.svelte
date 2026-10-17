@@ -96,7 +96,7 @@
 			<LinearProgress indeterminate label="Wczytywanie" />
 		{:else if result}
 			<div class="reward" in:scale={{ start: 0.7, duration: 450, easing: backOut }}>
-				<span class="xp pixel">+{xp} XP</span>
+				<span class="xp num">+{xp} XP</span>
 				<p class="title-medium">{scan.stationName}</p>
 				{#if result.scan.teamStatus === 'pending'}
 					<p class="body-medium muted">Bonus drużynowy ×1,2 dostaniesz, gdy dotrze reszta drużyny ({result.scan.teamProgress?.scanned}/{result.scan.teamProgress?.required}).</p>
@@ -110,7 +110,7 @@
 						<li in:fly={{ x: -16, delay: 150 + i * 90, duration: 300 }} style="--c: {statByCode[code].color}">
 							<span class="gi"><StatIcon {code} size={20} /></span>
 							<span class="body-large grow">{statByCode[code].name}</span>
-							<span class="pixel title-medium plus">+{Math.round(result.scan.deltas[code])}</span>
+							<span class="num title-medium plus">+{Math.round(result.scan.deltas[code])}</span>
 						</li>
 					{/each}
 				</ul>

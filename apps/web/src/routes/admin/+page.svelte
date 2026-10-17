@@ -88,9 +88,9 @@
 			<h2 class="section-title">{app.event.name}</h2>
 			{#if error}<p role="alert">{error}</p>{:else if !data}<Skeleton lines={4} />{:else}
 				<div class="kpis">
-					<div class="kpi"><span class="pixel big">{data.participants}</span><span class="label-medium">uczestników</span></div>
-					<div class="kpi"><span class="pixel big">{data.scans}</span><span class="label-medium">skanów</span></div>
-					<div class="kpi"><span class="pixel big">{data.scans ? Math.round((data.rated / data.scans) * 100) : 0}%</span><span class="label-medium">ocenionych</span></div>
+					<div class="kpi"><span class="num big">{data.participants}</span><span class="label-medium">uczestników</span></div>
+					<div class="kpi"><span class="num big">{data.scans}</span><span class="label-medium">skanów</span></div>
+					<div class="kpi"><span class="num big">{data.scans ? Math.round((data.rated / data.scans) * 100) : 0}%</span><span class="label-medium">ocenionych</span></div>
 				</div>
 
 				<h3 class="title-small">Zainteresowanie stacjami</h3>

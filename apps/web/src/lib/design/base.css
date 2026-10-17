@@ -175,3 +175,16 @@ a {
 :root[data-theme='dark'] .stat-chip {
 	--chip-fg: color-mix(in srgb, var(--c) 45%, #fff);
 }
+
+/* Numbers and codes: legible plain face with tabular digits (the pixel face confuses 5/S, 8/B). */
+.num {
+	font-family: var(--md-ref-typeface-plain);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	letter-spacing: 0;
+}
+.code-text {
+	font-family: ui-monospace, 'Roboto Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+}

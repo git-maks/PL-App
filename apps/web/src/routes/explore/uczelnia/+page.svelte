@@ -19,7 +19,7 @@
 	<div class="facts">
 		{#each university.facts as f (f.label)}
 			<div class="fact">
-				<span class="pixel value">{f.value}</span>
+				<span class="num value">{f.value}</span>
 				<span class="body-small muted">{f.label}</span>
 			</div>
 		{/each}
@@ -29,7 +29,7 @@
 	<ol class="timeline">
 		{#each university.history as h (h.year)}
 			<li>
-				<span class="year pixel">{h.year}</span>
+				<span class="year num">{h.year}</span>
 				<p class="body-medium">{h.text}</p>
 			</li>
 		{/each}

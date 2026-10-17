@@ -159,7 +159,7 @@
 		opacity: 0.7;
 	}
 	.code {
-		font: 500 clamp(1.5rem, 4vw, 2.75rem) / 1 var(--md-ref-typeface-pixel);
+		font: 700 clamp(1.5rem, 4vw, 2.75rem) / 1 ui-monospace, 'Roboto Mono', Menlo, Consolas, monospace;
 		letter-spacing: 0.12em;
 	}
 	.hint {

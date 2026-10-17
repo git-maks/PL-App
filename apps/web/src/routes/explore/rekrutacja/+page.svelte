@@ -18,7 +18,7 @@
 	<ol class="steps">
 		{#each recruitment.steps as step, i (step.title)}
 			<li>
-				<span class="n pixel">{i + 1}</span>
+				<span class="n num">{i + 1}</span>
 				<div>
 					<p class="title-small">{step.title}</p>
 					<p class="body-medium muted">{step.text}</p>
@@ -35,7 +35,7 @@
 	<Card variant="filled" padding={false}>
 		{#each s.mostCompetitive as x (x.name)}
 			<ListItem headline={x.name}>
-				{#snippet trailing()}<span class="pixel">{x.perPlace.toLocaleString('pl-PL')}</span>{/snippet}
+				{#snippet trailing()}<span class="num">{x.perPlace.toLocaleString('pl-PL')}</span>{/snippet}
 			</ListItem>
 		{/each}
 	</Card>

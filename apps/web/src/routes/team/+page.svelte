@@ -149,7 +149,7 @@
 					<span class="emblem"><Icon name={(team.emblem as IconName) ?? 'shield'} size={32} /></span>
 					<div class="grow">
 						<h2 class="title-large">{team.name}</h2>
-						<p class="body-small">{team.members.length}/{team.maxMembers} członków · <span class="pixel">{Math.round(team.score)} pkt</span></p>
+						<p class="body-small">{team.members.length}/{team.maxMembers} członków · <span class="num">{Math.round(team.score)} pkt</span></p>
 					</div>
 				</div>
 			</Card>
@@ -196,9 +196,9 @@
 					<ol class="board">
 						{#each board.entries.slice(0, 10) as e (e.id)}
 							<li class:me={e.isMe}>
-								<span class="rank pixel">{e.rank}</span>
+								<span class="rank num">{e.rank}</span>
 								<span class="grow body-medium">{e.name}{e.members ? ` · ${e.members} os.` : ''}</span>
-								<span class="pixel label-large">{Math.round(e.score)}</span>
+								<span class="num label-large">{Math.round(e.score)}</span>
 							</li>
 						{/each}
 					</ol>
@@ -211,7 +211,7 @@
 		{#if invite}
 			<div class="invite">
 				<QrCode text={invite.url} size={240} label="Kod QR zaproszenia do drużyny {team?.name}" />
-				<p class="label-large">Kod: <span class="pixel code">{invite.code}</span></p>
+				<p class="label-large">Kod: <span class="code-text code">{invite.code}</span></p>
 				<p class="body-small muted">Ważny jeszcze {Math.floor(left / 60)}:{String(left % 60).padStart(2, '0')} · wolnych miejsc: {invite.usesLeft}</p>
 				<div class="row wrap">
 					<Button variant="tonal" icon="share" onclick={shareInvite}>Wyślij link</Button>

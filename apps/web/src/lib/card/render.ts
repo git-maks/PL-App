@@ -133,8 +133,8 @@ export async function renderCard(d: CardData): Promise<HTMLCanvasElement> {
 	ctx.font = `500 58px ${PIXEL}`;
 	const ty = wrap(ctx, d.title, tx, 350, W - tx - 80, 62, 2);
 	ctx.fillStyle = 'rgba(255,255,255,0.85)';
-	ctx.font = `500 34px ${PIXEL}`;
-	ctx.fillText(`LVL ${d.level} · ${Math.round(d.xp)} XP`, tx, Math.max(ty + 8, 470));
+	ctx.font = `700 34px ${PLAIN}`;
+	ctx.fillText(`Poziom ${d.level} · ${Math.round(d.xp)} XP`, tx, Math.max(ty + 8, 470));
 
 	// Archetype split bar
 	let y = 560;
@@ -163,7 +163,7 @@ export async function renderCard(d: CardData): Promise<HTMLCanvasElement> {
 	}
 
 	// Radar
-	const cx = 300, cy = 960, r = 190;
+	const cx = 320, cy = 960, r = 180;
 	const max = Math.max(1, ...STAT_CODES.map((c) => d.stats[c]));
 	const pt = (i: number, k: number) => {
 		const a = -Math.PI / 2 + (i * 2 * Math.PI) / STAT_CODES.length;
@@ -208,7 +208,7 @@ export async function renderCard(d: CardData): Promise<HTMLCanvasElement> {
 	ctx.font = `400 30px ${PLAIN}`;
 	for (const [i, p] of d.programs.slice(0, 3).entries()) {
 		ctx.fillStyle = '#f5bf48';
-		ctx.font = `500 32px ${PIXEL}`;
+		ctx.font = `700 32px ${PLAIN}`;
 		ctx.fillText(`${i + 1}.`, rx, ry);
 		ctx.fillStyle = '#ffffff';
 		ctx.font = `400 30px ${PLAIN}`;

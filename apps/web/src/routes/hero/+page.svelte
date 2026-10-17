@@ -67,7 +67,7 @@
 
 		<Card variant="primary">
 			<div class="level">
-				<div class="lvl-badge pixel" aria-label="Poziom {p?.level ?? 1}">
+				<div class="lvl-badge num" aria-label="Poziom {p?.level ?? 1}">
 					<span class="label-small">LVL</span>
 					<span class="lvl-num">{p?.level ?? 1}</span>
 				</div>
@@ -75,7 +75,7 @@
 					<div class="row">
 						<span class="title-small">Doświadczenie</span>
 						<span class="spacer"></span>
-						<span class="pixel label-large">{Math.round(p?.xp ?? 0)} XP</span>
+						<span class="num label-large">{Math.round(p?.xp ?? 0)} XP</span>
 					</div>
 					<LinearProgress value={p?.levelProgress.ratio ?? 0} label="Postęp do następnego poziomu" />
 					<span class="body-small">Do poziomu {(p?.level ?? 1) + 1}: {Math.max(0, Math.ceil((p?.levelProgress.next ?? 25) - (p?.xp ?? 0)))} XP</span>

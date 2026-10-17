@@ -28,8 +28,8 @@
 			<span class="name label-large">{stat.name}</span>
 			<span class="arch label-small muted">{stat.archetype}</span>
 			<span class="spacer"></span>
-			{#if delta > 0}<span class="delta pixel label-medium">+{Math.round(delta)}</span>{/if}
-			<span class="value pixel title-small">{Math.round(shown.current)}</span>
+			{#if delta > 0}<span class="delta num label-medium">+{Math.round(delta)}</span>{/if}
+			<span class="value num title-small">{Math.round(shown.current)}</span>
 		</div>
 		<div
 			class="bar"
