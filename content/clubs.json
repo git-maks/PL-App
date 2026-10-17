@@ -1,0 +1,1323 @@
+[
+  {
+    "slug": "budowy-smiglowcow",
+    "name": "Koło Naukowe Budowy Śmigłowców",
+    "faculty": "WM",
+    "tags": [
+      "lotnictwo",
+      "konstrukcje"
+    ],
+    "vector": {
+      "STR": 0.6,
+      "MAN": 0.2,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynierii-biomedycznej",
+    "name": "Koło Naukowe Inżynierii Biomedycznej",
+    "faculty": "WM",
+    "tags": [
+      "medycyna",
+      "biomateriały"
+    ],
+    "vector": {
+      "WIS": 0.5,
+      "STR": 0.3,
+      "MAN": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynierii-materialowej",
+    "name": "Koło Naukowe Inżynierii Materiałowej",
+    "faculty": "WM",
+    "tags": [
+      "materiały",
+      "badania"
+    ],
+    "vector": {
+      "STR": 0.5,
+      "WIS": 0.5
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "robotyzacji-i-zastosowan-informatyki",
+    "name": "Koło Naukowe Robotyzacji i Zastosowań Informatyki",
+    "faculty": "WM",
+    "tags": [
+      "roboty",
+      "automatyka",
+      "programowanie"
+    ],
+    "vector": {
+      "STR": 0.4,
+      "MAN": 0.5,
+      "INT": 0.1
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "komplast",
+    "name": "Koło Naukowe „KOMPLAST”",
+    "faculty": "WM",
+    "tags": [
+      "tworzywa sztuczne",
+      "kompozyty"
+    ],
+    "vector": {
+      "STR": 0.6,
+      "WIS": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "komputerowego-wspomagania-prac-projektowych",
+    "name": "Koło Naukowe Komputerowego Wspomagania Prac Projektowych",
+    "faculty": "WM",
+    "tags": [
+      "CAD",
+      "projektowanie"
+    ],
+    "vector": {
+      "STR": 0.5,
+      "KRE": 0.3,
+      "MAN": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "napedow-lotniczych",
+    "name": "Koło Naukowe Napędów Lotniczych",
+    "faculty": "WM",
+    "tags": [
+      "lotnictwo",
+      "silniki"
+    ],
+    "vector": {
+      "STR": 0.6,
+      "ENE": 0.2,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "podstaw-inzynierii-produkcji",
+    "name": "Koło Naukowe Podstaw Inżynierii Produkcji",
+    "faculty": "WM",
+    "tags": [
+      "produkcja",
+      "technologia"
+    ],
+    "vector": {
+      "STR": 0.6,
+      "CHA": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynierii-polimerow-carbon",
+    "name": "Koło Naukowe Inżynierii Polimerów „CARBON”",
+    "faculty": "WM",
+    "tags": [
+      "polimery",
+      "kompozyty"
+    ],
+    "vector": {
+      "STR": 0.5,
+      "WIS": 0.5
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "samochodziarzy",
+    "name": "Koło Naukowe Samochodziarzy",
+    "faculty": "WM",
+    "tags": [
+      "motoryzacja",
+      "pojazdy"
+    ],
+    "vector": {
+      "STR": 0.7,
+      "VIT": 0.3
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "technologii-materialow",
+    "name": "Koło Naukowe Technologii Materiałów",
+    "faculty": "WM",
+    "tags": [
+      "materiały",
+      "technologia"
+    ],
+    "vector": {
+      "STR": 0.5,
+      "WIS": 0.5
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "transport-spedycja-logistyka",
+    "name": "Koło Naukowe „Transport – Spedycja – Logistyka”",
+    "faculty": "WM",
+    "tags": [
+      "transport",
+      "logistyka"
+    ],
+    "vector": {
+      "CHA": 0.5,
+      "STR": 0.3,
+      "INT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "first-robots",
+    "name": "Koło Naukowe First Robots",
+    "faculty": "WM",
+    "tags": [
+      "roboty",
+      "zawody"
+    ],
+    "vector": {
+      "STR": 0.4,
+      "MAN": 0.4,
+      "VIT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "zastosowan-nx",
+    "name": "Koło Naukowe Zastosowań NX",
+    "faculty": "WM",
+    "tags": [
+      "CAD/CAM",
+      "Siemens NX"
+    ],
+    "vector": {
+      "STR": 0.5,
+      "KRE": 0.3,
+      "MAN": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "automatyzacji",
+    "name": "Koło Naukowe Automatyzacji",
+    "faculty": "WM",
+    "tags": [
+      "automatyka"
+    ],
+    "vector": {
+      "STR": 0.4,
+      "MAN": 0.6
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "drake-drony-rakiety-aerodynamika-eksploracja-kosmiczna",
+    "name": "Koło Naukowe „Drake” — drony, rakiety, aerodynamika, eksploracja kosmiczna",
+    "faculty": "WM",
+    "tags": [
+      "drony",
+      "rakiety",
+      "kosmos"
+    ],
+    "vector": {
+      "STR": 0.4,
+      "MAN": 0.3,
+      "WIS": 0.3
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "sigma",
+    "name": "Koło Naukowe SIGMA",
+    "faculty": "WM",
+    "tags": [
+      "kompozyty",
+      "mechanika"
+    ],
+    "vector": {
+      "STR": 0.5,
+      "INT": 0.3,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "mechatronik",
+    "name": "Koło Naukowe „MECHATRONIK”",
+    "faculty": "WEiI",
+    "tags": [
+      "mechatronika",
+      "elektronika"
+    ],
+    "vector": {
+      "MAN": 0.5,
+      "STR": 0.5
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "materialoznawstwa-elektrycznego-i-techniki-wysokich-napiec-meljon",
+    "name": "Koło Naukowe Materiałoznawstwa Elektrycznego i Techniki Wysokich Napięć „MELJON”",
+    "faculty": "WEiI",
+    "tags": [
+      "wysokie napięcia",
+      "materiały"
+    ],
+    "vector": {
+      "MAN": 0.4,
+      "ENE": 0.3,
+      "WIS": 0.3
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "grupa-net-politechniki-lubelskiej",
+    "name": "Koło Naukowe „Grupa .NET Politechniki Lubelskiej”",
+    "faculty": "WEiI",
+    "tags": [
+      "programowanie",
+      ".NET"
+    ],
+    "vector": {
+      "MAN": 0.7,
+      "INT": 0.3
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "automatyki",
+    "name": "Koło Naukowe Automatyki",
+    "faculty": "WEiI",
+    "tags": [
+      "automatyka",
+      "sterowanie"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "INT": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "elektrykow-naped-i-automatyka",
+    "name": "Koło Naukowe Elektryków NAPĘD i AUTOMATYKA",
+    "faculty": "WEiI",
+    "tags": [
+      "napędy",
+      "automatyka"
+    ],
+    "vector": {
+      "MAN": 0.5,
+      "STR": 0.3,
+      "ENE": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "elektronikow-microchip",
+    "name": "Koło Naukowe Elektroników „MICROCHIP”",
+    "faculty": "WEiI",
+    "tags": [
+      "elektronika",
+      "mikrokontrolery"
+    ],
+    "vector": {
+      "MAN": 0.8,
+      "INT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "elektronikow-i-mechatronikow-semicon",
+    "name": "Koło Naukowe Elektroników i Mechatroników „SEMICON”",
+    "faculty": "WEiI",
+    "tags": [
+      "półprzewodniki",
+      "elektronika"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "WIS": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "stowarzyszenia-elektrykow-polskich",
+    "name": "Koło Naukowe Stowarzyszenia Elektryków Polskich",
+    "faculty": "WEiI",
+    "tags": [
+      "elektrotechnika",
+      "energetyka"
+    ],
+    "vector": {
+      "MAN": 0.5,
+      "ENE": 0.3,
+      "CHA": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "systemy-operacyjne-i-programowanie",
+    "name": "Koło Naukowe „Systemy Operacyjne i Programowanie”",
+    "faculty": "WEiI",
+    "tags": [
+      "systemy operacyjne",
+      "programowanie"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "INT": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "elektroniki-samochodowej-i-uzytkowej-prive",
+    "name": "Koło Naukowe Elektroniki Samochodowej i Użytkowej „PRIVE”",
+    "faculty": "WEiI",
+    "tags": [
+      "elektronika",
+      "motoryzacja"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "STR": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "electroinfo-techlab",
+    "name": "Koło Naukowe „ElectroInfo TechLab”",
+    "faculty": "WEiI",
+    "tags": [
+      "elektrotechnika",
+      "IT"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "INT": 0.2,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "optoelektroniki-foton",
+    "name": "Koło Naukowe Optoelektroniki „FOTON”",
+    "faculty": "WEiI",
+    "tags": [
+      "optoelektronika",
+      "fotonika"
+    ],
+    "vector": {
+      "MAN": 0.5,
+      "WIS": 0.5
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "retronika",
+    "name": "Koło Naukowe Retronika",
+    "faculty": "WEiI",
+    "tags": [
+      "retro elektronika",
+      "sprzęt"
+    ],
+    "vector": {
+      "MAN": 0.5,
+      "KRE": 0.3,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "amplab",
+    "name": "Koło Naukowe AmpLab",
+    "faculty": "WEiI",
+    "tags": [
+      "audio",
+      "wzmacniacze"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "KRE": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "drogowcow-i-mostow",
+    "name": "Koło Naukowe Drogowców i Mostów",
+    "faculty": "WBiA",
+    "tags": [
+      "drogi",
+      "mosty"
+    ],
+    "vector": {
+      "STR": 0.6,
+      "KRE": 0.2,
+      "INT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "technologii-budownictwa-aedificatio",
+    "name": "Koło Naukowe Technologii Budownictwa „AEDIFICATIO”",
+    "faculty": "WBiA",
+    "tags": [
+      "technologia budownictwa"
+    ],
+    "vector": {
+      "STR": 0.6,
+      "KRE": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "malarstwa-i-rysunku-mir",
+    "name": "Koło Naukowe Malarstwa i Rysunku „MIR”",
+    "faculty": "WBiA",
+    "tags": [
+      "malarstwo",
+      "rysunek"
+    ],
+    "vector": {
+      "KRE": 0.9,
+      "WIS": 0.1
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "architektury-wspolczesnej",
+    "name": "Koło Naukowe Architektury Współczesnej",
+    "faculty": "WBiA",
+    "tags": [
+      "architektura"
+    ],
+    "vector": {
+      "KRE": 0.8,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "konserwacji-zabytkow-sgraffito",
+    "name": "Koło Naukowe Konserwacji Zabytków „SGRAFFITO”",
+    "faculty": "WBiA",
+    "tags": [
+      "zabytki",
+      "konserwacja"
+    ],
+    "vector": {
+      "KRE": 0.5,
+      "WIS": 0.5
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "mechaniki-i-grafiki-inzynierskiej",
+    "name": "Koło Naukowe Mechaniki i Grafiki Inżynierskiej",
+    "faculty": "WBiA",
+    "tags": [
+      "mechanika",
+      "grafika inżynierska"
+    ],
+    "vector": {
+      "STR": 0.4,
+      "KRE": 0.3,
+      "INT": 0.3
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "mechaniki-budowli-i-metod-komputerowych",
+    "name": "Koło Naukowe Mechaniki Budowli i Metod Komputerowych",
+    "faculty": "WBiA",
+    "tags": [
+      "mechanika budowli",
+      "symulacje"
+    ],
+    "vector": {
+      "STR": 0.4,
+      "INT": 0.4,
+      "MAN": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "architektura-zdrowia",
+    "name": "Koło Naukowe Architektura Zdrowia",
+    "faculty": "WBiA",
+    "tags": [
+      "architektura",
+      "zdrowie"
+    ],
+    "vector": {
+      "KRE": 0.6,
+      "WIS": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "urbanistyki-i-ruralistyki",
+    "name": "Koło Naukowe Urbanistyki i Ruralistyki",
+    "faculty": "WBiA",
+    "tags": [
+      "urbanistyka",
+      "planowanie przestrzenne"
+    ],
+    "vector": {
+      "KRE": 0.6,
+      "CHA": 0.2,
+      "ENE": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "dynamiki-i-aerodynamiki-budowli",
+    "name": "Koło Naukowe Dynamiki i Aerodynamiki Budowli",
+    "faculty": "WBiA",
+    "tags": [
+      "aerodynamika",
+      "konstrukcje"
+    ],
+    "vector": {
+      "STR": 0.5,
+      "INT": 0.3,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "automatyki-pomiarow-i-sterowania-knapis",
+    "name": "Koło Naukowe Automatyki Pomiarów i Sterowania „KNAPIS”",
+    "faculty": "WMiIT",
+    "tags": [
+      "automatyka",
+      "pomiary"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "INT": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "infonabi",
+    "name": "Koło Naukowe „InfoNaBi”",
+    "faculty": "WMiIT",
+    "tags": [
+      "informatyka"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "INT": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "kwaternion",
+    "name": "Koło Naukowe „KWATERNION”",
+    "faculty": "WMiIT",
+    "tags": [
+      "matematyka"
+    ],
+    "vector": {
+      "INT": 0.8,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "grafiki-inzynierskiej-i-animacji-komputerowej-animgraf",
+    "name": "Koło Naukowe Grafiki Inżynierskiej i Animacji Komputerowej „AnimGRAF”",
+    "faculty": "WMiIT",
+    "tags": [
+      "grafika 3D",
+      "animacja"
+    ],
+    "vector": {
+      "KRE": 0.6,
+      "MAN": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "technologii-informatycznych-i-multimedialnych-teamweb",
+    "name": "Koło Naukowe Technologii Informatycznych i Multimedialnych TeamWEB",
+    "faculty": "WMiIT",
+    "tags": [
+      "web",
+      "multimedia"
+    ],
+    "vector": {
+      "MAN": 0.5,
+      "KRE": 0.4,
+      "CHA": 0.1
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynierii-bezpieczenstwa-a-team-of-safety",
+    "name": "Koło Naukowe Inżynierii Bezpieczeństwa „A” Team of Safety",
+    "faculty": "WMiIT",
+    "tags": [
+      "bezpieczeństwo",
+      "BHP"
+    ],
+    "vector": {
+      "CHA": 0.4,
+      "VIT": 0.3,
+      "WIS": 0.3
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "uczenia-maszynowego-atlas",
+    "name": "Koło Naukowe Uczenia Maszynowego „ATLAS”",
+    "faculty": "WMiIT",
+    "tags": [
+      "uczenie maszynowe",
+      "AI"
+    ],
+    "vector": {
+      "INT": 0.6,
+      "MAN": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "next-gen-squad",
+    "name": "Koło Naukowe Next Gen Squad",
+    "faculty": "WMiIT",
+    "tags": [
+      "informatyka stosowana"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "INT": 0.2,
+      "VIT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "obliczen-neuromorficznych-neuromancer",
+    "name": "Koło Naukowe Obliczeń Neuromorficznych „Neuromancer”",
+    "faculty": "WMiIT",
+    "tags": [
+      "obliczenia neuromorficzne",
+      "AI"
+    ],
+    "vector": {
+      "INT": 0.5,
+      "MAN": 0.3,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "bezzalogowych-statkow-powietrznych-edron",
+    "name": "Koło Naukowe bezzałogowych statków powietrznych „eDron”",
+    "faculty": "WMiIT",
+    "tags": [
+      "drony"
+    ],
+    "vector": {
+      "MAN": 0.5,
+      "STR": 0.3,
+      "VIT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "informatyki-think",
+    "name": "Koło Naukowe Informatyki „Think”",
+    "faculty": "WMiIT",
+    "tags": [
+      "informatyka"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "INT": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "pollub-my-marketing",
+    "name": "Koło Naukowe Pollub.my Marketing",
+    "faculty": "WZ",
+    "tags": [
+      "marketing",
+      "komunikacja"
+    ],
+    "vector": {
+      "CHA": 0.6,
+      "KRE": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "human-centered-management",
+    "name": "Koło Naukowe Human Centered Management",
+    "faculty": "WZ",
+    "tags": [
+      "zarządzanie ludźmi"
+    ],
+    "vector": {
+      "CHA": 0.8,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "menedzerow",
+    "name": "Koło Naukowe Menedżerów",
+    "faculty": "WZ",
+    "tags": [
+      "zarządzanie",
+      "przedsiębiorczość"
+    ],
+    "vector": {
+      "CHA": 0.8,
+      "INT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "zarzadzania-produkcja",
+    "name": "Koło Naukowe Zarządzania Produkcją",
+    "faculty": "WZ",
+    "tags": [
+      "produkcja",
+      "zarządzanie"
+    ],
+    "vector": {
+      "CHA": 0.5,
+      "STR": 0.3,
+      "INT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "zarzadzania-finansami-profit",
+    "name": "Koło Naukowe Zarządzania Finansami „PROFIT”",
+    "faculty": "WZ",
+    "tags": [
+      "finanse",
+      "inwestycje"
+    ],
+    "vector": {
+      "INT": 0.6,
+      "CHA": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "managerow-sztucznej-inteligencji-moai",
+    "name": "Koło Naukowe Managerów Sztucznej Inteligencji „MoAI”",
+    "faculty": "WZ",
+    "tags": [
+      "AI w biznesie"
+    ],
+    "vector": {
+      "CHA": 0.5,
+      "MAN": 0.3,
+      "INT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynierii-ochrony-srodowiska",
+    "name": "Koło Naukowe Inżynierii Ochrony Środowiska",
+    "faculty": "WIŚiE",
+    "tags": [
+      "ochrona środowiska"
+    ],
+    "vector": {
+      "ENE": 0.7,
+      "WIS": 0.3
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "energetyki-odnawialnej-grupa-ogniwo",
+    "name": "Koło Naukowe Energetyki Odnawialnej „GRUPA OGNIWO”",
+    "faculty": "WIŚiE",
+    "tags": [
+      "OZE",
+      "fotowoltaika"
+    ],
+    "vector": {
+      "ENE": 0.8,
+      "MAN": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "for-against",
+    "name": "Koło Naukowe „FOR&AGAINST”",
+    "faculty": "WIŚiE",
+    "tags": [
+      "inżynieria środowiska",
+      "dyskusje"
+    ],
+    "vector": {
+      "ENE": 0.5,
+      "CHA": 0.3,
+      "WIS": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "wodociagow-i-kanalizacji-hydros",
+    "name": "Koło Naukowe Wodociągów i Kanalizacji „HYDROS”",
+    "faculty": "WIŚiE",
+    "tags": [
+      "woda",
+      "kanalizacja"
+    ],
+    "vector": {
+      "ENE": 0.6,
+      "STR": 0.4
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "zaawansowanego-projektowania",
+    "name": "Koło Naukowe Zaawansowanego Projektowania",
+    "faculty": "WIŚiE",
+    "tags": [
+      "projektowanie instalacji",
+      "jakość powietrza"
+    ],
+    "vector": {
+      "ENE": 0.5,
+      "KRE": 0.3,
+      "INT": 0.2
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "modelowania-i-prototypowania-systemow-inzynierskich-inwentor",
+    "name": "Koło Naukowe Modelowania i Prototypowania Systemów Inżynierskich „INWENTOR”",
+    "faculty": "WIŚiE",
+    "tags": [
+      "prototypowanie",
+      "modelowanie"
+    ],
+    "vector": {
+      "STR": 0.4,
+      "ENE": 0.3,
+      "KRE": 0.3
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "espace",
+    "name": "Koło Naukowe eSpace",
+    "faculty": "WIŚiE",
+    "tags": [
+      "przestrzeń",
+      "środowisko"
+    ],
+    "vector": {
+      "ENE": 0.5,
+      "WIS": 0.5
+    },
+    "sources": [
+      {
+        "url": "https://pollub.pl/studenci/organizacje/organizacje-studenckie/kola-naukowe",
+        "title": "Koła naukowe — pollub.pl"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  }
+]

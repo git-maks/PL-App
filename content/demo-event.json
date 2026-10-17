@@ -1,0 +1,139 @@
+{
+  "slug": "dzien-otwarty-demo",
+  "name": "Dzień Otwarty Politechniki Lubelskiej (demo)",
+  "description": "Przykładowe wydarzenie do demonstracji i testów. Stacje odpowiadają realnym miejscom na kampusie; program zajęć jest przykładowy.",
+  "timezone": "Europe/Warsaw",
+  "day": { "start": "09:00", "end": "16:00" },
+  "minScansForCard": 5,
+  "stations": [
+    {
+      "slug": "wm-druk-3d",
+      "name": "Druk 3D i obróbka CNC",
+      "kind": "workshop",
+      "faculty": "WM",
+      "poi": "wm",
+      "description": "Zobacz, jak z projektu CAD powstaje gotowa część — od drukarki 3D po frezarkę CNC.",
+      "weights": { "STR": 0.7, "INT": 0.2, "KRE": 0.1 },
+      "sessions": [{ "start": "10:00", "end": "10:45", "room": "hala laboratoryjna WM" }, { "start": "13:00", "end": "13:45", "room": "hala laboratoryjna WM" }]
+    },
+    {
+      "slug": "wm-pojazdy",
+      "name": "Laboratorium silników i pojazdów",
+      "kind": "show",
+      "faculty": "WM",
+      "poi": "wm",
+      "description": "Hamownia, diagnostyka silników i pojazdy budowane przez koła naukowe.",
+      "weights": { "STR": 0.6, "MAN": 0.2, "VIT": 0.2 },
+      "sessions": [{ "start": "11:00", "end": "11:40", "room": "laboratorium pojazdów" }, { "start": "14:00", "end": "14:40", "room": "laboratorium pojazdów" }]
+    },
+    {
+      "slug": "weii-roboty-iot",
+      "name": "Programowanie robotów i IoT",
+      "kind": "workshop",
+      "faculty": "WEiI",
+      "poi": "weii",
+      "description": "Zaprogramuj mikrokontroler i rozkaż robotowi przejechać tor przeszkód.",
+      "weights": { "MAN": 0.6, "INT": 0.3, "STR": 0.1 },
+      "sessions": [{ "start": "10:00", "end": "10:45", "room": "E-lab" }, { "start": "12:00", "end": "12:45", "room": "E-lab" }]
+    },
+    {
+      "slug": "weii-wysokie-napiecia",
+      "name": "Pokaz wysokich napięć",
+      "kind": "show",
+      "faculty": "WEiI",
+      "poi": "weii",
+      "description": "Wyładowania, łuk elektryczny i bezpieczeństwo w świecie wysokich napięć.",
+      "weights": { "MAN": 0.5, "ENE": 0.3, "WIS": 0.2 },
+      "sessions": [{ "start": "11:00", "end": "11:30", "room": "laboratorium WN" }, { "start": "14:30", "end": "15:00", "room": "laboratorium WN" }]
+    },
+    {
+      "slug": "wbia-makiety-vr",
+      "name": "Pracownia architektury — makiety i VR",
+      "kind": "workshop",
+      "faculty": "WBiA",
+      "poi": "wbia",
+      "description": "Zaprojektuj fragment miasta z klocków i przejdź się po nim w goglach VR.",
+      "weights": { "KRE": 0.7, "STR": 0.3 },
+      "sessions": [{ "start": "10:30", "end": "11:15", "room": "pracownia projektowa" }, { "start": "13:30", "end": "14:15", "room": "pracownia projektowa" }]
+    },
+    {
+      "slug": "wisie-oze",
+      "name": "Laboratorium OZE — fotowoltaika i pompy ciepła",
+      "kind": "presentation",
+      "faculty": "WIŚiE",
+      "poi": "wisie",
+      "description": "Jak działa panel PV, magazyn energii i pompa ciepła — z pomiarami na żywo.",
+      "weights": { "ENE": 0.7, "WIS": 0.2, "MAN": 0.1 },
+      "sessions": [{ "start": "10:00", "end": "10:40", "room": "laboratorium OZE" }, { "start": "12:30", "end": "13:10", "room": "laboratorium OZE" }]
+    },
+    {
+      "slug": "wz-startup",
+      "name": "Gra decyzyjna: startup w 30 minut",
+      "kind": "workshop",
+      "faculty": "WZ",
+      "poi": "wz",
+      "description": "Drużynowa gra biznesowa: budżet, marketing i decyzje pod presją czasu.",
+      "weights": { "CHA": 0.6, "INT": 0.4 },
+      "team": { "mode": true, "minMembers": 2 },
+      "sessions": [{ "start": "11:30", "end": "12:00", "room": "sala 018" }, { "start": "14:00", "end": "14:30", "room": "sala 018" }]
+    },
+    {
+      "slug": "wmiit-cyberatak",
+      "name": "Cyberatak na żywo",
+      "kind": "show",
+      "faculty": "WMiIT",
+      "poi": "wmiit",
+      "description": "Zobacz, jak wygląda włamanie do sieci — i jak się przed nim bronić.",
+      "weights": { "MAN": 0.6, "INT": 0.4 },
+      "sessions": [{ "start": "10:15", "end": "10:45", "room": "laboratorium sieci" }, { "start": "13:15", "end": "13:45", "room": "laboratorium sieci" }]
+    },
+    {
+      "slug": "wmiit-ai-dane",
+      "name": "Matematyka danych — AI w praktyce",
+      "kind": "presentation",
+      "faculty": "WMiIT",
+      "poi": "wmiit",
+      "description": "Jak model uczy się rozpoznawać obrazy? Matematyka, która stoi za AI.",
+      "weights": { "INT": 0.7, "MAN": 0.3 },
+      "sessions": [{ "start": "11:15", "end": "11:45", "room": "aula WMiIT" }, { "start": "15:00", "end": "15:30", "room": "aula WMiIT" }]
+    },
+    {
+      "slug": "cizt-escape-room",
+      "name": "Biblioteka i CIZT — escape room z wiedzą",
+      "kind": "workshop",
+      "poi": "cizt",
+      "description": "Drużynowy escape room w Bibliotece: szyfry, katalogi i źródła wiedzy.",
+      "weights": { "WIS": 0.6, "CHA": 0.4 },
+      "team": { "mode": true, "minMembers": 2 },
+      "sessions": [{ "start": "12:00", "end": "12:40", "room": "Biblioteka, CIZT" }, { "start": "15:00", "end": "15:40", "room": "Biblioteka, CIZT" }]
+    },
+    {
+      "slug": "sport-sztafeta",
+      "name": "Centrum Sportowe — sztafeta drużynowa",
+      "kind": "workshop",
+      "poi": "sport",
+      "description": "Drużynowe wyzwanie sportowe z AZS Politechnika Lubelska.",
+      "weights": { "VIT": 0.7, "CHA": 0.3 },
+      "team": { "mode": true, "minMembers": 2 },
+      "sessions": [{ "start": "12:30", "end": "13:00", "room": "hala sportowa" }, { "start": "15:30", "end": "16:00", "room": "hala sportowa" }]
+    },
+    {
+      "slug": "rektorat-qa",
+      "name": "Rektorat — jak działa uczelnia (Q&A)",
+      "kind": "presentation",
+      "poi": "rektorat",
+      "description": "Rekrutacja, stypendia, wymiany zagraniczne — pytania do zespołu uczelni.",
+      "weights": { "CHA": 0.5, "WIS": 0.5 },
+      "sessions": [{ "start": "11:00", "end": "11:30", "room": "sala senacka" }, { "start": "14:00", "end": "14:30", "room": "sala senacka" }]
+    },
+    {
+      "slug": "centech-laboratoria",
+      "name": "CEN-TECH — laboratoria badawcze",
+      "kind": "show",
+      "poi": "centech",
+      "description": "Mikroskopy, kamery ultraszybkie i badania materiałów — zajrzyj do laboratoriów.",
+      "weights": { "WIS": 0.5, "STR": 0.3, "MAN": 0.2 },
+      "sessions": [{ "start": "10:30", "end": "11:00", "room": "CEN-TECH" }, { "start": "13:30", "end": "14:00", "room": "CEN-TECH" }]
+    }
+  ]
+}

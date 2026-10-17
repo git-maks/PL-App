@@ -1,0 +1,216 @@
+{
+  "verifiedAt": "2026-10-17",
+  "stats": [
+    {
+      "code": "STR",
+      "name": "Siła",
+      "archetype": "Konstruktor",
+      "icon": "gear",
+      "color": "#C2410C",
+      "description": "Budowanie, konstruowanie, maszyny i materiały. Lubisz, gdy coś działa w realnym świecie."
+    },
+    {
+      "code": "INT",
+      "name": "Inteligencja",
+      "archetype": "Analityk",
+      "icon": "sigma",
+      "color": "#4338CA",
+      "description": "Liczby, modele i logiczne wnioskowanie. Szukasz wzorców tam, gdzie inni widzą chaos."
+    },
+    {
+      "code": "MAN",
+      "name": "Mana",
+      "archetype": "Technomag",
+      "icon": "bolt",
+      "color": "#7C3AED",
+      "description": "Elektronika, kod i systemy cyfrowe. Tchniesz życie w krzem i prąd."
+    },
+    {
+      "code": "KRE",
+      "name": "Kreatywność",
+      "archetype": "Architekt",
+      "icon": "compass",
+      "color": "#DB2777",
+      "description": "Forma, przestrzeń i design. Projektujesz rzeczy, które są piękne i użyteczne."
+    },
+    {
+      "code": "ENE",
+      "name": "Energia",
+      "archetype": "Strażnik Energii",
+      "icon": "leaf",
+      "color": "#15803D",
+      "description": "Energetyka, klimat i środowisko. Chcesz, żeby technologia służyła planecie."
+    },
+    {
+      "code": "CHA",
+      "name": "Charyzma",
+      "archetype": "Strateg",
+      "icon": "crown",
+      "color": "#B45309",
+      "description": "Ludzie, organizacja i biznes. Potrafisz poprowadzić zespół i projekt do celu."
+    },
+    {
+      "code": "WIS",
+      "name": "Mądrość",
+      "archetype": "Badacz",
+      "icon": "book",
+      "color": "#0E7490",
+      "description": "Ciekawość, wiedza i badania. Zadajesz pytania, na które nikt jeszcze nie odpowiedział."
+    },
+    {
+      "code": "VIT",
+      "name": "Witalność",
+      "archetype": "Atleta",
+      "icon": "heart",
+      "color": "#BE123C",
+      "description": "Ruch, wytrwałość i gra zespołowa. Twoja energia napędza całą drużynę."
+    }
+  ],
+  "hybrids": {
+    "STR+INT": {
+      "title": "Inżynier Precyzji",
+      "description": "Łączysz siłę konstruktora z chłodną analizą — obliczysz, zaprojektujesz i zbudujesz."
+    },
+    "STR+MAN": {
+      "title": "Mechatronik",
+      "description": "Mechanika i elektronika to dla Ciebie jeden świat. Roboty, drony i automaty czekają."
+    },
+    "STR+KRE": {
+      "title": "Mistrz Formy",
+      "description": "Masz zmysł konstruktora i oko projektanta — tworzysz rzeczy solidne i piękne."
+    },
+    "STR+ENE": {
+      "title": "Energomechanik",
+      "description": "Maszyny i energia: turbiny, silniki, instalacje przyszłości."
+    },
+    "STR+CHA": {
+      "title": "Kapitan Produkcji",
+      "description": "Rozumiesz maszyny i ludzi — idealny lider hali produkcyjnej i projektów inżynierskich."
+    },
+    "STR+WIS": {
+      "title": "Wynalazca",
+      "description": "Badasz, testujesz i budujesz prototypy. Patenty to Twój naturalny ekosystem."
+    },
+    "STR+VIT": {
+      "title": "Tytan Warsztatu",
+      "description": "Niezmordowany praktyk — najlepiej uczysz się, działając rękami."
+    },
+    "INT+MAN": {
+      "title": "Haker Algorytmów",
+      "description": "Kod i matematyka to Twoje zaklęcia. Dane, sieci i bezpieczeństwo nie mają przed Tobą tajemnic."
+    },
+    "INT+KRE": {
+      "title": "Projektant Modeli",
+      "description": "Tworzysz modele — matematyczne i przestrzenne — które pomagają zrozumieć świat."
+    },
+    "INT+ENE": {
+      "title": "Analityk Klimatu",
+      "description": "Liczby w służbie planety: prognozy, symulacje, optymalizacja zużycia energii."
+    },
+    "INT+CHA": {
+      "title": "Strateg Liczb",
+      "description": "Finanse, dane i decyzje biznesowe — widzisz trend, zanim stanie się oczywisty."
+    },
+    "INT+WIS": {
+      "title": "Uczony",
+      "description": "Teoria i badania to Twoja przestrzeń. Nauka potrzebuje takich umysłów."
+    },
+    "INT+VIT": {
+      "title": "Taktyk",
+      "description": "Planujesz jak szachista, działasz jak sportowiec."
+    },
+    "MAN+KRE": {
+      "title": "Mag Multimediów",
+      "description": "Technologia i sztuka: grafika, dźwięk, interakcja i nowe media."
+    },
+    "MAN+ENE": {
+      "title": "Inżynier Sieci Przyszłości",
+      "description": "Inteligentne sieci energetyczne, OZE i AI — budujesz energetykę jutra."
+    },
+    "MAN+CHA": {
+      "title": "Technolider",
+      "description": "Rozumiesz technologię i potrafisz ją sprzedać — lider zespołów IT i startupów."
+    },
+    "MAN+WIS": {
+      "title": "Cyfrowy Odkrywca",
+      "description": "Eksperymentujesz z technologią, żeby odkrywać nowe rzeczy — badania i innowacje."
+    },
+    "MAN+VIT": {
+      "title": "Cyberatleta",
+      "description": "Szybki, zwinny i techniczny — e-sport, drony i systemy czasu rzeczywistego."
+    },
+    "KRE+ENE": {
+      "title": "Ekoarchitekt",
+      "description": "Projektujesz przestrzeń przyjazną ludziom i środowisku."
+    },
+    "KRE+CHA": {
+      "title": "Wizjoner Marki",
+      "description": "Kreatywność plus komunikacja: marketing, design produktów, opowiadanie historii."
+    },
+    "KRE+WIS": {
+      "title": "Strażnik Dziedzictwa",
+      "description": "Szanujesz historię i nadajesz jej nowe życie — konserwacja, rewitalizacja, architektura."
+    },
+    "KRE+VIT": {
+      "title": "Twórca w Ruchu",
+      "description": "Tworzysz w biegu — projekty, wydarzenia, działanie."
+    },
+    "ENE+CHA": {
+      "title": "Lider Zielonej Transformacji",
+      "description": "Organizujesz zmianę na lepsze — energia, środowisko i ludzie."
+    },
+    "ENE+WIS": {
+      "title": "Badacz Natury",
+      "description": "Woda, powietrze, materiały — badasz procesy, od których zależy nasze życie."
+    },
+    "ENE+VIT": {
+      "title": "Strażnik Żywiołów",
+      "description": "Działasz w terenie, blisko natury i jej sił."
+    },
+    "CHA+WIS": {
+      "title": "Mędrzec Organizacji",
+      "description": "Wiedza i ludzie — doradzasz, organizujesz i uczysz innych."
+    },
+    "CHA+VIT": {
+      "title": "Kapitan Drużyny",
+      "description": "Zespół idzie za Tobą — sport, organizacja i przywództwo."
+    },
+    "WIS+VIT": {
+      "title": "Wędrowny Badacz",
+      "description": "Ciekawość świata i energia do jej zaspokajania."
+    }
+  },
+  "rating": {
+    "labels": [
+      "Nie dla mnie",
+      "Tak sobie",
+      "Ciekawe",
+      "Bardzo fajne",
+      "Chcę to robić!"
+    ],
+    "emoji": [
+      "😐",
+      "🙂",
+      "😊",
+      "😃",
+      "🤩"
+    ],
+    "question": "Na ile to było dla Ciebie fajne?"
+  },
+  "defaults": {
+    "ratingMultipliers": [
+      0.25,
+      0.5,
+      1,
+      1.5,
+      2
+    ],
+    "minScansForCard": 5,
+    "levelDivisor": 25,
+    "teamBonus": 1.2,
+    "archetypeThreshold": 0.15,
+    "maxArchetypes": 3,
+    "roundingStep": 5,
+    "basePoints": 100
+  }
+}

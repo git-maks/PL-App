@@ -1,0 +1,64 @@
+{
+  "sections": [
+    {
+      "id": "organizacje",
+      "title": "Organizacje studenckie",
+      "items": [
+        { "name": "Samorząd Studentów Politechniki Lubelskiej", "text": "Reprezentuje studentów i organizuje wydarzenia na kampusie." },
+        { "name": "„Plagiat”", "text": "Czasopismo studentów Politechniki Lubelskiej." },
+        { "name": "Studencka Agencja Fotograficzna (SAF)", "text": "Dla pasjonatów fotografii i dokumentowania życia uczelni." },
+        { "name": "Studencka Inicjatywa Kulturalna StuArt", "text": "Kultura i wydarzenia artystyczne tworzone przez studentów." }
+      ]
+    },
+    {
+      "id": "kultura",
+      "title": "Kultura",
+      "items": [
+        { "name": "Chór Politechniki Lubelskiej", "text": "Śpiew chóralny i koncerty." },
+        { "name": "Zespół Tańca Ludowego „KRAJKA”", "text": "Taniec i tradycja ludowa." },
+        { "name": "Formacja Tańca Towarzyskiego „GAMZA”", "text": "Taniec towarzyski." },
+        { "name": "Grupa Tańca Współczesnego", "text": "Taniec współczesny." },
+        { "name": "Klub Studencki „Kazik”", "text": "Legendarny punkt na studenckiej mapie kampusu." }
+      ]
+    },
+    {
+      "id": "sport",
+      "title": "Sport",
+      "items": [
+        { "name": "KU AZS Politechnika Lubelska", "text": "Klub uczelniany — sekcje sportowe i rozgrywki akademickie." },
+        { "name": "Klub Płetwonurków „PASKUDA”", "text": "Nurkowanie." },
+        { "name": "Sekcja Strzelectwa Sportowego KU AZS PL", "text": "Strzelectwo sportowe." },
+        { "name": "Klub Kick-boxingu", "text": "Sporty walki." },
+        { "name": "Yacht Club Politechniki Lubelskiej", "text": "Żeglarstwo." },
+        { "name": "Koło Wędkarskie „ESOX”", "text": "Wędkarstwo." },
+        { "name": "Centrum Sportowe PL", "text": "Hala sportowa przy ul. Nadbystrzyckiej 36B; zajęcia prowadzi Studium Wychowania Fizycznego i Sportu." }
+      ]
+    },
+    {
+      "id": "akademiki",
+      "title": "Domy studenckie",
+      "items": [
+        { "name": "DS1", "text": "ul. Nadbystrzycka 42" },
+        { "name": "DS2", "text": "ul. Nadbystrzycka 44" },
+        { "name": "DS3", "text": "ul. Nadbystrzycka 44A" },
+        { "name": "DS4", "text": "ul. Nadbystrzycka 42A — tu mieści się też Biuro Spraw Studenckich (tel. 81 538 41 80)." }
+      ],
+      "note": "Kwaterowanie na rok 2026/27 odbyło się 26–27 września 2026 r."
+    },
+    {
+      "id": "cyfrowe",
+      "title": "Usługi cyfrowe",
+      "items": [
+        { "name": "Aplikacja „Kampus Pollub”", "text": "Oficjalna aplikacja uczelni (Google Play, App Store).", "url": "https://pollub.pl/studenci-niepelnosprawni/aplikacja-kampus-pollub" },
+        { "name": "Wirtualny dziekanat i mLegitymacja", "text": "Sprawy studenckie online." },
+        { "name": "Office 365 i eduroam", "text": "Konto uczelniane i Wi-Fi na kampusie." }
+      ]
+    }
+  ],
+  "sources": [
+    { "url": "https://pl.wikipedia.org/wiki/Politechnika_Lubelska", "title": "Wikipedia — Życie studenckie" },
+    { "url": "https://pollub.pl/studenci/wsparcie/domy-studenckie", "title": "Domy Studenckie" },
+    { "url": "https://rekrutacja.pollub.pl/poznaj-kampus", "title": "Poznaj kampus" }
+  ],
+  "verifiedAt": "2026-10-17"
+}

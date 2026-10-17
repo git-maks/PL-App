@@ -1,0 +1,29 @@
+{
+  "secretHex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "stationId": "0f8fad5b-d9cb-469f-a165-70867728950e",
+  "cases": [
+    {
+      "window": 58600000,
+      "mac": "2pNK4nIWuVSw",
+      "url": "https://uniquest.example/q/1.0f8fad5bd9cb469fa16570867728950e.58600000.2pNK4nIWuVSw"
+    },
+    {
+      "window": 58600001,
+      "mac": "uM_7ktbEDpm5"
+    }
+  ],
+  "static": {
+    "mac": "f3jyTKA7-XJ3",
+    "url": "https://uniquest.example/q/s.0f8fad5bd9cb469fa16570867728950e.f3jyTKA7-XJ3"
+  },
+  "manual": [
+    {
+      "window": 5860000,
+      "code": "UKZKCJ"
+    },
+    {
+      "window": 5860001,
+      "code": "47XYHF"
+    }
+  ]
+}

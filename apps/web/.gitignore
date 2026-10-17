@@ -1,0 +1,6 @@
+e2e/.generated/
+test-results/
+playwright-report/
+node_modules/
+.svelte-kit/
+build/

@@ -1,0 +1,9 @@
+# Automatic HTTPS (Let's Encrypt) in front of UniQuest. Set UQ_TRUST_PROXY=true and
+# UQ_COOKIE_SECURE=true for the app when running behind this proxy.
+{$UQ_DOMAIN} {
+	encode zstd gzip
+	reverse_proxy app:8080 {
+		# Server-Sent Events must not be buffered.
+		flush_interval -1
+	}
+}

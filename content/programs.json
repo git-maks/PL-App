@@ -1,0 +1,1397 @@
+[
+  {
+    "slug": "architektura",
+    "name": "Architektura",
+    "faculty": "WBiA",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I i II stopnia",
+    "description": "Architektura to kierunek, na którym zdobędziesz między innymi wiedzę z zakresu historii i teorii architektury oraz urbanistyki, konserwacji zabytków, budownictwa, a także kierowania procesem inwestycyjnym i przepisów techniczno-budowlanych.",
+    "careersIntro": "Możesz pracować w:",
+    "careers": [
+      "audytor w przedsiębiorstwach i instytucjach",
+      "administracji i samorządach terytorialnych",
+      "instytucjach prowadzących badania naukowe z zakresu architektury",
+      "jednostkach doradztwa technicznego"
+    ],
+    "didYouKnow": "Po ukończeniu studiów i odbyciu odpowiedniej praktyki możesz uzyskać pełne uprawnienia zawodowe, które umożliwią Ci pełnienie samodzielnych funkcji technicznych w budownictwie.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka"
+    ],
+    "vector": {
+      "KRE": 0.7,
+      "STR": 0.1,
+      "ENE": 0.1,
+      "WIS": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "budownictwo",
+    "name": "Budownictwo",
+    "faculty": "WBiA",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I stopnia/studia stacjonarne i niestacjonarne II stopnia",
+    "description": "Budownictwo to kierunek, który da ci wiedzę i umiejętności między innymi z zakresu projektowania konstrukcji obiektów i elementów budowlanych, technologii stosowanych w budownictwie, a także kierowania procesem inwestycyjnym.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "projektant",
+      "kierownik budowy",
+      "inspektor nadzoru"
+    ],
+    "didYouKnow": "Możesz rozwijać  swoje zainteresowania w Studenckich Kołach Naukowych, m.in. Technologii Budownictwa „AEDIFICATIO”, Malarstwa i Rysunku „MIR”, Architektury Współczesnej, Konserwacji Zabytków „SGRAFFITO”, Budownictwa Naturalnego „ARCHINATURE”",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka"
+    ],
+    "vector": {
+      "STR": 0.5,
+      "KRE": 0.3,
+      "INT": 0.2
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "elektrotechnika",
+    "name": "Elektrotechnika",
+    "faculty": "WEiI",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I stopnia/studia stacjonarne i niestacjonarne II stopnia",
+    "description": "Elektrotechnika pozwala na zdobycie praktycznych umiejętności projektowania, wytwarzania, eksploatacji i diagnostyki urządzeń elektrycznych i elektronicznych, instalacji elektrycznych, komputerowych systemów pomiarowych, układów automatyki oraz napędów mikroprocesorowych. Poznasz tajniki urządzeń sterujących i pomiarowych wykorzystujących energię elektryczną. Zdobędziesz wiedzę i umiejętności dotyczące elektroenergetyki, w tym odnawialnych źródeł energii.",
+    "careersIntro": "Możesz projektować, wytwarzać, eksploatować i serwisować urządzenia i maszyny elektrotechniczne, m.in. na stanowiskach:",
+    "careers": [
+      "projektanta",
+      "konstruktora",
+      "serwisanta",
+      "inżyniera obsługi",
+      "konsultanta",
+      "inżyniera sprzedaży"
+    ],
+    "didYouKnow": "Możesz brać udział w zawodowych kursach i certyfikowanych szkoleniach, np. z zakresu systemów fotowoltaicznych, pomp ciepła, magazynów energii, oceny energetycznej budynków oraz pozwalające na uzyskanie uprawnień elektrycznych G1. Pozwala to na uzyskanie certyfikatów i zaświadczeń uprawniających do pracy z OZE. Będziesz mógł/mogła ubiegać się o oczekiwane przez pracodawców branżowe uprawnienia energetyczne, honorowane na terenie Polski oraz krajów Unii Europejskiej.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka"
+    ],
+    "vector": {
+      "MAN": 0.5,
+      "STR": 0.25,
+      "ENE": 0.25
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "informatyka",
+    "name": "Informatyka",
+    "faculty": "WEiI",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I stopnia",
+    "description": "Informatyka pozwala na zrozumienie działanie współczesnych aplikacji i systemów komputerowych, baz danych. Nauczysz się też ich tworzenia. Będziesz uczestniczyć w laboratoriach i brać aktywny udział w realizacji projektów informatycznych, ucząc się pracy w zespole. Nauczysz się wytwarzania oprogramowania i jego eksploatacji, tworzenia aplikacji internetowych mobilnych i multimedialnych, a także projektowania i administrowania sieciami komputerowymi. Podszkolisz język angielski.",
+    "careersIntro": "Może znaleźć zatrudnienie jako:",
+    "careers": [
+      "projektant i twórca oprogramowania oraz systemów informatycznych",
+      "administrator złożonych systemów informatycznych",
+      "administrator sieci komputerowych",
+      "specjalista w dziedzinie bezpieczeństwa systemów informatycznych",
+      "specjalista z zakresu grafiki komputerowej",
+      "systemów multimedialnych",
+      "systemów mobilnych",
+      "twórca aplikacji internetowych",
+      "inżynier–informatyk zakładowy"
+    ],
+    "didYouKnow": "Możesz odbywać staże i praktyki zawodowe w wiodących lubelskich firmach informatycznych. Praktyki, a nawet część studiów, będziesz mógł/mogła odbywać też za granicą.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka"
+    ],
+    "vector": {
+      "MAN": 0.6,
+      "INT": 0.4
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynieria-multimediow",
+    "name": "Inżynieria multimediów",
+    "faculty": "WEiI",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Inżynieria multimediów to interdyscyplinarny kierunek studiów łączący wiedzę z obszaru nauk inżynieryjno-technicznych oraz nauk społecznych. Nauczysz się, w jaki sposób tworzyć oprogramowanie, przetwarzać pliki graficzne i formy multimedialne oraz zapoznasz się z grafiką komputerową i zasadami tworzenia animacji. Zdobędziesz wiedzę i umiejętności inżynierskie z zakresu projektowania i użytkowania urządzeń i instalacji elektrycznych, oświetleniowych, audiowizualnych. Dowiesz się, jak tworzyć aplikacje i prezentacje multimedialne, a także jak realizować różne formy nagrań audio-wizualnych przy wykorzystaniu sprzętu i narzędzi dostępnych w studiach telewizyjno-radiowych.",
+    "careersIntro": "Możesz projektować, wytwarzać, eksploatować i serwisować urządzenia elektryczne oraz aplikacje i narzędzia informatyczne wykorzystywane przy produkcji i realizacji różnych form multimedialnych, m.in. na stanowiskach:",
+    "careers": [
+      "projektanta (np. systemów zasilających, oprogramowania, instalacji i form multimedialnych)",
+      "serwisanta urządzeń i systemów multimedialnych",
+      "inżyniera obsługi studia",
+      "realizatora (np. dźwięku, obrazu i multimediów)",
+      "montażysty form multimedialnych",
+      "inżyniera multimediów"
+    ],
+    "didYouKnow": "Zdobyte kompetencje inżynierskie pozwolą ci także podjąć zatrudnienie w firmach zajmujących się nagłośnieniem, oświetleniem i zasilaniem obiektów wykorzystywanych w czasie imprez masowych i widowisk artystycznych.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka"
+    ],
+    "vector": {
+      "MAN": 0.45,
+      "KRE": 0.45,
+      "CHA": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynierskie-zastosowania-informatyki-w-elektrotechnice",
+    "name": "Inżynierskie zastosowania informatyki w elektrotechnice",
+    "faculty": "WEiI",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I i II stopnia",
+    "description": "Inżynierskie zastosowania informatyki w elektrotechnice daje gruntowną wiedzę i kompetencje inżynierskie z zakresu elektrotechniki, elektroniki oraz programowania. Nabędziesz umiejętności programistyczne, z zakresu technologii informacyjnych, baz danych, systemów mikroprocesorowych oraz sieci komputerowych i przemysłowych, nakierowane na wykorzystanie w szeroko rozumianej elektrotechnice, m.in. do monitorowania, sterowania i zarządzania procesami technologicznymi, nowoczesnymi układami napędowymi, sterującymi i zasilającymi, a także do akwizycji, analizy oraz wizualizacji danych.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "programista systemów informatyki i automatyki przemysłowej",
+      "inżynier programowania przemysłowego",
+      "specjalista informatyk",
+      "konsultant ds. technicznych",
+      "inżynier zarządzający sieciami przemysłowymi",
+      "inżynier/specjalista ds. produkcji",
+      "inżynier utrzymania ruchu",
+      "inżynier obsługi/serwisant",
+      "inżynier konstruktor",
+      "projektant systemów sterowania maszyn",
+      "projektant i programista urządzeń mikroprocesorowych"
+    ],
+    "didYouKnow": "Połączenie wiedzy z zakresu informatyki i elektrotechniki sprawia, że stajesz się silną konkurencją na rynku pracy.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka"
+    ],
+    "vector": {
+      "MAN": 0.5,
+      "INT": 0.3,
+      "ENE": 0.2
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "energetyka",
+    "name": "Energetyka",
+    "faculty": "WIŚiE",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Energetyka pozwala na nabycie umiejętności projektowania, nadzorowania i eksploatacji urządzeń, instalacji, sieci i systemów energetycznych i innych rozwiązań technologicznych stosowanych w energetyce. Ponad połowa zajęć to ćwiczenia audytoryjne, laboratoria lub zajęcia projektowe, podczas których przygotujesz projekty z zakresu energetyki. Zdobywają w ten sposób umiejętności niezbędne w ich przyszłej pracy. Miesięczna praktyka zawodowa pozwoli ci jeszcze przed ukończeniem studiów poznać realia związane z wykonywaniem wyuczonego zawodu.",
+    "careersIntro": "Możesz prowadzić firmę związaną z projektowaniem, wykonawstwem, eksploatacją, dystrybucją materiałów i urządzeń instalacyjnych z zakresu energetyki albo pracować jako:",
+    "careers": [
+      "projektant w biurach projektowych",
+      "w firmach wykonawczych zajmujących się urządzaniami i systemami energetycznymi",
+      "w przedsiębiorstwach energetycznych, szczególnie związanych z wytwarzaniem i dystrybucją ciepła i energii elektrycznej",
+      "audytor energetyczny",
+      "asystent kierownika budowy w procesie nadzorowania i koordynowania stanu realizacji robót przy budowie m.in.: elektrowni, elektrociepłowni, ciepłowni, sieci i instalacji energetycznych",
+      "pracownik nadzoru inwestycji związanych z poprawą efektywności energetycznej",
+      "w ośrodkach naukowo-badawczych",
+      "na stanowiskach kierowniczych w instytucjach publicznych i prywatnych związanych z branżą energetyczną",
+      "w jednostkach samorządowych w zakresie problemów energetyki",
+      "w ramach własnej działalności gospodarczej związanej z projektowaniem, wykonawstwem, eksploatacją, dystrybucją materiałów i urządzeń instalacyjnych z zakresu energetyki"
+    ],
+    "didYouKnow": "Program studiów został opracowany we współpracy z przedstawicielami otoczenia społeczno-gospodarczego Politechniki Lubelskiej. Jako absolwent możesz ubiegać się o uprawnienia budowlane w specjalnościach instalacyjnej w zakresie sieci i instalacji sanitarnych, ciepłowniczych, gazowych bez ograniczeń. Dodatkowo na podstawie dyplomu ukończenia studiów I stopnia możesz uzyskać certyfikat instalatora w zakresie OZE wydawany przez Urząd Dozoru Technicznego.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "geografia",
+      "chemia",
+      "biologia"
+    ],
+    "vector": {
+      "ENE": 0.6,
+      "STR": 0.2,
+      "INT": 0.2
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynieria-odnawialnych-zrodel-energii",
+    "name": "Inżynieria odnawialnych źródeł energii",
+    "faculty": "WIŚiE",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Inżynieria odnawialnych źródeł energii przygotowuje wszechstronnych specjalistów o kwalifikacjach projektowych. Nauczysz się, jak wykorzystywać odnawialne źródła energii do produkcji m.in. energii elektrycznej i ciepła. Studia rozpoczniesz od powtórzenia i uzupełnienia wiedzy z przedmiotów ogólnych. Najważniejsza będzie fizyka, matematyka, geometria wykreślna i chemia. Od pierwszego roku poznawać będziesz przedmioty kierunkowe, takie jak podstawy budownictwa w inżynierii odnawialnych źródeł energii czy rośliny energetyczne. Będziesz brać też udział w laboratoriach, ćwiczeniach, seminariach i zajęciach projektowych.",
+    "careersIntro": "Możesz prowadzić firmę związaną z projektowaniem, wykonawstwem, eksploatacją, dystrybucją materiałów i urządzeń lub pracować jako:",
+    "careers": [
+      "projektanta w biurach projektowych",
+      "wykonawca i eksploatator inwestycji z zakresu energetyki, urządzeń oraz sieci i instalacji odnawialnych źródeł energii",
+      "w przedsiębiorstwach zajmujących się produkcją, wytwarzaniem oraz dystrybucją energii elektrycznej i cieplnej",
+      "jednostkach wytwórczych aparatury i podzespołów urządzeń służących do realizacji zadań z zakresu energetyki proekologicznej",
+      "instytucjach administrujących i monitorujących prace obiektów, takich jak np.: farmy fotowoltaiczne i wiatrowe, systemy kolektorów słonecznych, biogazownie, wytwórnie biopaliw",
+      "w administracji i samorządach terytorialnych",
+      "w fundacjach i organizacjach pozarządowych związanych z inżynierią odnawialnych źródeł energii",
+      "w placówkach naukowo-badawczych i w szkolnictwie",
+      "na stanowiskach kierowniczych w instytucjach publicznych i prywatnych związanych z branżą energetyczną",
+      "przy projektowaniu i wykonawstwie inwestycji oraz eksploatacji obiektów ​w sektorze energetyki"
+    ],
+    "didYouKnow": "Absolwenci studiów I stopnia kierunku inżynieria odnawialnych źródeł energii mogą kontynuować kształcenie na studiach drugiego stopnia na specjalności Inżynieria odnawialnych źródeł energii na kierunku inżynieria środowiska. Po uzyskaniu tytułu magistra inżyniera mogą ubiegać się o uprawnienia budowlane do wykonywania samodzielnej funkcji technicznej w budownictwie w specjalności instalacyjnej w zakresie sieci, instalacji i urządzeń sanitarnych w zakresie projektowania i wykonawstwa bez ograniczeń. Ponadto na podstawie dyplomu ukończenia studiów I stopnia mogą uzyskać certyfikat instalatora w zakresie OZE wydawany przez Urząd Dozoru Technicznego.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "geografia",
+      "chemia",
+      "biologia"
+    ],
+    "vector": {
+      "ENE": 0.7,
+      "WIS": 0.2,
+      "KRE": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynieria-srodowiska",
+    "name": "Inżynieria środowiska",
+    "faculty": "WIŚiE",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I i II stopnia",
+    "description": "Inżynieria środowiska ma charakter interdyscyplinarny, łącząc wiedzę o charakterze inżynieryjno-technicznym z wiedzą przyrodniczą, związaną zwłaszcza z procesami zachodzącymi w środowisku naturalnym. Na samym początku studiów najważniejsze są przedmioty ogólne: matematyka, rysunek techniczny i chemia. Na I roku studiów rozpoczniesz też naukę przedmiotów kierunkowych, m.in.: zarządzanie procesem inwestycyjnym w inżynierii środowiska, technologia wody i ścieków, gospodarka odpadami, gospodarka wodna i ochrona wód, technologia biopaliw, alternatywne źródła energii.",
+    "careersIntro": "Możesz założyć własną firmę związaną z projektowaniem, wykonawstwem, eksploatacją, dystrybucją materiałów i urządzeń instalacyjnych lub pracować jako:",
+    "careers": [
+      "projektant w biurach projektowych",
+      "wykonawca i eksploatator inwestycji z zakresu budownictwa, urządzeń oraz sieci i instalacji sanitarnych, gospodarki odpadami, kształtowania i rekultywacji środowiska",
+      "audytor w przedsiębiorstwach i instytucjach",
+      "w administracji i samorządach terytorialnych",
+      "w fundacjach i organizacjach pozarządowych związanych z inżynierią środowiska",
+      "w placówkach naukowo-badawczych i w szkolnictwie",
+      "w ramach własnej działalności gospodarczej związanej z projektowaniem, wykonawstwem, eksploatacją, dystrybucją materiałów i urządzeń instalacyjnych z zakresu inżynierii środowiska",
+      "na stanowiskach kierowniczych w instytucjach publicznych i prywatnych związanych z branżą sanitarną i energetyczną"
+    ],
+    "didYouKnow": "Po studiach możesz ubiegać się o uprawnienia budowlane do wykonywania samodzielnej funkcji technicznej w budownictwie w specjalności instalacyjnej w zakresie sieci, instalacji i urządzeń wodociągowych i kanalizacyjnych, cieplnych, wentylacyjnych, gazowych w zakresie projektowania i wykonawstwa w ograniczonym zakresie. Po uzyskaniu tytułu magistra inżyniera absolwenci mogą ubiegać się o uprawnienia bez ograniczeń.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "geografia",
+      "chemia",
+      "biologia"
+    ],
+    "vector": {
+      "ENE": 0.6,
+      "WIS": 0.25,
+      "STR": 0.15
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "sztuczna-inteligencja-w-energetyce",
+    "name": "Sztuczna inteligencja w energetyce",
+    "faculty": "WIŚiE",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Kierunek sztuczna inteligencja w energetyce przygotowuje specjalistów łączących wiedzę energetyczną z nowoczesnymi metodami analizy danych i uczenia maszynowego. Studenci zdobywają umiejętności projektowania, wdrażania i nadzorowania inteligentnych systemów wspierających pracę sieci i instalacji energetycznych.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "inżynier automatyki i robotyki w zakładach energetycznych i elektrociepłowniach",
+      "inżynier AI do sterowania inteligentnymi sieciami, optymalizacji pracy źródeł OZE i przewidywania awarii",
+      "analityk danych w przedsiębiorstwach energetycznych",
+      "specjalista ds. zarządzania odnawialnymi źródłami energii, z wykorzystaniem AI do prognozowania produkcji energii, zarządzania magazynami energii itp",
+      "programista systemów sterowania elektrowniami, monitoringu pracy sieci w zakładach energetycznych"
+    ],
+    "didYouKnow": "Zdobyta wiedza, umiejętności i kompetencje umożliwiają absolwentowi pracę w przedsiębiorstwach energetycznych, u operatorów systemów, w firmach rozwijających rozwiązania dla inteligentnych sieci, w integratorach systemów przemysłowych oraz w działach analityki i cyberbezpieczeństwa.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "geografia",
+      "chemia",
+      "biologia"
+    ],
+    "vector": {
+      "ENE": 0.4,
+      "MAN": 0.35,
+      "INT": 0.25
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "wzornictwo-przemyslowe",
+    "name": "Wzornictwo przemysłowe",
+    "faculty": "WM",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Nauczysz się technik warsztatowych oraz stosowania oprogramowania komputerowego do prac artystycznych i zastosowań inżynierskich. Poznasz także zasady konstrukcji i metodyki projektowania urządzeń, obiektów i systemów technicznych czy projektowania cyklu życia produktu na podstawie jego cech materiałowych, konstrukcyjnych i eksploatacyjnych. Ponadto zdobędziesz wiedzę z zakresu opracowania projektu wzorniczego pod kątem ergonomii, estetyki i funkcjonalności.",
+    "careersIntro": "",
+    "careers": [],
+    "didYouKnow": "Absolwent kierunku wzornictwo przemysłowe jest przygotowany w aspekcie społecznym i technicznym do pracy w firmach zajmujących się wzornictwem przemysłowym, przedsiębiorstwach posiadających własne biura projektowe, specjalizowanych biurach projektowych i doradczych. Wzornictwo przemysłowe jest kierunkiem prowadzonym przez Wydział Mechaniczny PL przy współpracy z Uniwersytetem Przyrodniczym oraz Wydziałem Artystycznym UMCS.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "chemia",
+      "informatyka",
+      "historia sztuki"
+    ],
+    "vector": {
+      "KRE": 0.65,
+      "STR": 0.25,
+      "CHA": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "mechanika-i-budowa-maszyn",
+    "name": "Mechanika i budowa maszyn",
+    "faculty": "WM",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I stopnia/studia stacjonarne i niestacjonarne II stopnia",
+    "description": "Mechanika i budowa maszyn to kierunek, na którym poznasz tajniki wytwarzania i eksploatacji urządzeń technicznych (pojazdów, maszyn) z wykorzystaniem nowoczesnych metod, technologii oraz narzędzi projektowych i technologicznych. Nauczysz się materiałoznawstwa, elektroniki i elektrotechniki. Poznasz systemy pomiarowe i narzędzia związane z procesem projektowania i symulacji komputerowych stosowanych w innowacyjnych przedsiębiorstwach. Zdobędziesz wiedzę specjalistyczną dotyczącą samochodów, śmigłowców, maszyn i urządzeń technologicznych, a nawet nauczysz się znajdować rozwiązania, które ułatwią życie innym ludziom.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "Technolog",
+      "Konstruktor",
+      "Inżynier procesu",
+      "Specjalista ds. serwisu i konserwacji maszyn",
+      "Inżynier ds. badań i rozwoju",
+      "Specjalista ds. innowacji technologicznych",
+      "Audytor ds. bezpieczeństwa i certyfikacji"
+    ],
+    "didYouKnow": "Kierunek studiów mechanika i budowa maszyn łączy w sobie wiedzę z zakresu inżynierii, fizyki oraz matematyki, umożliwiając projektowanie i konstruowanie nowoczesnych maszyn? Studenci uczą się zarówno o procesach technologicznych, jak i programowaniu maszyn, co pozwala im na pracę w różnych branżach, od przemysłu motoryzacyjnego po lotniczy.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "chemia"
+    ],
+    "vector": {
+      "STR": 0.7,
+      "INT": 0.2,
+      "MAN": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "transport",
+    "name": "Transport",
+    "faculty": "WM",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I i II stopnia",
+    "description": "Transport to kierunek, na którym zyskasz wiedzę z zakresu inżynierii środków transportowych oraz inżynierii ruchu. Nauczysz się rozwiązywać problemy dotyczące organizacji i projektowania systemów sterowania ruchem i procesami transportowymi. Poznasz zagadnienia związane z ekonomiką, ekologia transportu, logistyką i spedycją.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "Specjalista ds. logistyki transportowej",
+      "Kierownik floty transportowej",
+      "Inżynier ruchu drogowego",
+      "Specjalista ds. obsługi technicznej pojazdów",
+      "Konsultant ds. transportu miejskiego",
+      "Analityk ds. systemów transportowych",
+      "Specjalista ds. zarządzania transportem w firmie spedycyjnej"
+    ],
+    "didYouKnow": "Kierunek studiów transport to nie tylko nauka o środkach transportu, ale także o logistyce, zarządzaniu ruchem oraz nowoczesnych technologiach? Studenci zdobywają wiedzę z zakresu inżynierii transportu drogowego czy kolejowego, a także uczą się, jak optymalizować systemy transportowe pod kątem bezpieczeństwa i ekologii.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "chemia"
+    ],
+    "vector": {
+      "STR": 0.45,
+      "CHA": 0.3,
+      "INT": 0.25
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynieria-pojazdow",
+    "name": "Inżynieria pojazdów",
+    "faculty": "WM",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Nauczysz się podstaw projektowania, wytwarzania i eksploatacji nowoczesnych pojazdów samochodowych oraz lekkich statków powietrznych. Zatrudnienie znajdziesz w biurach projektowych, zakładach produkcyjnych oraz firmach obsługujących nowoczesne pojazdy samochodowe i lekkie statki powietrzne.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "Pracownik firm obsługujących nowoczesne pojazdy samochodowe i lekkie statki powietrzne",
+      "Pracownik biur projektowych i zakładów produkcyjnych",
+      "Pracownik biur projektowych i zakładów produkcyjnych",
+      "Inżynier ds. testów",
+      "Mechanik obsługi technicznej",
+      "Integrator systemów",
+      "Inżynier ds. sprzedaży",
+      "Inżynier ds. konstrukcji lotniczych",
+      "Projektant systemów lotniczych",
+      "Specjalista ds. badań aerodynamicznych",
+      "Doradca serwisowy",
+      "Konstruktor"
+    ],
+    "didYouKnow": "Masz możliwość odbycia nieobowiązkowych praktyk zawodowych w firmach współpracujących z Wydziałem Mechanicznym. Możesz brać udział w spotkaniach z przedstawicielami przemysłu i biznesu oraz rozwijać zainteresowania w kołach naukowych rozszerzających zakres materiału przekazywany na zajęciach. Możesz też brać udział w studenckich konferencjach naukowych.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "chemia"
+    ],
+    "vector": {
+      "STR": 0.6,
+      "MAN": 0.25,
+      "VIT": 0.15
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynieria-biomedyczna",
+    "name": "Inżynieria biomedyczna",
+    "faculty": "WM",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I i II stopnia",
+    "description": "Inżynieria biomedyczna to interdyscyplinarny kierunek studiów. Zdobędziesz umiejętności projektowania układów biomechanicznych oraz poznasz budowę i zasadę działania nowoczesnych urządzeń medycznych. Nauczysz się używać nowoczesnej aparatury oraz systemów diagnostycznych i terapeutycznych opierając się na metodach, technikach i technologiach wytwórczych, elektronicznych, informatycznych i teleinformatycznych oraz materiałowych.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "Specjalista ds. badań i rozwoju w inżynierii biomedycznej",
+      "Koordynator ds. wdrażania nowych technologii medycznych",
+      "Specjalista ds. planowania i kontrolowania projektów badawczych",
+      "Inżynier ds. zarządzania sprzętem medycznym",
+      "Specjalista ds. utrzymania ruchu sprzętu medycznego",
+      "Kierownik ds. diagnostyki i kalibracji sprzętu medycznego",
+      "Specjalista ds. wdrażania technologii medycznych w praktyce klinicznej",
+      "Specjalista ds. analizy i zarządzania danymi medycznymi",
+      "Projektant sprzętu ortopedycznego"
+    ],
+    "didYouKnow": "Inżynieria biomedyczna to interdyscyplinarny kierunek studiów, który łączy wiedzę z zakresu medycyny, biologii i inżynierii? Absolwenci tego kierunku projektują nowoczesne urządzenia medyczne, takie jak protezy, implanty czy sztuczne narządy, które poprawiają jakość życia pacjentów.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "chemia",
+      "biologia"
+    ],
+    "vector": {
+      "WIS": 0.4,
+      "STR": 0.3,
+      "MAN": 0.2,
+      "VIT": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "zarzadzanie-i-inzynieria-produkcji",
+    "name": "Zarządzanie i inżynieria produkcji",
+    "faculty": "WM",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Zarządzanie i inżynieria produkcji to kierunek, na którym zdobędziesz wiedzę dotyczącą technologii produkcji oraz zarządzania przedsiębiorstwem. Zdobędziesz też umiejętności menadżerskie, tak niezbędnych do kierowania zespołem ludzi. Studia pozwalają na swobodne działanie w otoczeniu nowoczesnych technologii produkcyjnych, efektywne zarządzane przebiegiem ich wykorzystania oraz innowacyjne poszukiwania kierunków ich rozwoju.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "Specjalista ds. optymalizacji procesów produkcyjnych",
+      "Specjalista ds. planowania i kontrolowania produkcji",
+      "Koordynator ds. ciągłego doskonalenia",
+      "Audytor wewnętrzny systemów zarządzania jakością",
+      "Menadżer projektów",
+      "Koordynator ds. łańcucha dostaw",
+      "Kierownik ds. zasobów ludzkich w produkcji",
+      "Specjalista ds. szkoleń i rozwoju pracowników",
+      "Specjalista ds. optymalizacji procesów przemysłowych pod kątem ekologicznym",
+      "Specjalista ds. zarządzania bezpieczeństwem w produkcji",
+      "Menadżer innowacji w produkcji",
+      "Specjalista ds. wdrażania nowych technologii"
+    ],
+    "didYouKnow": "Masz możliwość odbycia nieobowiązkowych praktyk zawodowych w firmach współpracujących z Wydziałem Mechanicznym. Możesz brać udział w spotkaniach z przedstawicielami przemysłu i biznesu oraz rozwijać zainteresowania w kołach naukowych rozszerzających zakres materiału przekazywany na zajęciach. Możesz też brać udział w studenckich konferencjach naukowych.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "chemia"
+    ],
+    "vector": {
+      "STR": 0.4,
+      "CHA": 0.4,
+      "INT": 0.2
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "mechatronika",
+    "name": "Mechatronika",
+    "faculty": "WM",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I i II stopnia",
+    "description": "Mechatronika jest kierunkiem interdyscyplinarnym łączącym wiedzę z kilku obszarów nauk technicznych. Podczas studiów uzyskasz teoretyczną wiedzę w zakresie mechaniki, budowy i eksploatacji maszyn, elektroniki, informatyki, automatyki i robotyki oraz sterowania. Nie zabraknie też praktyki, którą wykorzystasz przy projektowaniu i eksploatacji inteligentnych maszyn, pojazdów oraz specjalistycznych sprzętów.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "Projektant systemów mechatronicznych",
+      "Inżynier ds. sterowania mechatronicznego",
+      "Specjalista ds. programowania robotów przemysłowych",
+      "Specjalista ds. diagnostyki i konserwacji systemów mechatronicznych",
+      "Inżynier ds. utrzymania ruchu maszyn",
+      "Inżynier ds. automatyzacji i robotyki",
+      "Inżynier ds. integracji systemów przemysłowych"
+    ],
+    "didYouKnow": "Masz możliwość odbycia nieobowiązkowych praktyk zawodowych w firmach współpracujących z Wydziałem Mechanicznym. Możesz brać udział w spotkaniach z przedstawicielami przemysłu i biznesu oraz rozwijać zainteresowania w kołach naukowych rozszerzających zakres materiału przekazywany na zajęciach. Możesz też brać udział w studenckich konferencjach naukowych.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "chemia"
+    ],
+    "vector": {
+      "STR": 0.45,
+      "MAN": 0.35,
+      "INT": 0.2
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "robotyzacja-procesow-wytworczych",
+    "name": "Robotyzacja procesów wytwórczych",
+    "faculty": "WM",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I i II stopnia",
+    "description": "Nauczysz się integrować roboty przemysłowe z urządzeniami pomocniczymi. Zaprojektujesz i zbudujesz układ sterowania robotem/pojazdem autonomicznym. Zobaczysz jak projektuje się gniazda wytwórcze i planuje ich pracę.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "Znajdziesz zatrudnienie jako specjalista z obszarów: automatyzacji, robotyzacji oraz integracji procesów wytwórczych w przedsiębiorstwach zajmujących się wytwarzaniem nowoczesnych maszyn i robotów przemysłowych oraz branżach usługowych, produkcyjnych oraz działach IT"
+    ],
+    "didYouKnow": "Kierunek studiów rootyzacja procesów wytwórczych przygotowuje studentów do pracy z najnowocześniejszymi technologiami automatyzacji? Dzięki zdobytej wiedzy, absolwenci potrafią dobierać i wdrażać roboty przemysłowe oraz projektować i optymalizować procesy produkcyjne w różnych branżach.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "chemia"
+    ],
+    "vector": {
+      "STR": 0.45,
+      "MAN": 0.45,
+      "INT": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "matematyka",
+    "name": "Matematyka",
+    "faculty": "WMiIT",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": true,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I i II stopnia o profilu praktycznym",
+    "description": "Matematyka to studia dla miłośników królowej nauk, którzy chcą poznać metody matematyczne stosowane w analizie i modelowaniu zjawisk i procesów zachodzących w technice, produkcji, usługach, finansach i ubezpieczeniach. Zdobędziesz wiedzę niezbędną do wykorzystania narzędzi matematycznych i komputerowych metod wspomagania pracy inżyniera w rozwiązywaniu problemów praktycznych z zakresu różnych dziedzin gospodarki.",
+    "careersIntro": "Możesz pracować w:",
+    "careers": [
+      "działach finansowych",
+      "działach operacyjnych",
+      "działach prognoz i analiz",
+      "instytucjach takich jak: firmy IT, banki, towarzystwa ubezpieczeniowe, urzędy skarbowe i statystyczne"
+    ],
+    "didYouKnow": "W oparciu o zmodyfikowany program studiów pracownicy naukowo-dydaktyczni Politechniki Lubelskiej przygotowują studentów do podjęcia pracy w instytucjach, w których wiedza matematyczna jest niezbędna do rozwiązywania problemów w gospodarce i technice we współpracy ze specjalistami z innych dziedzin oraz do efektywnego podejmowania optymalnych decyzji w zakresie finansów i ubezpieczeń.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "chemia",
+      "geografia"
+    ],
+    "vector": {
+      "INT": 0.75,
+      "WIS": 0.25
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynieria-i-analiza-danych",
+    "name": "Inżynieria i analiza danych",
+    "faculty": "WMiIT",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": true,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I i II stopnia o profilu praktycznym",
+    "description": "Inżynieria i analiza danych to studia inżynierskie łączące wiedzę z informatyki i matematyki. Zdobędziesz wiedzę z zakresu praktycznego wykorzystania metod obliczeniowych, gromadzenia, analizy i wizualizacji danych oraz aktualnych metod i narzędzi informatycznych.",
+    "careersIntro": "Możesz pracować jako:",
+    "careers": [
+      "specjalista zaawansowanej analizy danych",
+      "pracownik centrum badawczego wyspecjalizowanego w analizie danych",
+      "pracownik firm ubezpieczeniowych, banków czy przedsiębiorstw",
+      "pracownik działów strategii, prognoz i rozwoju oraz działów zaopatrzenia i logistyki",
+      "pracownik firm z branży IT"
+    ],
+    "didYouKnow": "Stale rosnąca liczba danych generowana każdego dnia powoduje, że rynek analiz danych dynamiczne się rozwija. Dlatego posiadanie w swojej firmie specjalistów, którzy potrafią sprawnie wyszukiwać, segregować oraz analizować dane jest na wagę złota.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "chemia",
+      "geografia"
+    ],
+    "vector": {
+      "INT": 0.6,
+      "MAN": 0.3,
+      "WIS": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "informatyka-techniczna",
+    "name": "Informatyka techniczna",
+    "faculty": "WMiIT",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne",
+    "description": "Zdobędziesz wiedzę i umiejętności w zakresie budowy i eksploatacji systemów komputerowych i mikroprocesorowych, projektowania i tworzenia systemów informatycznych, czy metod sztucznej inteligencji.",
+    "careersIntro": "Absolwent znajdzie  zatrudnienie zarówno w firmach z branży IT oraz jako informatyk specjalista od zastosowań technologicznych w przemyśle w branżach związanych z budownictwem, inżynierią mechaniczną oraz inżynierią środowiska.",
+    "careers": [],
+    "didYouKnow": "",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "geografia"
+    ],
+    "vector": {
+      "MAN": 0.55,
+      "INT": 0.3,
+      "STR": 0.15
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "cyberbezpieczenstwo",
+    "name": "Cyberbezpieczeństwo",
+    "faculty": "WMiIT",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne",
+    "description": "Studia przygotowują do monitorowania sieci, identyfikowania zagrożeń, analizowania incydentów i oceny bezpieczeństwa, a także raportowania o atakach i fałszywych alarmach, co umożliwia aktywną ochronę infrastruktury IT.",
+    "careersIntro": "Absolwent będzie przygotowany do pracy w obszarze cyberbezpieczeństwa w sektorze prywatnym i publicznym, m.in. jako ekspert IT ds. bezpieczeństwa czy specjalista w tworzeniu krajowego systemu cyberbezpieczeństwa, chroniąc krytyczną infrastrukturę cyfrową.",
+    "careers": [],
+    "didYouKnow": "W erze cyfrowej cyberbezpieczeństwo jest sprawą najwyższej wagi, chroni prywatność, chroni przedsiębiorstwa przed stratami finansowymi, utrzymuje zaufanie i reputację, zapewnia zgodność z wymogami prawnymi i przyczynia się do bezpieczeństwa narodowego.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka"
+    ],
+    "vector": {
+      "MAN": 0.55,
+      "INT": 0.45
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "informatyka-medyczna",
+    "name": "Informatyka medyczna",
+    "faculty": "WMiIT",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne",
+    "description": "Kierunek przygotowuje specjalistów zdolnych do pracy na styku informatyki, inżynierii i medycyny, w szczególności w obszarach związanych z cyfryzacją ochrony zdrowia, systemami wspomagania decyzji klinicznych oraz integracją danych medycznych.",
+    "careersIntro": "Jako absolwent kierunku informatyka medyczna znajdziesz zatrudnienie w podmiotach leczniczych, firmach sektora MedTech, przedsiębiorstwach informatycznych realizujących projekty dla ochrony zdrowia, jednostkach badawczo-rozwojowych, firmach biotechnologicznych i farmaceutycznych, instytucjach publicznych oraz zespołach zajmujących się analizą danych medycznych i rozwojem rozwiązań sztucznej inteligencji w medycynie. Możesz pracować m.in. jako:",
+    "careers": [
+      "analityk danych medycznych",
+      "inżynier systemów e-zdrowia",
+      "programista aplikacji medycznych",
+      "specjalista ds. interoperacyjności i integracji danych",
+      "specjalista ds. bezpieczeństwa informacji medycznej",
+      "inżynier rozwiązań AI w medycynie",
+      "specjalista ds. systemów HIS/RIS/PACS",
+      "specjalista ds. telemedycyny",
+      "członek zespołów badawczo-rozwojowych w obszarze technologii medycznych"
+    ],
+    "didYouKnow": "",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka",
+      "biologia",
+      "chemia"
+    ],
+    "vector": {
+      "MAN": 0.4,
+      "WIS": 0.35,
+      "INT": 0.25
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "marketing-i-komunikacja-rynkowa",
+    "name": "Marketing i komunikacja rynkowa",
+    "faculty": "WZ",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Nauczysz się projektowania i realizacji działań marketingowych w przedsiębiorstwie. Opanujesz teorię i praktykę zarządzania marką, komunikacji i budowania relacji z klientem. Poznasz zasady rządzące zachowaniem nabywcy, a także sposoby prowadzenia badań marketingowych, analizy danych i ich stosowania do tworzenia i modyfikowania strategii marketingowych. Zajęcia z grafiki, digital marketingu i mediów społecznościowych przybliżą trendy i narzędzia budowania wizerunku marki i firmy online. Kładziemy nacisk na projekty, kreatywność oraz kompetencje interpersonalne, w tym negocjacje, sprzedaż i obsługę klienta.",
+    "careersIntro": "Możesz prowadzić własną działalność lub pracować jako:",
+    "careers": [
+      "specjalista ds. marketingu",
+      "specjalista ds. promocji",
+      "specjalista ds. komunikacji",
+      "specjalista ds. reklamy",
+      "specjalista ds. PR i kontaktów z mediami",
+      "specjalista ds. badań marketingowych",
+      "specjalista ds. obsługi klienta",
+      "account manager",
+      "account executive",
+      "brand manager",
+      "category manager",
+      "content manager",
+      "analityk marketing",
+      "handlowiec/kierownik biura handlowego",
+      "merchandiser"
+    ],
+    "didYouKnow": "Większość wykładowców na kierunku posiada doświadczenie rynkowe związane z marketingiem, komunikacją czy badaniami rynku, a część zajęć prowadzą zewnętrzni praktycy. Studiując, możesz należeć do Koła Naukowego Pollub.my marketing, biorąc udział w warsztatach, konferencjach i inicjatywach branżowych. Poznasz też koncepcje neuronauki i skorzystasz z możliwości realizacji prac dyplomowych w Laboratorium Neuromarketingu, gdzie sprawdzisz w praktyce zastosowanie nowoczesnych metod badawczych w optymalizacji strategii marketingowych.",
+    "maturaSubjects": [
+      "matematyka",
+      "geografia",
+      "informatyka",
+      "wos",
+      "historia"
+    ],
+    "vector": {
+      "CHA": 0.55,
+      "KRE": 0.35,
+      "INT": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "finanse-i-rachunkowosc",
+    "name": "Finanse i rachunkowość",
+    "faculty": "WZ",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I stopnia",
+    "description": "Finanse i rachunkowości to kierunek, na którym zajęcia prowadzą wybitni eksperci: pracownicy naukowi, doświadczeni dydaktycy oraz najlepsi praktycy biznesowi. Świetnie przygotowany program studiów oraz elastycznie skonstruowany grafik zajęć umożliwi ci podjęcie pracy już w trakcie nauki.",
+    "careersIntro": "Możesz prowadzić własną działalność lub pracować w instytucjach finansowych, biurach rachunkowych, agencjach konsultingowych, administracji państwowej i samorządowej, a także w placówkach naukowo-badawczych jako:",
+    "careers": [
+      "specjalista ds. rachunkowości",
+      "specjalista ds. controlingu",
+      "specjalista ds. analizy finansowej",
+      "specjalista ds. finansów przedsiębiorstw"
+    ],
+    "didYouKnow": "Finanse i rachunkowości to kierunek, na którym zajęcia prowadzą wybitni eksperci: pracownicy naukowi, doświadczeni dydaktycy oraz najlepsi praktycy biznesowi.",
+    "maturaSubjects": [
+      "matematyka",
+      "geografia",
+      "informatyka",
+      "wos"
+    ],
+    "vector": {
+      "INT": 0.55,
+      "CHA": 0.45
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "sztuczna-inteligencja-w-biznesie",
+    "name": "Sztuczna inteligencja w biznesie",
+    "faculty": "WZ",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Sztuczna inteligencja w biznesie to kierunek inżynierski, który skupia się na integracji wiedzy z obszaru sztucznej inteligencji z zarządzaniem procesami biznesowymi. Nauczysz się efektywnie wykorzystywać nowoczesne metody analizy danych w zarządzaniu i biznesie, m.in. matematyczne i statystyczne podstawy niezbędne do zrozumienia metod sztucznej inteligencji, implementację metod sztucznej inteligencji w rozwiązywaniu realnych problemów biznesowych oraz programowanie w językach Python i R, pracę z bazami danych i hurtowniami danych oraz podstawy projektowania infrastruktury technicznej.",
+    "careersIntro": "Możesz kontynuować naukę na studiach drugiego stopnia z obszaru zarządzania lub z obszaru analizy danych lub pracować jako:",
+    "careers": [
+      "członek zespołu ds. sztucznej inteligencji",
+      "asystent zarządu do spraw data science",
+      "członek zespołu ds. analizy procesów organizacyjnych, w tym analityk procesów logistycznych, produkcyjnych lub zarządczych",
+      "specjalista ds. analizy decyzyjnej",
+      "niezależny konsultant w zakresie SI",
+      "analityk biznesowo-systemowy w obszarze SI",
+      "analityk danych",
+      "członek centrum doskonałości (ang. Centre of Excellence, CoE)"
+    ],
+    "didYouKnow": "Sztuczna inteligencja w biznesie to odpowiedź na rosnące zapotrzebowanie rynku pracy na specjalistów, którzy nie tylko rozumieją technologie AI, ale potrafią je też skutecznie wdrażać w struktury i procesy biznesowe.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka"
+    ],
+    "vector": {
+      "CHA": 0.4,
+      "MAN": 0.35,
+      "INT": 0.25
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "ai-in-business-solutions",
+    "name": "AI in business solutions",
+    "faculty": "WZ",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "en",
+    "studies": "Studia stacjonarne I stopnia",
+    "description": "Nauczysz się projektowania i wdrażania rozwiązań wykorzystujących sztuczną inteligencję, analizę danych oraz business intelligence w przedsiębiorstwach. Opanujesz pozyskiwanie, porządkowanie, analizowanie i wizualizowanie danych, a także tworzenie raportów, dashboardów i rekomendacji wspierających decyzje biznesowe. Poznasz m.in. język Python, bazy danych i SQL, narzędzia low-code/no-code, automatyzację procesów, chatboty, generatywną sztuczną inteligencję oraz podstawy uczenia maszynowego. Nauczysz się rozpoznawać potrzeby organizacji, dobierać odpowiednie technologie i przekładać je na rozwiązania przynoszące rzeczywistą wartość biznesową. Zdobędziesz również kompetencje z zakresu zarządzania projektami, komunikacji, pracy zespołowej, cyberbezpieczeństwa oraz odpowiedzialnego wykorzystywania AI.",
+    "careersIntro": "Możesz rozwijać własną działalność technologiczną lub pracować w działach IT, analityki danych, business intelligence i sztucznej inteligencji, a także w firmach konsultingowych i technologicznych jako:",
+    "careers": [
+      "Solution Designer",
+      "analityk biznesowy",
+      "młodszy analityk danych",
+      "specjalista ds. narzędzi AI w biznesie",
+      "specjalista ds. wdrażania rozwiązań AI",
+      "specjalista ds. business intelligence",
+      "specjalista ds. analizy i wizualizacji danych",
+      "specjalista ds. automatyzacji procesów biznesowych",
+      "specjalista ds. rozwiązań low-code/no-code",
+      "konsultant ds. transformacji cyfrowej",
+      "specjalista ds. chatbotów i rozwiązań opartych na LLM",
+      "koordynator projektów technologicznych",
+      "Absolwent może pełnić rolę łącznika między zespołami biznesowymi i technologicznymi – od rozpoznania problemu, przez wybór narzędzi, aż po wdrożenie i ocenę efektów rozwiązania"
+    ],
+    "didYouKnow": "Kierunek jest prowadzony w języku angielskim i ma profil praktyczny. Program obejmuje sześć semestrów oraz sześć miesięcy praktyk zawodowych realizowanych w przedsiębiorstwach. Zamiast tradycyjnej pracy licencjackiej przygotujesz praktyczny projekt dyplomowy. Zajęcia opierają się na realizacji projektów, analizie rzeczywistych problemów biznesowych i wykorzystaniu nowoczesnych narzędzi, a program jest rozwijany we współpracy z przedstawicielami branży IT i AI. Przewidziano również zajęcia prowadzone przez praktyków, wizyty studyjne oraz dodatkowe formy rozwijania kompetencji zawodowych.",
+    "maturaSubjects": [
+      "matematyka",
+      "fizyka",
+      "informatyka"
+    ],
+    "vector": {
+      "CHA": 0.4,
+      "MAN": 0.35,
+      "INT": 0.25
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "zarzadzanie",
+    "name": "Zarządzanie",
+    "faculty": "WZ",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne I i II stopnia",
+    "description": "Zarządzanie umożliwia odkrywanie i rozwijanie talentu przedsiębiorczości. Pokazuje czym jest nowoczesne przedsiębiorstwo i w jakim kierunku podąża biznesowy świat. Zajęcia prowadzą naukowcy i praktycy, którzy prezentują i wyjaśniają dynamikę zmian współczesnych organizacji. Będziesz brać udział w zajęciach projektowych, podczas których rozwiążesz wiele rzeczywistych problemów występujących w organizacjach.",
+    "careersIntro": "Możesz prowadzić własną działalność lub pracować w jako specjalista (po ukończeniu studiów I stopnia), a z czasem menedżera różnych szczebli zarządzania organizacją (po ukończeniu studiów II stopnia).",
+    "careers": [],
+    "didYouKnow": "Nauczysz się ekonomii, finansów, marketingu i logistyki. Dzięki temu będziesz przygotowywać wieloaspektowe projekty i analizy przedsięwzięć technicznych, technologicznych, marketingowych, finansowych i organizacyjnych.",
+    "maturaSubjects": [
+      "matematyka",
+      "geografia",
+      "informatyka",
+      "wos",
+      "historia"
+    ],
+    "vector": {
+      "CHA": 0.7,
+      "INT": 0.2,
+      "VIT": 0.1
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynieria-logistyki",
+    "name": "Inżynieria logistyki",
+    "faculty": "WZ",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne",
+    "description": "Inżynieria logistyki to kierunek o profilu praktycznym realizowany w ramach nauk społecznych (nauki o zarządzaniu i jakości) oraz inżynieryjno-technicznych (informatyka techniczna i telekomunikacja, inżynieria mechaniczna). Nauczysz się zarządzania specjalistycznymi procesami logistycznymi, projektowania systemów logistycznych oraz posługiwania się narzędziami informatycznymi w rozwiązywaniu problemów logistycznych.",
+    "careersIntro": "Możesz kontynuować naukę na studiach II stopnia na kierunkach logistyka, transport, zarządzanie oraz zarządzanie i inżynieria produkcji albo pracować w sektorze logistycznym oraz pokrewnych obszarach, m.in. jako:",
+    "careers": [
+      "logistyk — zarządzanie procesami logistycznymi w przedsiębiorstwie, optymalizacja łańcuchów dostaw",
+      "specjalista ds. logistyki — nadzór nad procesami logistycznymi, planowanie i implementacja rozwiązań logistycznych",
+      "inżynier procesów logistycznych — projektowanie i optymalizacja procesów logistycznych w celu zwiększenia efektywności operacyjnej",
+      "specjalista gospodarki materiałowej — zarządzanie zasobami materialnymi przedsiębiorstwa, w tym zaopatrzeniem i magazynowaniem",
+      "specjalista ds. transportu wewnętrznego i magazynowania — organizacja i nadzór nad wewnętrznymi procesami transportowymi i magazynowymi",
+      "specjalista ds. zbytu i kontaktów z klientami — zarządzanie relacjami z klientami, planowanie i koordynacja działań sprzedażowych",
+      "specjalista ds. utrzymania ruchu — nadzór nad stanem technicznym urządzeń i systemów logistycznych",
+      "projektant systemów logistycznych — tworzenie nowych rozwiązań systemowych dla branży logistycznej"
+    ],
+    "didYouKnow": "Rozbudowane praktyki zawodowe pozwalają ci zdobyć praktyczne doświadczenie w różnych obszarach logistyki i stosowanie zdobytej wiedzy w rzeczywistych warunkach pracy. Będziesz brać udział w zajęciach związanych z nowoczesnymi technologiami w logistyce.",
+    "maturaSubjects": [
+      "matematyka",
+      "geografia",
+      "informatyka",
+      "wos",
+      "fizyka"
+    ],
+    "vector": {
+      "CHA": 0.45,
+      "INT": 0.3,
+      "STR": 0.25
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+        "title": "Kierunki studiów — rekrutacja I stopnia"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "slug": "inzynieria-bezpieczenstwa",
+    "name": "Inżynieria bezpieczeństwa",
+    "faculty": "WMiIT",
+    "levels": [
+      "I"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I stopnia",
+    "description": "Kierunek przygotowuje specjalistów ds. bezpieczeństwa i higieny pracy oraz zarządzania bezpieczeństwem w przedsiębiorstwach i instytucjach.",
+    "careersIntro": "Absolwenci są przygotowani do pracy jako specjaliści ds. bezpieczeństwa we wszelkiego rodzaju przedsiębiorstwach i instytucjach; uzyskują uprawnienia do prowadzenia szkoleń BHP oraz mogą pełnić funkcje inspektorów i specjalistów ds. BHP.",
+    "careers": [
+      "specjalista ds. BHP",
+      "inspektor ds. BHP",
+      "trener szkoleń BHP"
+    ],
+    "didYouKnow": "",
+    "maturaSubjects": [],
+    "vector": {
+      "CHA": 0.35,
+      "STR": 0.25,
+      "WIS": 0.2,
+      "VIT": 0.2
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://wmit.pollub.pl/kandydaci/kierunki-studiow",
+        "title": "Kierunki studiów — WMiIT"
+      },
+      {
+        "url": "https://wmit.pollub.pl/kandydaci/profil-absolwenta",
+        "title": "Profil absolwenta — WMiIT"
+      }
+    ],
+    "verifiedAt": "2026-10-17",
+    "note": "Uruchomienie w danym roku zależy od liczby kandydatów."
+  },
+  {
+    "slug": "edukacja-techniczno-informatyczna",
+    "name": "Edukacja techniczno-informatyczna",
+    "faculty": "WMiIT",
+    "levels": [
+      "I",
+      "II"
+    ],
+    "modes": [
+      "stacjonarne",
+      "niestacjonarne"
+    ],
+    "practicalProfile": false,
+    "language": "pl",
+    "studies": "Studia stacjonarne i niestacjonarne I i II stopnia",
+    "description": "Kierunek łączy technikę, informatykę i dydaktykę — dla osób, które chcą uczyć techniki i informatyki lub prowadzić szkolenia techniczne.",
+    "careersIntro": "",
+    "careers": [],
+    "didYouKnow": "",
+    "maturaSubjects": [],
+    "vector": {
+      "CHA": 0.4,
+      "MAN": 0.35,
+      "KRE": 0.25
+    },
+    "recruitmentUrl": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow",
+    "sources": [
+      {
+        "url": "https://wmit.pollub.pl/kandydaci/kierunki-studiow",
+        "title": "Kierunki studiów — WMiIT"
+      }
+    ],
+    "verifiedAt": "2026-10-17",
+    "note": "W rekrutacji 2026/27 kierunek nie został uruchomiony ze względu na małą liczbę kandydatów (wmit.pollub.pl)."
+  }
+]

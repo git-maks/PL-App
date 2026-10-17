@@ -1,0 +1,10 @@
+**/node_modules
+**/.svelte-kit
+apps/web/build
+apps/web/test-results
+apps/web/playwright-report
+apps/web/e2e/.generated
+apps/api/internal/webui/dist/*
+!apps/api/internal/webui/dist/.gitkeep
+.git
+docs

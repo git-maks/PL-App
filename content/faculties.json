@@ -1,0 +1,275 @@
+[
+  {
+    "code": "WM",
+    "slug": "mechaniczny",
+    "name": "Wydział Mechaniczny",
+    "address": "ul. Nadbystrzycka 36, 20-618 Lublin",
+    "poi": "wm",
+    "website": "https://wm.pollub.pl",
+    "founded": 1953,
+    "description": "Najstarszy wydział uczelni — powstał razem z nią w 1953 r. Kształci konstruktorów, mechatroników, specjalistów od pojazdów, transportu, robotyzacji i inżynierii biomedycznej. Dyscyplina inżynieria mechaniczna uzyskała w ewaluacji 2022 najwyższą kategorię A+.",
+    "vector": {
+      "STR": 0.7,
+      "MAN": 0.15,
+      "INT": 0.15
+    },
+    "programs": [
+      "wzornictwo-przemyslowe",
+      "mechanika-i-budowa-maszyn",
+      "transport",
+      "inzynieria-pojazdow",
+      "inzynieria-biomedyczna",
+      "zarzadzanie-i-inzynieria-produkcji",
+      "mechatronika",
+      "robotyzacja-procesow-wytworczych"
+    ],
+    "clubs": [
+      "budowy-smiglowcow",
+      "inzynierii-biomedycznej",
+      "inzynierii-materialowej",
+      "robotyzacji-i-zastosowan-informatyki",
+      "komplast",
+      "komputerowego-wspomagania-prac-projektowych",
+      "napedow-lotniczych",
+      "podstaw-inzynierii-produkcji",
+      "inzynierii-polimerow-carbon",
+      "samochodziarzy",
+      "technologii-materialow",
+      "transport-spedycja-logistyka",
+      "first-robots",
+      "zastosowan-nx",
+      "automatyzacji",
+      "drake-drony-rakiety-aerodynamika-eksploracja-kosmiczna",
+      "sigma"
+    ],
+    "sources": [
+      {
+        "url": "https://pollub.pl/uczelnia/o-politechnice",
+        "title": "O Politechnice"
+      },
+      {
+        "url": "https://rekrutacja.pollub.pl/poznaj-kampus",
+        "title": "Poznaj kampus"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "code": "WEiI",
+    "slug": "elektrotechniki-i-informatyki",
+    "name": "Wydział Elektrotechniki i Informatyki",
+    "address": "ul. Nadbystrzycka 38A, 20-618 Lublin",
+    "poi": "weii",
+    "website": "https://weii.pollub.pl",
+    "founded": 1964,
+    "description": "Wywodzi się z Wydziału Elektrycznego założonego w 1964 r.; od 2003 r. nosi obecną nazwę. Elektrotechnika, informatyka, inżynieria multimediów i zastosowania informatyki w elektrotechnice — od wysokich napięć po aplikacje mobilne.",
+    "vector": {
+      "MAN": 0.7,
+      "INT": 0.2,
+      "ENE": 0.1
+    },
+    "programs": [
+      "elektrotechnika",
+      "informatyka",
+      "inzynieria-multimediow",
+      "inzynierskie-zastosowania-informatyki-w-elektrotechnice"
+    ],
+    "clubs": [
+      "mechatronik",
+      "materialoznawstwa-elektrycznego-i-techniki-wysokich-napiec-meljon",
+      "grupa-net-politechniki-lubelskiej",
+      "automatyki",
+      "elektrykow-naped-i-automatyka",
+      "elektronikow-microchip",
+      "elektronikow-i-mechatronikow-semicon",
+      "stowarzyszenia-elektrykow-polskich",
+      "systemy-operacyjne-i-programowanie",
+      "elektroniki-samochodowej-i-uzytkowej-prive",
+      "electroinfo-techlab",
+      "optoelektroniki-foton",
+      "retronika",
+      "amplab"
+    ],
+    "sources": [
+      {
+        "url": "https://pollub.pl/uczelnia/o-politechnice",
+        "title": "O Politechnice"
+      },
+      {
+        "url": "https://rekrutacja.pollub.pl/poznaj-kampus",
+        "title": "Poznaj kampus"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "code": "WBiA",
+    "slug": "budownictwa-i-architektury",
+    "name": "Wydział Budownictwa i Architektury",
+    "address": "ul. Nadbystrzycka 40, 20-618 Lublin",
+    "poi": "wbia",
+    "website": "https://wbia.pollub.pl",
+    "founded": 1965,
+    "description": "Powstał w 1965 r. jako Wydział Budownictwa Lądowego. Kształci architektów i inżynierów budownictwa; dyscyplina inżynieria lądowa i transport ma kategorię A+ (ewaluacja 2022). Budownictwo było w 2026 r. kierunkiem z największą liczbą zgłoszeń kandydatów na uczelni.",
+    "vector": {
+      "KRE": 0.6,
+      "STR": 0.4
+    },
+    "programs": [
+      "architektura",
+      "budownictwo"
+    ],
+    "clubs": [
+      "drogowcow-i-mostow",
+      "technologii-budownictwa-aedificatio",
+      "malarstwa-i-rysunku-mir",
+      "architektury-wspolczesnej",
+      "konserwacji-zabytkow-sgraffito",
+      "mechaniki-i-grafiki-inzynierskiej",
+      "mechaniki-budowli-i-metod-komputerowych",
+      "architektura-zdrowia",
+      "urbanistyki-i-ruralistyki",
+      "dynamiki-i-aerodynamiki-budowli"
+    ],
+    "sources": [
+      {
+        "url": "https://pollub.pl/uczelnia/o-politechnice",
+        "title": "O Politechnice"
+      },
+      {
+        "url": "https://rekrutacja.pollub.pl/poznaj-kampus",
+        "title": "Poznaj kampus"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "code": "WIŚiE",
+    "slug": "inzynierii-srodowiska-i-energetyki",
+    "name": "Wydział Inżynierii Środowiska i Energetyki",
+    "address": "ul. Nadbystrzycka 40B, 20-618 Lublin",
+    "poi": "wisie",
+    "website": "https://wisie.pollub.pl",
+    "founded": null,
+    "description": "Energetyka, odnawialne źródła energii, inżynieria środowiska i nowy kierunek sztuczna inteligencja w energetyce. Energetyka miała w rekrutacji 2026 najwięcej kandydatów na jedno miejsce (5,8).",
+    "vector": {
+      "ENE": 0.75,
+      "WIS": 0.15,
+      "MAN": 0.1
+    },
+    "programs": [
+      "energetyka",
+      "inzynieria-odnawialnych-zrodel-energii",
+      "inzynieria-srodowiska",
+      "sztuczna-inteligencja-w-energetyce"
+    ],
+    "clubs": [
+      "inzynierii-ochrony-srodowiska",
+      "energetyki-odnawialnej-grupa-ogniwo",
+      "for-against",
+      "wodociagow-i-kanalizacji-hydros",
+      "zaawansowanego-projektowania",
+      "modelowania-i-prototypowania-systemow-inzynierskich-inwentor",
+      "espace"
+    ],
+    "sources": [
+      {
+        "url": "https://pollub.pl/uczelnia/o-politechnice",
+        "title": "O Politechnice"
+      },
+      {
+        "url": "https://rekrutacja.pollub.pl/poznaj-kampus",
+        "title": "Poznaj kampus"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "code": "WZ",
+    "slug": "zarzadzania",
+    "name": "Wydział Zarządzania",
+    "address": "ul. Nadbystrzycka 38, 20-618 Lublin",
+    "poi": "wz",
+    "website": "https://wz.pollub.pl",
+    "founded": 1988,
+    "description": "Wywodzi się z Wydziału Zarządzania i Podstaw Techniki (1988). Zarządzanie, logistyka, finanse, marketing oraz sztuczna inteligencja w biznesie — także w języku angielskim (AI in business solutions).",
+    "vector": {
+      "CHA": 0.7,
+      "INT": 0.3
+    },
+    "programs": [
+      "marketing-i-komunikacja-rynkowa",
+      "finanse-i-rachunkowosc",
+      "sztuczna-inteligencja-w-biznesie",
+      "ai-in-business-solutions",
+      "zarzadzanie",
+      "inzynieria-logistyki"
+    ],
+    "clubs": [
+      "pollub-my-marketing",
+      "human-centered-management",
+      "menedzerow",
+      "zarzadzania-produkcja",
+      "zarzadzania-finansami-profit",
+      "managerow-sztucznej-inteligencji-moai"
+    ],
+    "sources": [
+      {
+        "url": "https://pollub.pl/uczelnia/o-politechnice",
+        "title": "O Politechnice"
+      },
+      {
+        "url": "https://rekrutacja.pollub.pl/poznaj-kampus",
+        "title": "Poznaj kampus"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  },
+  {
+    "code": "WMiIT",
+    "slug": "matematyki-i-informatyki-technicznej",
+    "name": "Wydział Matematyki i Informatyki Technicznej",
+    "address": "ul. Nadbystrzycka 38, 20-618 Lublin",
+    "poi": "wmiit",
+    "website": "https://wmit.pollub.pl",
+    "founded": 2007,
+    "description": "Najmłodszy wydział (od 2007 r., wcześniej Wydział Podstaw Techniki). Matematyka, analiza danych, cyberbezpieczeństwo, informatyka techniczna i medyczna, inżynieria bezpieczeństwa. Cyberbezpieczeństwo było w 2026 r. drugim kierunkiem uczelni pod względem liczby zgłoszeń.",
+    "vector": {
+      "INT": 0.6,
+      "MAN": 0.4
+    },
+    "programs": [
+      "matematyka",
+      "inzynieria-i-analiza-danych",
+      "informatyka-techniczna",
+      "cyberbezpieczenstwo",
+      "informatyka-medyczna",
+      "inzynieria-bezpieczenstwa",
+      "edukacja-techniczno-informatyczna"
+    ],
+    "clubs": [
+      "automatyki-pomiarow-i-sterowania-knapis",
+      "infonabi",
+      "kwaternion",
+      "grafiki-inzynierskiej-i-animacji-komputerowej-animgraf",
+      "technologii-informatycznych-i-multimedialnych-teamweb",
+      "inzynierii-bezpieczenstwa-a-team-of-safety",
+      "uczenia-maszynowego-atlas",
+      "next-gen-squad",
+      "obliczen-neuromorficznych-neuromancer",
+      "bezzalogowych-statkow-powietrznych-edron",
+      "informatyki-think"
+    ],
+    "sources": [
+      {
+        "url": "https://pollub.pl/uczelnia/o-politechnice",
+        "title": "O Politechnice"
+      },
+      {
+        "url": "https://rekrutacja.pollub.pl/poznaj-kampus",
+        "title": "Poznaj kampus"
+      }
+    ],
+    "verifiedAt": "2026-10-17"
+  }
+]
