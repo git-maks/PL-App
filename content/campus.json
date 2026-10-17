@@ -1,0 +1,248 @@
+{
+  "map": {
+    "width": 760,
+    "height": 536,
+    "bounds": {
+      "north": 51.2378,
+      "west": 22.5455,
+      "south": 51.2336,
+      "east": 22.555
+    },
+    "street": "ul. Nadbystrzycka",
+    "river": "Bystrzyca"
+  },
+  "pois": [
+    {
+      "id": "wm",
+      "n": 1,
+      "name": "Wydział Mechaniczny",
+      "address": "ul. Nadbystrzycka 36",
+      "kind": "faculty",
+      "lat": 51.23527,
+      "lon": 22.55325,
+      "approximate": false,
+      "faculty": "WM",
+      "x": 620.0,
+      "y": 322.9
+    },
+    {
+      "id": "weii",
+      "n": 2,
+      "name": "Wydział Elektrotechniki i Informatyki",
+      "address": "ul. Nadbystrzycka 38A",
+      "kind": "faculty",
+      "lat": 51.23681,
+      "lon": 22.5489,
+      "approximate": false,
+      "faculty": "WEiI",
+      "x": 272.0,
+      "y": 126.3
+    },
+    {
+      "id": "centech",
+      "n": 3,
+      "name": "CEN-TECH — Centrum Technologii Informatycznych i Lingwistyki Technicznej",
+      "address": "ul. Nadbystrzycka 38B",
+      "kind": "lab",
+      "lat": 51.23631,
+      "lon": 22.54835,
+      "approximate": false,
+      "faculty": null,
+      "x": 228.0,
+      "y": 190.2
+    },
+    {
+      "id": "church",
+      "n": 4,
+      "name": "Parafia Przemienienia Pańskiego",
+      "address": "",
+      "kind": "landmark",
+      "lat": 51.2372,
+      "lon": 22.5468,
+      "approximate": true,
+      "faculty": null,
+      "x": 104.0,
+      "y": 76.6
+    },
+    {
+      "id": "wbia",
+      "n": 5,
+      "name": "Wydział Budownictwa i Architektury",
+      "address": "ul. Nadbystrzycka 40",
+      "kind": "faculty",
+      "lat": 51.23539,
+      "lon": 22.54797,
+      "approximate": false,
+      "faculty": "WBiA",
+      "x": 197.6,
+      "y": 307.6
+    },
+    {
+      "id": "canteen",
+      "n": 6,
+      "name": "Stołówka",
+      "address": "",
+      "kind": "service",
+      "lat": 51.235,
+      "lon": 22.5471,
+      "approximate": true,
+      "faculty": null,
+      "x": 128.0,
+      "y": 357.3
+    },
+    {
+      "id": "dorms",
+      "n": 7,
+      "name": "Domy Studenckie DS1–DS4",
+      "address": "ul. Nadbystrzycka 42, 42A, 44, 44A",
+      "kind": "dorm",
+      "lat": 51.23485,
+      "lon": 22.54637,
+      "approximate": false,
+      "faculty": null,
+      "x": 69.6,
+      "y": 376.5
+    },
+    {
+      "id": "wisie",
+      "n": 8,
+      "name": "Wydział Inżynierii Środowiska i Energetyki",
+      "address": "ul. Nadbystrzycka 40B",
+      "kind": "faculty",
+      "lat": 51.23468,
+      "lon": 22.54788,
+      "approximate": false,
+      "faculty": "WIŚiE",
+      "x": 190.4,
+      "y": 398.2
+    },
+    {
+      "id": "wz",
+      "n": 9,
+      "name": "Wydział Zarządzania",
+      "address": "ul. Nadbystrzycka 38",
+      "kind": "faculty",
+      "lat": 51.2351,
+      "lon": 22.54905,
+      "approximate": false,
+      "faculty": "WZ",
+      "x": 284.0,
+      "y": 344.6
+    },
+    {
+      "id": "wmiit",
+      "n": 10,
+      "name": "Wydział Matematyki i Informatyki Technicznej",
+      "address": "ul. Nadbystrzycka 38",
+      "kind": "faculty",
+      "lat": 51.23535,
+      "lon": 22.54935,
+      "approximate": false,
+      "faculty": "WMiIT",
+      "x": 308.0,
+      "y": 312.7
+    },
+    {
+      "id": "rektorat",
+      "n": 11,
+      "name": "Rektorat",
+      "address": "ul. Nadbystrzycka 38D",
+      "kind": "admin",
+      "lat": 51.2356,
+      "lon": 22.55029,
+      "approximate": false,
+      "faculty": null,
+      "x": 383.2,
+      "y": 280.8
+    },
+    {
+      "id": "spichlerz",
+      "n": 12,
+      "name": "Spichlerz",
+      "address": "",
+      "kind": "landmark",
+      "lat": 51.236,
+      "lon": 22.5499,
+      "approximate": true,
+      "faculty": null,
+      "x": 352.0,
+      "y": 229.7
+    },
+    {
+      "id": "cizt",
+      "n": 13,
+      "name": "Centrum Innowacji i Zaawansowanych Technologii („Rdzewiak”) — Biblioteka",
+      "address": "ul. Nadbystrzycka 36C",
+      "kind": "library",
+      "lat": 51.2362,
+      "lon": 22.55123,
+      "approximate": false,
+      "faculty": null,
+      "x": 458.4,
+      "y": 204.2
+    },
+    {
+      "id": "asppect",
+      "n": 14,
+      "name": "Asppect",
+      "address": "ul. Nadbystrzycka 36A",
+      "kind": "landmark",
+      "lat": 51.23586,
+      "lon": 22.55232,
+      "approximate": false,
+      "faculty": null,
+      "x": 545.6,
+      "y": 247.6
+    },
+    {
+      "id": "sport",
+      "n": 15,
+      "name": "Centrum Sportowe (hala sportowa)",
+      "address": "ul. Nadbystrzycka 36B",
+      "kind": "sport",
+      "lat": 51.2347,
+      "lon": 22.554,
+      "approximate": true,
+      "faculty": null,
+      "x": 680.0,
+      "y": 395.6
+    },
+    {
+      "id": "green",
+      "n": 16,
+      "name": "Tereny zielone nad Bystrzycą",
+      "address": "",
+      "kind": "green",
+      "lat": 51.2344,
+      "lon": 22.5518,
+      "approximate": true,
+      "faculty": null,
+      "x": 504.0,
+      "y": 433.9
+    },
+    {
+      "id": "outdoor-gym",
+      "n": 17,
+      "name": "Siłownia zewnętrzna i boiska",
+      "address": "",
+      "kind": "sport",
+      "lat": 51.2342,
+      "lon": 22.5529,
+      "approximate": true,
+      "faculty": null,
+      "x": 592.0,
+      "y": 459.4
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://rekrutacja.pollub.pl/poznaj-kampus",
+      "title": "Poznaj kampus"
+    },
+    {
+      "url": "https://www.openstreetmap.org",
+      "title": "OpenStreetMap (współrzędne budynków, © współtwórcy OSM, ODbL)"
+    }
+  ],
+  "verifiedAt": "2026-10-17"
+}

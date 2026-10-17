@@ -1,0 +1,191 @@
+/*
+ * Material Design 3 tokens for UniQuest.
+ * Seed colour: working navy for Politechnika Lubelska (replace with the official brand colour
+ * from the university's identity guidelines when available — only this file changes).
+ */
+:root {
+	color-scheme: light;
+
+	/* Colour roles — light */
+	--md-sys-color-primary: #1f5aa6;
+	--md-sys-color-on-primary: #ffffff;
+	--md-sys-color-primary-container: #d6e3ff;
+	--md-sys-color-on-primary-container: #001b3d;
+	--md-sys-color-secondary: #545f71;
+	--md-sys-color-on-secondary: #ffffff;
+	--md-sys-color-secondary-container: #d8e3f8;
+	--md-sys-color-on-secondary-container: #111c2b;
+	--md-sys-color-tertiary: #7a5900;
+	--md-sys-color-on-tertiary: #ffffff;
+	--md-sys-color-tertiary-container: #ffdea6;
+	--md-sys-color-on-tertiary-container: #261900;
+	--md-sys-color-error: #ba1a1a;
+	--md-sys-color-on-error: #ffffff;
+	--md-sys-color-error-container: #ffdad6;
+	--md-sys-color-on-error-container: #410002;
+	--md-sys-color-success: #1b6d2f;
+	--md-sys-color-success-container: #a3f5a8;
+	--md-sys-color-on-success-container: #002107;
+	--md-sys-color-surface: #f9f9ff;
+	--md-sys-color-on-surface: #191c20;
+	--md-sys-color-surface-variant: #e0e2ec;
+	--md-sys-color-on-surface-variant: #43474e;
+	--md-sys-color-surface-container-lowest: #ffffff;
+	--md-sys-color-surface-container-low: #f3f3fa;
+	--md-sys-color-surface-container: #ededf4;
+	--md-sys-color-surface-container-high: #e7e8ee;
+	--md-sys-color-surface-container-highest: #e2e2e9;
+	--md-sys-color-outline: #74777f;
+	--md-sys-color-outline-variant: #c4c6d0;
+	--md-sys-color-inverse-surface: #2e3036;
+	--md-sys-color-inverse-on-surface: #f0f0f7;
+	--md-sys-color-inverse-primary: #a9c7ff;
+	--md-sys-color-scrim: #000000;
+	--md-sys-color-shadow: #000000;
+
+	/* Typography */
+	--md-ref-typeface-plain: 'Roboto Flex', Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	--md-ref-typeface-pixel: 'Pixelify Sans', var(--md-ref-typeface-plain);
+	--md-sys-typescale-display-small: 400 2.25rem/2.75rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-headline-large: 400 2rem/2.5rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-headline-medium: 400 1.75rem/2.25rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-headline-small: 400 1.5rem/2rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-title-large: 400 1.375rem/1.75rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-title-medium: 500 1rem/1.5rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-title-small: 500 0.875rem/1.25rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-body-large: 400 1rem/1.5rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-body-medium: 400 0.875rem/1.25rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-body-small: 400 0.75rem/1rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-label-large: 500 0.875rem/1.25rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-label-medium: 500 0.75rem/1rem var(--md-ref-typeface-plain);
+	--md-sys-typescale-label-small: 500 0.6875rem/1rem var(--md-ref-typeface-plain);
+
+	/* Shape */
+	--md-sys-shape-corner-extra-small: 4px;
+	--md-sys-shape-corner-small: 8px;
+	--md-sys-shape-corner-medium: 12px;
+	--md-sys-shape-corner-large: 16px;
+	--md-sys-shape-corner-extra-large: 28px;
+	--md-sys-shape-corner-full: 999px;
+
+	/* Elevation (shadows; tonal surfaces carry most of the hierarchy) */
+	--md-sys-elevation-1: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px 1px rgb(0 0 0 / 0.15);
+	--md-sys-elevation-2: 0 1px 2px rgb(0 0 0 / 0.3), 0 2px 6px 2px rgb(0 0 0 / 0.15);
+	--md-sys-elevation-3: 0 4px 8px 3px rgb(0 0 0 / 0.15), 0 1px 3px rgb(0 0 0 / 0.3);
+
+	/* State layers */
+	--md-sys-state-hover: 0.08;
+	--md-sys-state-focus: 0.1;
+	--md-sys-state-pressed: 0.1;
+
+	/* Motion (MD3) */
+	--md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+	--md-sys-motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+	--md-sys-motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+	--md-sys-motion-duration-short2: 100ms;
+	--md-sys-motion-duration-short4: 200ms;
+	--md-sys-motion-duration-medium2: 300ms;
+	--md-sys-motion-duration-medium4: 400ms;
+	--md-sys-motion-duration-long2: 500ms;
+
+	/* Layout */
+	--uq-gutter: 16px;
+	--uq-max-width: 720px;
+	--uq-nav-height: 80px;
+	--uq-top-bar-height: 64px;
+	--uq-safe-bottom: env(safe-area-inset-bottom, 0px);
+	--uq-safe-top: env(safe-area-inset-top, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		color-scheme: dark;
+		--md-sys-color-primary: #a9c7ff;
+		--md-sys-color-on-primary: #003063;
+		--md-sys-color-primary-container: #00468c;
+		--md-sys-color-on-primary-container: #d6e3ff;
+		--md-sys-color-secondary: #bcc7db;
+		--md-sys-color-on-secondary: #263141;
+		--md-sys-color-secondary-container: #3c4758;
+		--md-sys-color-on-secondary-container: #d8e3f8;
+		--md-sys-color-tertiary: #f5bf48;
+		--md-sys-color-on-tertiary: #402d00;
+		--md-sys-color-tertiary-container: #5c4200;
+		--md-sys-color-on-tertiary-container: #ffdea6;
+		--md-sys-color-error: #ffb4ab;
+		--md-sys-color-on-error: #690005;
+		--md-sys-color-error-container: #93000a;
+		--md-sys-color-on-error-container: #ffdad6;
+		--md-sys-color-success: #88d98e;
+		--md-sys-color-success-container: #005319;
+		--md-sys-color-on-success-container: #a3f5a8;
+		--md-sys-color-surface: #111318;
+		--md-sys-color-on-surface: #e2e2e9;
+		--md-sys-color-surface-variant: #43474e;
+		--md-sys-color-on-surface-variant: #c4c6d0;
+		--md-sys-color-surface-container-lowest: #0c0e13;
+		--md-sys-color-surface-container-low: #191c20;
+		--md-sys-color-surface-container: #1d2024;
+		--md-sys-color-surface-container-high: #282a2f;
+		--md-sys-color-surface-container-highest: #33353a;
+		--md-sys-color-outline: #8e9099;
+		--md-sys-color-outline-variant: #43474e;
+		--md-sys-color-inverse-surface: #e2e2e9;
+		--md-sys-color-inverse-on-surface: #2e3036;
+		--md-sys-color-inverse-primary: #1f5aa6;
+	}
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
+	--md-sys-color-primary: #a9c7ff;
+	--md-sys-color-on-primary: #003063;
+	--md-sys-color-primary-container: #00468c;
+	--md-sys-color-on-primary-container: #d6e3ff;
+	--md-sys-color-secondary: #bcc7db;
+	--md-sys-color-on-secondary: #263141;
+	--md-sys-color-secondary-container: #3c4758;
+	--md-sys-color-on-secondary-container: #d8e3f8;
+	--md-sys-color-tertiary: #f5bf48;
+	--md-sys-color-on-tertiary: #402d00;
+	--md-sys-color-tertiary-container: #5c4200;
+	--md-sys-color-on-tertiary-container: #ffdea6;
+	--md-sys-color-error: #ffb4ab;
+	--md-sys-color-on-error: #690005;
+	--md-sys-color-error-container: #93000a;
+	--md-sys-color-on-error-container: #ffdad6;
+	--md-sys-color-success: #88d98e;
+	--md-sys-color-success-container: #005319;
+	--md-sys-color-on-success-container: #a3f5a8;
+	--md-sys-color-surface: #111318;
+	--md-sys-color-on-surface: #e2e2e9;
+	--md-sys-color-surface-variant: #43474e;
+	--md-sys-color-on-surface-variant: #c4c6d0;
+	--md-sys-color-surface-container-lowest: #0c0e13;
+	--md-sys-color-surface-container-low: #191c20;
+	--md-sys-color-surface-container: #1d2024;
+	--md-sys-color-surface-container-high: #282a2f;
+	--md-sys-color-surface-container-highest: #33353a;
+	--md-sys-color-outline: #8e9099;
+	--md-sys-color-outline-variant: #43474e;
+	--md-sys-color-inverse-surface: #e2e2e9;
+	--md-sys-color-inverse-on-surface: #2e3036;
+	--md-sys-color-inverse-primary: #1f5aa6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		--md-sys-motion-duration-short2: 0ms;
+		--md-sys-motion-duration-short4: 0ms;
+		--md-sys-motion-duration-medium2: 0ms;
+		--md-sys-motion-duration-medium4: 0ms;
+		--md-sys-motion-duration-long2: 0ms;
+	}
+}
+:root[data-motion='reduced'] {
+	--md-sys-motion-duration-short2: 0ms;
+	--md-sys-motion-duration-short4: 0ms;
+	--md-sys-motion-duration-medium2: 0ms;
+	--md-sys-motion-duration-medium4: 0ms;
+	--md-sys-motion-duration-long2: 0ms;
+}

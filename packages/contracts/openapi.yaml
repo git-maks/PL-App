@@ -1,0 +1,843 @@
+openapi: 3.1.0
+info:
+  title: UniQuest API
+  version: 1.0.0
+  description: |
+    Backend API for UniQuest (Politechnika Lubelska). Same-origin JSON API under /api/v1.
+    Authentication: server-side session in the `__Host-uq_session` cookie (HttpOnly, Secure, SameSite=Lax).
+    Mutating requests must send `X-Requested-With: uniquest` (CSRF defence together with an Origin check).
+    Errors use application/problem+json (RFC 9457) with a domain `code`.
+servers:
+  - url: /api/v1
+security:
+  - session: []
+
+tags:
+  - name: auth
+  - name: me
+  - name: events
+  - name: scans
+  - name: teams
+  - name: push
+  - name: staff
+  - name: admin
+  - name: system
+
+paths:
+  /healthz:
+    get:
+      tags: [system]
+      security: []
+      summary: Liveness probe
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Health' } } } }
+
+  /auth/guest:
+    post:
+      tags: [auth]
+      security: []
+      summary: Create a guest account and session
+      requestBody:
+        content: { application/json: { schema: { $ref: '#/components/schemas/GuestRequest' } } }
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/Me' } } } }
+        '429': { $ref: '#/components/responses/Problem' }
+  /auth/email/start:
+    post:
+      tags: [auth]
+      security: []
+      summary: Send a 6-digit login code to an e-mail address
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/EmailStartRequest' } } }
+      responses:
+        '200': { description: Sent, content: { application/json: { schema: { $ref: '#/components/schemas/EmailStartResponse' } } } }
+        '400': { $ref: '#/components/responses/Problem' }
+        '429': { $ref: '#/components/responses/Problem' }
+  /auth/email/verify:
+    post:
+      tags: [auth]
+      security: []
+      summary: Verify the code. Upgrades the current guest (keeping progress) or logs into the existing account.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/EmailVerifyRequest' } } }
+      responses:
+        '200': { description: Verified, content: { application/json: { schema: { $ref: '#/components/schemas/Me' } } } }
+        '400': { $ref: '#/components/responses/Problem' }
+  /auth/logout:
+    post:
+      tags: [auth]
+      summary: End the current session
+      responses:
+        '204': { description: Logged out }
+  /auth/logout-all:
+    post:
+      tags: [auth]
+      summary: End all sessions of the current user
+      responses:
+        '204': { description: Logged out everywhere }
+
+  /me:
+    get:
+      tags: [me]
+      summary: Current user
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Me' } } } }
+        '401': { $ref: '#/components/responses/Problem' }
+    patch:
+      tags: [me]
+      summary: Update nickname, consents or preferences
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/MePatch' } } }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Me' } } } }
+        '400': { $ref: '#/components/responses/Problem' }
+    delete:
+      tags: [me]
+      summary: Delete the account and all personal data (GDPR art. 17)
+      responses:
+        '204': { description: Deleted }
+  /me/avatar:
+    put:
+      tags: [me]
+      summary: Upload the pixel-art avatar (PNG ≤ 16 KB, ≤ 128×128)
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/AvatarUpload' } } }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Me' } } } }
+        '400': { $ref: '#/components/responses/Problem' }
+    delete:
+      tags: [me]
+      summary: Remove the avatar
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Me' } } } }
+  /me/export:
+    get:
+      tags: [me]
+      summary: Export all personal data (GDPR art. 20)
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+  /me/progress:
+    get:
+      tags: [me]
+      summary: Stats, XP, level and visits in the active event
+      parameters: [{ $ref: '#/components/parameters/EventQuery' }]
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Progress' } } } }
+  /me/character:
+    get:
+      tags: [me]
+      summary: Character card data and recommendations
+      parameters: [{ $ref: '#/components/parameters/EventQuery' }]
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Character' } } } }
+  /me/notifications:
+    get:
+      tags: [me]
+      summary: In-app notifications
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/Notification' } } } } }
+  /me/notifications/read:
+    post:
+      tags: [me]
+      summary: Mark all notifications as read
+      responses:
+        '204': { description: OK }
+  /users/{id}/avatar:
+    get:
+      tags: [me]
+      security: []
+      summary: Avatar PNG (public, cache-busted by `v`)
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string, format: uuid } }
+      responses:
+        '200': { description: PNG, content: { image/png: { schema: { type: string, format: binary } } } }
+        '404': { $ref: '#/components/responses/Problem' }
+
+  /events/active:
+    get:
+      tags: [events]
+      security: []
+      summary: The currently active event with its configuration
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Event' } } } }
+        '404': { $ref: '#/components/responses/Problem' }
+  /events/{eventId}/stations:
+    get:
+      tags: [events]
+      security: []
+      summary: Stations with their sessions (agenda)
+      parameters: [{ $ref: '#/components/parameters/EventId' }]
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/Station' } } } } }
+  /events/{eventId}/leaderboard:
+    get:
+      tags: [events]
+      summary: Team or solo leaderboard (cached for a few seconds)
+      parameters:
+        - { $ref: '#/components/parameters/EventId' }
+        - { name: type, in: query, schema: { type: string, enum: [team, solo], default: team } }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Leaderboard' } } } }
+
+  /scans:
+    post:
+      tags: [scans]
+      summary: Claim a visit with a scanned QR payload (idempotent per user and station)
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/ScanRequest' } } }
+      responses:
+        '200': { description: Accepted (or already scanned), content: { application/json: { schema: { $ref: '#/components/schemas/ScanResult' } } } }
+        '400': { $ref: '#/components/responses/Problem' }
+        '409': { $ref: '#/components/responses/Problem' }
+        '422': { $ref: '#/components/responses/Problem' }
+  /scans/{scanId}/rating:
+    put:
+      tags: [scans]
+      summary: Rate a visit (1–5). Changeable within 15 minutes.
+      parameters:
+        - { name: scanId, in: path, required: true, schema: { type: string, format: uuid } }
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/RatingRequest' } } }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/RatingResult' } } } }
+        '400': { $ref: '#/components/responses/Problem' }
+        '404': { $ref: '#/components/responses/Problem' }
+        '409': { $ref: '#/components/responses/Problem' }
+
+  /teams:
+    post:
+      tags: [teams]
+      summary: Create a team in the active event (caller becomes captain)
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/TeamCreate' } } }
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/Team' } } } }
+        '409': { $ref: '#/components/responses/Problem' }
+  /teams/mine:
+    get:
+      tags: [teams]
+      summary: The caller's team in the active event
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Team' } } } }
+        '404': { $ref: '#/components/responses/Problem' }
+  /teams/join:
+    post:
+      tags: [teams]
+      summary: Join a team with an invite code
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/TeamJoin' } } }
+      responses:
+        '200': { description: Joined, content: { application/json: { schema: { $ref: '#/components/schemas/Team' } } } }
+        '404': { $ref: '#/components/responses/Problem' }
+        '409': { $ref: '#/components/responses/Problem' }
+  /teams/{teamId}/invites:
+    post:
+      tags: [teams]
+      summary: Create an invite (QR + code); captain only
+      parameters: [{ $ref: '#/components/parameters/TeamId' }]
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/TeamInvite' } } } }
+        '403': { $ref: '#/components/responses/Problem' }
+  /teams/{teamId}/leave:
+    post:
+      tags: [teams]
+      summary: Leave the team (captaincy passes to the longest member; empty teams are deleted)
+      parameters: [{ $ref: '#/components/parameters/TeamId' }]
+      responses:
+        '204': { description: Left }
+  /teams/{teamId}/members/{userId}:
+    delete:
+      tags: [teams]
+      summary: Remove a member; captain only
+      parameters:
+        - { $ref: '#/components/parameters/TeamId' }
+        - { name: userId, in: path, required: true, schema: { type: string, format: uuid } }
+      responses:
+        '204': { description: Removed }
+        '403': { $ref: '#/components/responses/Problem' }
+
+  /stream:
+    get:
+      tags: [system]
+      summary: Server-Sent Events channel for the current user
+      description: |
+        Event types: `notification`, `team.updated`, `team.member_joined`, `team.member_left`,
+        `scan.confirmed`, `progress.updated`, `ping`. Each `data` field is JSON (see StreamEvent).
+      responses:
+        '200': { description: Event stream, content: { text/event-stream: { schema: { $ref: '#/components/schemas/StreamEvent' } } } }
+
+  /push/vapid-public-key:
+    get:
+      tags: [push]
+      security: []
+      summary: VAPID public key for PushManager.subscribe
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { type: object, required: [key], properties: { key: { type: string } } } } } }
+  /push/subscriptions:
+    post:
+      tags: [push]
+      summary: Register a Web Push subscription
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/PushSubscription' } } }
+      responses:
+        '204': { description: Stored }
+    delete:
+      tags: [push]
+      summary: Remove a Web Push subscription
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [endpoint], properties: { endpoint: { type: string } } } } }
+      responses:
+        '204': { description: Removed }
+  /sessions/{sessionId}/reminder:
+    put:
+      tags: [push]
+      summary: Remind me 10 minutes before this session
+      parameters: [{ $ref: '#/components/parameters/SessionId' }]
+      responses:
+        '204': { description: Set }
+    delete:
+      tags: [push]
+      summary: Cancel the reminder
+      parameters: [{ $ref: '#/components/parameters/SessionId' }]
+      responses:
+        '204': { description: Cancelled }
+  /me/reminders:
+    get:
+      tags: [push]
+      summary: Session ids with reminders set
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { type: array, items: { type: string, format: uuid } } } } }
+
+  /staff/stations:
+    get:
+      tags: [staff]
+      summary: Stations assigned to the caller (all stations for admins)
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/StaffStation' } } } } }
+        '403': { $ref: '#/components/responses/Problem' }
+  /staff/stations/{stationId}/qr:
+    get:
+      tags: [staff]
+      summary: Current rotating QR payload for the station display
+      parameters: [{ $ref: '#/components/parameters/StationId' }]
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/StationQr' } } } }
+        '403': { $ref: '#/components/responses/Problem' }
+  /staff/stations/{stationId}/window:
+    post:
+      tags: [staff]
+      summary: Open or close the scan window manually
+      parameters: [{ $ref: '#/components/parameters/StationId' }]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/ScanWindowRequest' } } }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/StaffStation' } } } }
+
+  /admin/events/{eventId}/analytics:
+    get:
+      tags: [admin]
+      summary: Aggregated, anonymised interest per station and archetype distribution
+      parameters: [{ $ref: '#/components/parameters/EventId' }]
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Analytics' } } } }
+        '403': { $ref: '#/components/responses/Problem' }
+  /admin/events/{eventId}/analytics.csv:
+    get:
+      tags: [admin]
+      summary: The same aggregates as CSV
+      parameters: [{ $ref: '#/components/parameters/EventId' }]
+      responses:
+        '200': { description: CSV, content: { text/csv: { schema: { type: string } } } }
+  /admin/stations/{stationId}:
+    patch:
+      tags: [admin]
+      summary: Update station weights, points, team mode or staff
+      parameters: [{ $ref: '#/components/parameters/StationId' }]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/StationPatch' } } }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Station' } } } }
+  /admin/users/role:
+    post:
+      tags: [admin]
+      summary: Grant or revoke the staff/admin role by verified e-mail
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/RoleRequest' } } }
+      responses:
+        '204': { description: Updated }
+        '404': { $ref: '#/components/responses/Problem' }
+  /admin/broadcast:
+    post:
+      tags: [admin]
+      summary: Send an organiser announcement (in-app + push) to all participants of the active event
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/BroadcastRequest' } } }
+      responses:
+        '202': { description: Queued }
+
+components:
+  securitySchemes:
+    session:
+      type: apiKey
+      in: cookie
+      name: __Host-uq_session
+
+  parameters:
+    EventId: { name: eventId, in: path, required: true, schema: { type: string, format: uuid } }
+    EventQuery: { name: eventId, in: query, required: false, schema: { type: string, format: uuid } }
+    TeamId: { name: teamId, in: path, required: true, schema: { type: string, format: uuid } }
+    StationId: { name: stationId, in: path, required: true, schema: { type: string, format: uuid } }
+    SessionId: { name: sessionId, in: path, required: true, schema: { type: string, format: uuid } }
+
+  responses:
+    Problem:
+      description: Error
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+
+  schemas:
+    Problem:
+      type: object
+      required: [status, title, code]
+      properties:
+        type: { type: string }
+        title: { type: string }
+        status: { type: integer }
+        detail: { type: string }
+        code:
+          type: string
+          description: Stable machine-readable error code
+          enum:
+            - bad_request
+            - unauthorized
+            - forbidden
+            - not_found
+            - rate_limited
+            - invalid_email
+            - invalid_code
+            - code_expired
+            - invalid_nickname
+            - invalid_avatar
+            - qr_invalid
+            - qr_expired
+            - scan_window_closed
+            - no_active_event
+            - already_rated
+            - rating_locked
+            - invalid_rating
+            - team_full
+            - team_locked
+            - already_in_team
+            - invite_invalid
+            - not_captain
+            - internal
+
+    Health:
+      type: object
+      required: [status, version]
+      properties:
+        status: { type: string }
+        version: { type: string }
+
+    StatCode:
+      type: string
+      enum: [STR, INT, MAN, KRE, ENE, CHA, WIS, VIT]
+    StatVector:
+      type: object
+      description: Partial map StatCode → weight
+      additionalProperties: { type: number }
+    Stats:
+      type: object
+      required: [STR, INT, MAN, KRE, ENE, CHA, WIS, VIT]
+      properties:
+        STR: { type: number }
+        INT: { type: number }
+        MAN: { type: number }
+        KRE: { type: number }
+        ENE: { type: number }
+        CHA: { type: number }
+        WIS: { type: number }
+        VIT: { type: number }
+
+    GuestRequest:
+      type: object
+      properties:
+        nickname: { type: string, maxLength: 24 }
+    EmailStartRequest:
+      type: object
+      required: [email]
+      properties:
+        email: { type: string, format: email, maxLength: 254 }
+        ageConfirmed: { type: boolean, description: User confirmed being 16+ or having guardian consent }
+    EmailStartResponse:
+      type: object
+      required: [sent]
+      properties:
+        sent: { type: boolean }
+        devCode: { type: string, description: Only in development/demo mode — the code is shown instead of e-mailed }
+    EmailVerifyRequest:
+      type: object
+      required: [email, code]
+      properties:
+        email: { type: string, format: email }
+        code: { type: string, pattern: '^[0-9]{6}$' }
+
+    Me:
+      type: object
+      required: [id, kind, nickname, role, avatarUrl, consents, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        kind: { type: string, enum: [guest, registered] }
+        nickname: { type: string }
+        email: { type: [string, 'null'] }
+        role: { type: string, enum: [participant, staff, admin] }
+        avatarUrl: { type: [string, 'null'] }
+        avatarFrame: { type: [string, 'null'] }
+        consents: { $ref: '#/components/schemas/Consents' }
+        createdAt: { type: string, format: date-time }
+    Consents:
+      type: object
+      required: [terms]
+      properties:
+        terms: { type: boolean }
+        notifications: { type: boolean }
+    MePatch:
+      type: object
+      properties:
+        nickname: { type: string, minLength: 2, maxLength: 24 }
+        consents: { $ref: '#/components/schemas/Consents' }
+        avatarFrame: { type: [string, 'null'] }
+    AvatarUpload:
+      type: object
+      required: [png]
+      properties:
+        png: { type: string, description: 'data:image/png;base64,… (≤ 16 KB decoded)' }
+
+    GameConfig:
+      type: object
+      required: [ratingMultipliers, levelDivisor, teamBonus, archetypeThreshold, maxArchetypes, roundingStep, minScansForCard]
+      properties:
+        ratingMultipliers: { type: array, items: { type: number }, minItems: 5, maxItems: 5 }
+        levelDivisor: { type: number }
+        teamBonus: { type: number }
+        archetypeThreshold: { type: number }
+        maxArchetypes: { type: integer }
+        roundingStep: { type: integer }
+        minScansForCard: { type: integer }
+    Event:
+      type: object
+      required: [id, slug, name, description, startsAt, endsAt, timezone, status, config, teamMin, teamMax]
+      properties:
+        id: { type: string, format: uuid }
+        slug: { type: string }
+        name: { type: string }
+        description: { type: string }
+        startsAt: { type: string, format: date-time }
+        endsAt: { type: string, format: date-time }
+        timezone: { type: string }
+        status: { type: string, enum: [draft, active, finished] }
+        config: { $ref: '#/components/schemas/GameConfig' }
+        teamMin: { type: integer }
+        teamMax: { type: integer }
+    Session:
+      type: object
+      required: [id, stationId, room, startsAt, endsAt, scanOpensAt, scanClosesAt]
+      properties:
+        id: { type: string, format: uuid }
+        stationId: { type: string, format: uuid }
+        room: { type: string }
+        startsAt: { type: string, format: date-time }
+        endsAt: { type: string, format: date-time }
+        scanOpensAt: { type: string, format: date-time }
+        scanClosesAt: { type: string, format: date-time }
+    Station:
+      type: object
+      required: [id, slug, name, description, kind, poi, basePoints, weights, team, sessions]
+      properties:
+        id: { type: string, format: uuid }
+        slug: { type: string }
+        name: { type: string }
+        description: { type: string }
+        kind: { type: string, enum: [workshop, presentation, show, place] }
+        faculty: { type: [string, 'null'] }
+        poi: { type: string }
+        basePoints: { type: integer }
+        weights: { $ref: '#/components/schemas/StatVector' }
+        team:
+          oneOf:
+            - type: 'null'
+            - type: object
+              required: [minMembers]
+              properties: { minMembers: { type: integer } }
+        sessions: { type: array, items: { $ref: '#/components/schemas/Session' } }
+
+    ScanRequest:
+      type: object
+      required: [payload]
+      properties:
+        payload: { type: string, maxLength: 512, description: Full QR URL or the 6-character manual code }
+        scannedAt: { type: string, format: date-time, description: Client time (only trusted within the queued-scan grace) }
+        queued: { type: boolean, description: True when replayed from the offline queue }
+    Scan:
+      type: object
+      required: [id, stationId, stationName, scannedAt, rating, team, teamStatus, deltas, rateableUntil]
+      properties:
+        id: { type: string, format: uuid }
+        stationId: { type: string, format: uuid }
+        stationName: { type: string }
+        scannedAt: { type: string, format: date-time }
+        rating: { type: [integer, 'null'], minimum: 1, maximum: 5 }
+        team: { type: boolean, description: Counted as a team visit (bonus applied) }
+        teamStatus: { type: string, enum: [none, pending, complete] }
+        teamProgress:
+          type: [object, 'null']
+          properties:
+            scanned: { type: integer }
+            required: { type: integer }
+        deltas: { $ref: '#/components/schemas/Stats' }
+        rateableUntil: { type: string, format: date-time }
+    ScanResult:
+      type: object
+      required: [scan, alreadyScanned]
+      properties:
+        scan: { $ref: '#/components/schemas/Scan' }
+        alreadyScanned: { type: boolean }
+    RatingRequest:
+      type: object
+      required: [rating]
+      properties:
+        rating: { type: integer, minimum: 1, maximum: 5 }
+    RatingResult:
+      type: object
+      required: [scan, progress]
+      properties:
+        scan: { $ref: '#/components/schemas/Scan' }
+        progress: { $ref: '#/components/schemas/Progress' }
+
+    ArchetypeShare:
+      type: object
+      required: [code, percent]
+      properties:
+        code: { $ref: '#/components/schemas/StatCode' }
+        percent: { type: integer }
+    Progress:
+      type: object
+      required: [eventId, stats, xp, level, levelProgress, ratedCount, archetypes, titleKey, cardUnlocked, minScansForCard, scans, badges]
+      properties:
+        eventId: { type: string, format: uuid }
+        stats: { $ref: '#/components/schemas/Stats' }
+        xp: { type: number }
+        level: { type: integer }
+        levelProgress:
+          type: object
+          required: [current, next, ratio]
+          properties:
+            current: { type: number }
+            next: { type: number }
+            ratio: { type: number }
+        ratedCount: { type: integer }
+        archetypes: { type: array, items: { $ref: '#/components/schemas/ArchetypeShare' } }
+        titleKey: { type: [string, 'null'] }
+        cardUnlocked: { type: boolean }
+        minScansForCard: { type: integer }
+        scans: { type: array, items: { $ref: '#/components/schemas/Scan' } }
+        badges: { type: array, items: { $ref: '#/components/schemas/Badge' } }
+    Badge:
+      type: object
+      required: [id, awardedAt]
+      properties:
+        id: { type: string, enum: [faculties-all, bookworm, team-spirit, early-bird, first-scan, card-unlocked] }
+        awardedAt: { type: string, format: date-time }
+    Recommendation:
+      type: object
+      required: [slug, score, because]
+      properties:
+        slug: { type: string }
+        score: { type: integer }
+        because: { type: array, items: { $ref: '#/components/schemas/StatCode' } }
+    Character:
+      type: object
+      required: [unlocked, progress, programs, clubs]
+      properties:
+        unlocked: { type: boolean }
+        progress: { $ref: '#/components/schemas/Progress' }
+        programs: { type: array, items: { $ref: '#/components/schemas/Recommendation' } }
+        clubs: { type: array, items: { $ref: '#/components/schemas/Recommendation' } }
+
+    TeamCreate:
+      type: object
+      required: [name]
+      properties:
+        name: { type: string, minLength: 2, maxLength: 24 }
+        emblem: { type: string, maxLength: 16 }
+    TeamJoin:
+      type: object
+      required: [code]
+      properties:
+        code: { type: string, minLength: 6, maxLength: 64, description: Invite code or invite URL }
+    TeamMember:
+      type: object
+      required: [userId, nickname, avatarUrl, role, xp, joinedAt]
+      properties:
+        userId: { type: string, format: uuid }
+        nickname: { type: string }
+        avatarUrl: { type: [string, 'null'] }
+        role: { type: string, enum: [captain, member] }
+        xp: { type: number }
+        joinedAt: { type: string, format: date-time }
+    Team:
+      type: object
+      required: [id, name, emblem, captainId, members, score, maxMembers, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        name: { type: string }
+        emblem: { type: string }
+        captainId: { type: string, format: uuid }
+        members: { type: array, items: { $ref: '#/components/schemas/TeamMember' } }
+        score: { type: number }
+        maxMembers: { type: integer }
+        createdAt: { type: string, format: date-time }
+    TeamInvite:
+      type: object
+      required: [code, url, expiresAt, usesLeft]
+      properties:
+        code: { type: string }
+        url: { type: string }
+        expiresAt: { type: string, format: date-time }
+        usesLeft: { type: integer }
+    Leaderboard:
+      type: object
+      required: [type, entries]
+      properties:
+        type: { type: string, enum: [team, solo] }
+        entries:
+          type: array
+          items:
+            type: object
+            required: [rank, id, name, score]
+            properties:
+              rank: { type: integer }
+              id: { type: string }
+              name: { type: string }
+              score: { type: number }
+              members: { type: integer }
+              isMe: { type: boolean }
+
+    Notification:
+      type: object
+      required: [id, kind, title, body, createdAt, readAt]
+      properties:
+        id: { type: string, format: uuid }
+        kind: { type: string, enum: [reminder, team, card, broadcast, badge] }
+        title: { type: string }
+        body: { type: string }
+        url: { type: [string, 'null'] }
+        createdAt: { type: string, format: date-time }
+        readAt: { type: [string, 'null'], format: date-time }
+    StreamEvent:
+      type: object
+      required: [type]
+      properties:
+        type: { type: string }
+        data: {}
+
+    PushSubscription:
+      type: object
+      required: [endpoint, keys]
+      properties:
+        endpoint: { type: string, maxLength: 1024 }
+        keys:
+          type: object
+          required: [p256dh, auth]
+          properties:
+            p256dh: { type: string }
+            auth: { type: string }
+
+    StaffStation:
+      type: object
+      required: [station, scanOpen, scansCount, ratedCount, avgRating]
+      properties:
+        station: { $ref: '#/components/schemas/Station' }
+        scanOpen: { type: boolean }
+        scanOpenUntil: { type: [string, 'null'], format: date-time }
+        scansCount: { type: integer }
+        ratedCount: { type: integer }
+        avgRating: { type: [number, 'null'] }
+    StationQr:
+      type: object
+      required: [payload, manualCode, validUntil, periodSeconds, scanOpen, scansCount]
+      properties:
+        payload: { type: string, description: URL to encode in the QR code }
+        manualCode: { type: string, description: 6-character code for manual entry }
+        validUntil: { type: string, format: date-time }
+        periodSeconds: { type: integer }
+        scanOpen: { type: boolean }
+        scansCount: { type: integer }
+    ScanWindowRequest:
+      type: object
+      required: [open]
+      properties:
+        open: { type: boolean }
+        minutes: { type: integer, minimum: 1, maximum: 120, default: 15 }
+
+    StationPatch:
+      type: object
+      properties:
+        basePoints: { type: integer, minimum: 1, maximum: 1000 }
+        weights: { $ref: '#/components/schemas/StatVector' }
+        teamMinMembers: { type: [integer, 'null'] }
+        staffEmails: { type: array, items: { type: string, format: email } }
+    RoleRequest:
+      type: object
+      required: [email, role]
+      properties:
+        email: { type: string, format: email }
+        role: { type: string, enum: [participant, staff, admin] }
+    BroadcastRequest:
+      type: object
+      required: [title, body]
+      properties:
+        title: { type: string, maxLength: 80 }
+        body: { type: string, maxLength: 280 }
+        url: { type: string }
+    Analytics:
+      type: object
+      required: [participants, scans, rated, stations, archetypes]
+      properties:
+        participants: { type: integer }
+        scans: { type: integer }
+        rated: { type: integer }
+        stations:
+          type: array
+          items:
+            type: object
+            required: [stationId, name, visits, rated, avgRating]
+            properties:
+              stationId: { type: string }
+              name: { type: string }
+              visits: { type: integer }
+              rated: { type: integer }
+              avgRating: { type: [number, 'null'] }
+        archetypes:
+          type: array
+          items:
+            type: object
+            required: [code, users]
+            properties:
+              code: { $ref: '#/components/schemas/StatCode' }
+              users: { type: integer }

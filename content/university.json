@@ -1,0 +1,76 @@
+{
+  "name": "Politechnika Lubelska",
+  "nameEn": "Lublin University of Technology",
+  "shortName": "PL",
+  "founded": "1953-05-13",
+  "address": "ul. Nadbystrzycka 38D, 20-618 Lublin",
+  "email": "politechnika@pollub.pl",
+  "website": "https://pollub.pl",
+  "coords": { "lat": 51.2355, "lon": 22.5503 },
+  "intro": "Publiczna uczelnia techniczna założona w 1953 r. — jedyna techniczna spośród pięciu uczelni publicznych w Lublinie. Sześć wydziałów, około 30 kierunków studiów I stopnia, kampus między ul. Nadbystrzycką a doliną Bystrzycy i pozycja krajowego lidera wynalazczości.",
+  "facts": [
+    { "label": "Rok założenia", "value": "1953", "source": "https://pl.wikipedia.org/wiki/Politechnika_Lubelska" },
+    { "label": "Wydziały", "value": "6", "source": "https://pollub.pl/uczelnia/o-politechnice" },
+    { "label": "Kierunki I stopnia (rekrutacja 2026)", "value": "30", "source": "https://pollub.pl/rekrutacja/aktualnosci/chetnych-do-studiowania-na-politechnice-lubelskiej-wiecej-niz-rok-temu-pierwsze-statystyki-rekrutacyjne-1777.html" },
+    { "label": "Studenci", "value": "6 764 (GUS, XII 2023)", "source": "https://pl.wikipedia.org/wiki/Politechnika_Lubelska" },
+    { "label": "Absolwenci", "value": "ponad 41 tys.", "source": "https://pl.wikipedia.org/wiki/Politechnika_Lubelska" },
+    { "label": "Patenty udzielone w 2025 r.", "value": "128", "source": "https://forumakademickie.pl/politechnika-lubelska-nadal-patentowym-liderem" }
+  ],
+  "history": [
+    { "year": 1953, "text": "13 maja powstaje Wieczorowa Szkoła Inżynierska z Wydziałem Mechanicznym. Pierwszy rok akademicki rozpoczyna 107 studentów." },
+    { "year": 1964, "text": "Powstaje Wydział Elektryczny." },
+    { "year": 1965, "text": "Powstaje Wydział Budownictwa Lądowego, a uczelnia zmienia nazwę na Wyższą Szkołę Inżynierską." },
+    { "year": 1977, "text": "Wyższa Szkoła Inżynierska zostaje przemianowana na Politechnikę Lubelską." },
+    { "year": 1988, "text": "Powstaje Wydział Zarządzania i Podstaw Techniki (od 2007 r. Wydział Zarządzania)." },
+    { "year": 2003, "text": "Wydział Elektryczny zmienia się w Wydział Elektrotechniki i Informatyki." },
+    { "year": 2007, "text": "Szósty wydział: Wydział Podstaw Techniki — dziś Wydział Matematyki i Informatyki Technicznej." },
+    { "year": 2023, "text": "Uczelnia świętuje 70-lecie." }
+  ],
+  "didYouKnow": [
+    { "text": "Politechnika Lubelska jest od pięciu lat z rzędu liderem rankingu Urzędu Patentowego RP — w 2025 r. uzyskała 128 patentów.", "source": "https://forumakademickie.pl/politechnika-lubelska-nadal-patentowym-liderem" },
+    { "text": "W ewaluacji nauki 2022 dwie dyscypliny uczelni — inżynieria mechaniczna oraz inżynieria lądowa i transport — otrzymały najwyższą kategorię A+.", "source": "https://en.wikipedia.org/wiki/Lublin_University_of_Technology" },
+    { "text": "W rankingu Perspektywy 2026 Politechnika Lubelska zajęła 10. miejsce wśród uczelni technicznych.", "source": "https://ranking.perspektywy.pl/rankingi-wg-typow/uczelnie-techniczne" },
+    { "text": "W rekrutacji 2026 o studia stacjonarne I stopnia ubiegało się ponad 6000 maturzystów — blisko 17% więcej niż rok wcześniej.", "source": "https://pollub.pl/rekrutacja/aktualnosci/chetnych-do-studiowania-na-politechnice-lubelskiej-wiecej-niz-rok-temu-pierwsze-statystyki-rekrutacyjne-1777.html" },
+    { "text": "Najwięcej kandydatów na jedno miejsce w 2026 r. miały: energetyka (5,8), finanse i rachunkowość (5,7) oraz cyberbezpieczeństwo (5,5).", "source": "https://pollub.pl/rekrutacja/aktualnosci/chetnych-do-studiowania-na-politechnice-lubelskiej-wiecej-niz-rok-temu-pierwsze-statystyki-rekrutacyjne-1777.html" },
+    { "text": "Budynek Centrum Innowacji i Zaawansowanych Technologii, w którym mieści się Biblioteka, jest nazywany „Rdzewiakiem”.", "source": "https://rekrutacja.pollub.pl/poznaj-kampus" },
+    { "text": "Najstarszym wydziałem uczelni jest Wydział Mechaniczny — działa od 1953 r., czyli od samego początku Politechniki.", "source": "https://pl.wikipedia.org/wiki/Politechnika_Lubelska" },
+    { "text": "Maskotką Politechniki Lubelskiej jest robot.", "source": "https://en.wikipedia.org/wiki/Lublin_University_of_Technology" },
+    { "text": "Na rok akademicki 2026/27 uczelnia powitała ponad 250 studentów zagranicznych z blisko 20 krajów.", "source": "https://rekrutacja.pollub.pl/poznaj-kampus" },
+    { "text": "Część budynków kampusu to zabytkowe dworki, a administracja uczelni korzysta też z dawnego pałacu Sobieskich przy ul. Bernardyńskiej.", "source": "https://pl.wikipedia.org/wiki/Politechnika_Lubelska" }
+  ],
+  "authorities": {
+    "term": "2024–2028",
+    "rector": "prof. dr hab. inż. Zbigniew Pater",
+    "prorectors": ["ds. nauki", "ds. studenckich", "ds. cyfryzacji i komercjalizacji"],
+    "source": "https://pollub.pl/uczelnia/wladze-uczelni"
+  },
+  "units": [
+    "Studium Języków Obcych",
+    "Studium Wychowania Fizycznego i Sportu",
+    "Centrum Informacji Naukowo-Technicznej (Biblioteka)",
+    "Szkoła Doktorska",
+    "Centrum Informatyczne",
+    "Centrum Innowacji i Transferu Technologii",
+    "Centrum Komunikacji i Marketingu",
+    "Uczelniane Biuro Projektów",
+    "Biuro Karier i Współpracy z Otoczeniem Społeczno-Gospodarczym",
+    "Biuro Rzecznika Patentowego",
+    "Biuro Kształcenia Międzynarodowego",
+    "Polska Unia Metrologiczna"
+  ],
+  "contacts": [
+    { "name": "Centrum Komunikacji i Marketingu", "phone": "81 538 47 21" },
+    { "name": "Biuro Karier", "phone": "81 538 46 63" },
+    { "name": "Biuro Spraw Studenckich", "phone": "81 538 41 80" },
+    { "name": "Biuro Kształcenia Międzynarodowego", "phone": "81 538 47 03" },
+    { "name": "Studium Wychowania Fizycznego i Sportu", "phone": "81 538 45 47" },
+    { "name": "Biblioteka (CIN-T)", "phone": "81 538 46 77" },
+    { "name": "Straż Akademicka", "phone": "81 538 48 98" }
+  ],
+  "sources": [
+    { "url": "https://pollub.pl/uczelnia/o-politechnice", "title": "O Politechnice" },
+    { "url": "https://pollub.pl/uczelnia/kontakt", "title": "Kontakt" },
+    { "url": "https://pl.wikipedia.org/wiki/Politechnika_Lubelska", "title": "Wikipedia" }
+  ],
+  "verifiedAt": "2026-10-17"
+}

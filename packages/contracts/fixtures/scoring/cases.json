@@ -1,0 +1,413 @@
+{
+  "description": "Golden fixtures for the scoring engine (spec §8). Consumed by apps/web (Vitest) and the Go backend (go test). Recommendations use content/programs.json and content/clubs.json.",
+  "config": {
+    "ratingMultipliers": [
+      0.25,
+      0.5,
+      1,
+      1.5,
+      2
+    ],
+    "levelDivisor": 25,
+    "teamBonus": 1.2,
+    "archetypeThreshold": 0.15,
+    "maxArchetypes": 3,
+    "roundingStep": 5,
+    "minScansForCard": 5
+  },
+  "cases": [
+    {
+      "name": "spec example (5 visits)",
+      "scans": [
+        {
+          "basePoints": 100,
+          "weights": {
+            "STR": 0.7,
+            "INT": 0.2,
+            "KRE": 0.1
+          },
+          "rating": 5,
+          "team": false
+        },
+        {
+          "basePoints": 100,
+          "weights": {
+            "MAN": 0.6,
+            "INT": 0.4
+          },
+          "rating": 3,
+          "team": false
+        },
+        {
+          "basePoints": 100,
+          "weights": {
+            "VIT": 0.7,
+            "CHA": 0.3
+          },
+          "rating": 4,
+          "team": false
+        },
+        {
+          "basePoints": 100,
+          "weights": {
+            "WIS": 0.6,
+            "CHA": 0.4
+          },
+          "rating": 2,
+          "team": false
+        },
+        {
+          "basePoints": 100,
+          "weights": {
+            "KRE": 0.7,
+            "STR": 0.3
+          },
+          "rating": 4,
+          "team": false
+        }
+      ],
+      "expected": {
+        "stats": {
+          "STR": 185,
+          "INT": 80,
+          "MAN": 60,
+          "KRE": 125,
+          "ENE": 0,
+          "CHA": 65,
+          "WIS": 30,
+          "VIT": 105
+        },
+        "xp": 650,
+        "level": 6,
+        "archetypes": [
+          {
+            "code": "STR",
+            "percent": 45
+          },
+          {
+            "code": "KRE",
+            "percent": 30
+          },
+          {
+            "code": "VIT",
+            "percent": 25
+          }
+        ],
+        "titleKey": "STR+KRE",
+        "programs": [
+          "budownictwo",
+          "inzynieria-pojazdow",
+          "mechanika-i-budowa-maszyn"
+        ],
+        "clubs": [
+          "komputerowego-wspomagania-prac-projektowych",
+          "mechaniki-i-grafiki-inzynierskiej",
+          "zastosowan-nx"
+        ]
+      }
+    },
+    {
+      "name": "no visits",
+      "scans": [],
+      "expected": {
+        "stats": {
+          "STR": 0,
+          "INT": 0,
+          "MAN": 0,
+          "KRE": 0,
+          "ENE": 0,
+          "CHA": 0,
+          "WIS": 0,
+          "VIT": 0
+        },
+        "xp": 0,
+        "level": 1,
+        "archetypes": [],
+        "titleKey": null,
+        "programs": [],
+        "clubs": []
+      }
+    },
+    {
+      "name": "single visit, renormalised to two archetypes",
+      "scans": [
+        {
+          "basePoints": 100,
+          "weights": {
+            "STR": 0.7,
+            "INT": 0.2,
+            "KRE": 0.1
+          },
+          "rating": 3,
+          "team": false
+        }
+      ],
+      "expected": {
+        "stats": {
+          "STR": 70,
+          "INT": 20,
+          "MAN": 0,
+          "KRE": 10,
+          "ENE": 0,
+          "CHA": 0,
+          "WIS": 0,
+          "VIT": 0
+        },
+        "xp": 100,
+        "level": 3,
+        "archetypes": [
+          {
+            "code": "STR",
+            "percent": 80
+          },
+          {
+            "code": "INT",
+            "percent": 20
+          }
+        ],
+        "titleKey": "STR+INT",
+        "programs": [
+          "mechanika-i-budowa-maszyn",
+          "budownictwo",
+          "inzynieria-pojazdow"
+        ],
+        "clubs": [
+          "drogowcow-i-mostow",
+          "dynamiki-i-aerodynamiki-budowli",
+          "sigma"
+        ]
+      }
+    },
+    {
+      "name": "team bonus applies, unrated visit ignored",
+      "scans": [
+        {
+          "basePoints": 100,
+          "weights": {
+            "VIT": 0.7,
+            "CHA": 0.3
+          },
+          "rating": 5,
+          "team": true
+        },
+        {
+          "basePoints": 100,
+          "weights": {
+            "MAN": 1
+          },
+          "rating": null,
+          "team": false
+        }
+      ],
+      "expected": {
+        "stats": {
+          "STR": 0,
+          "INT": 0,
+          "MAN": 0,
+          "KRE": 0,
+          "ENE": 0,
+          "CHA": 72,
+          "WIS": 0,
+          "VIT": 168
+        },
+        "xp": 240,
+        "level": 4,
+        "archetypes": [
+          {
+            "code": "VIT",
+            "percent": 70
+          },
+          {
+            "code": "CHA",
+            "percent": 30
+          }
+        ],
+        "titleKey": "CHA+VIT",
+        "programs": [
+          "inzynieria-bezpieczenstwa",
+          "zarzadzanie",
+          "marketing-i-komunikacja-rynkowa"
+        ],
+        "clubs": [
+          "inzynierii-bezpieczenstwa-a-team-of-safety",
+          "human-centered-management",
+          "menedzerow"
+        ]
+      }
+    },
+    {
+      "name": "tie broken by canonical stat order",
+      "scans": [
+        {
+          "basePoints": 100,
+          "weights": {
+            "WIS": 0.5,
+            "ENE": 0.5
+          },
+          "rating": 1,
+          "team": false
+        }
+      ],
+      "expected": {
+        "stats": {
+          "STR": 0,
+          "INT": 0,
+          "MAN": 0,
+          "KRE": 0,
+          "ENE": 12.5,
+          "CHA": 0,
+          "WIS": 12.5,
+          "VIT": 0
+        },
+        "xp": 25,
+        "level": 2,
+        "archetypes": [
+          {
+            "code": "ENE",
+            "percent": 50
+          },
+          {
+            "code": "WIS",
+            "percent": 50
+          }
+        ],
+        "titleKey": "ENE+WIS",
+        "programs": [
+          "inzynieria-srodowiska",
+          "inzynieria-odnawialnych-zrodel-energii",
+          "energetyka"
+        ],
+        "clubs": [
+          "espace",
+          "inzynierii-ochrony-srodowiska",
+          "for-against"
+        ]
+      }
+    },
+    {
+      "name": "single dominant archetype",
+      "scans": [
+        {
+          "basePoints": 100,
+          "weights": {
+            "MAN": 0.9,
+            "INT": 0.1
+          },
+          "rating": 5,
+          "team": false
+        },
+        {
+          "basePoints": 100,
+          "weights": {
+            "MAN": 1
+          },
+          "rating": 4,
+          "team": false
+        }
+      ],
+      "expected": {
+        "stats": {
+          "STR": 0,
+          "INT": 20,
+          "MAN": 330,
+          "KRE": 0,
+          "ENE": 0,
+          "CHA": 0,
+          "WIS": 0,
+          "VIT": 0
+        },
+        "xp": 350,
+        "level": 4,
+        "archetypes": [
+          {
+            "code": "MAN",
+            "percent": 100
+          }
+        ],
+        "titleKey": "MAN",
+        "programs": [
+          "informatyka-techniczna",
+          "informatyka",
+          "inzynierskie-zastosowania-informatyki-w-elektrotechnice"
+        ],
+        "clubs": [
+          "elektronikow-microchip",
+          "grupa-net-politechniki-lubelskiej",
+          "electroinfo-techlab"
+        ]
+      }
+    },
+    {
+      "name": "three archetypes with uneven remainders",
+      "scans": [
+        {
+          "basePoints": 100,
+          "weights": {
+            "ENE": 0.7,
+            "WIS": 0.2,
+            "MAN": 0.1
+          },
+          "rating": 4,
+          "team": false
+        },
+        {
+          "basePoints": 100,
+          "weights": {
+            "CHA": 0.6,
+            "INT": 0.4
+          },
+          "rating": 3,
+          "team": true
+        },
+        {
+          "basePoints": 100,
+          "weights": {
+            "KRE": 0.7,
+            "STR": 0.3
+          },
+          "rating": 2,
+          "team": false
+        }
+      ],
+      "expected": {
+        "stats": {
+          "STR": 15,
+          "INT": 48,
+          "MAN": 15,
+          "KRE": 35,
+          "ENE": 105,
+          "CHA": 72,
+          "WIS": 30,
+          "VIT": 0
+        },
+        "xp": 320,
+        "level": 4,
+        "archetypes": [
+          {
+            "code": "ENE",
+            "percent": 45
+          },
+          {
+            "code": "CHA",
+            "percent": 35
+          },
+          {
+            "code": "INT",
+            "percent": 20
+          }
+        ],
+        "titleKey": "ENE+CHA",
+        "programs": [
+          "energetyka",
+          "inzynieria-odnawialnych-zrodel-energii",
+          "inzynieria-srodowiska"
+        ],
+        "clubs": [
+          "for-against",
+          "zaawansowanego-projektowania",
+          "inzynierii-ochrony-srodowiska"
+        ]
+      }
+    }
+  ]
+}

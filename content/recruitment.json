@@ -1,0 +1,44 @@
+{
+  "intro": "Rekrutacja na wszystkie formy i poziomy studiów odbywa się przez Elektroniczną Rejestrację Kandydatów (ERK). Rekrutacja zimowa trwa od czerwca do września, letnia od stycznia do lutego.",
+  "steps": [
+    { "title": "Wybierz kierunek", "text": "Sprawdź opis, przedmioty maturalne i perspektywy w kompendium albo na rekrutacja.pollub.pl." },
+    { "title": "Zarejestruj się w ERK", "text": "Załóż konto, wybierz kierunki, wnieś opłatę rekrutacyjną i wprowadź wyniki matury." },
+    { "title": "Sprawdź wyniki", "text": "Lista zakwalifikowanych jest publikowana w systemie i na stronach wydziałów." },
+    { "title": "Złóż dokumenty", "text": "W terminie dostarcz komplet dokumentów do wydziałowej komisji rekrutacyjnej (zwykle w godz. 9:00–14:00)." }
+  ],
+  "links": [
+    { "title": "Portal rekrutacyjny", "url": "https://rekrutacja.pollub.pl" },
+    { "title": "Kierunki studiów I stopnia", "url": "https://rekrutacja.pollub.pl/studia-1-stopnia/kierunki-studiow" },
+    { "title": "Harmonogram rekrutacji 2026/2027", "url": "https://pollub.pl/rekrutacja/harmonogram-rekrutacji-2026-2027" },
+    { "title": "Studies in English", "url": "https://rekrutacja.pollub.pl" },
+    { "title": "Mapa kampusu", "url": "https://rekrutacja.pollub.pl/poznaj-kampus" }
+  ],
+  "stats2026": {
+    "candidates": "ponad 6000",
+    "qualified": "blisko 3600",
+    "programs": 30,
+    "mostCompetitive": [
+      { "name": "Energetyka", "perPlace": 5.8 },
+      { "name": "Finanse i rachunkowość", "perPlace": 5.7 },
+      { "name": "Cyberbezpieczeństwo", "perPlace": 5.5 },
+      { "name": "Marketing i komunikacja rynkowa", "perPlace": 4.3 },
+      { "name": "Inżynieria i analiza danych", "perPlace": 4.2 },
+      { "name": "Inżynieria logistyki", "perPlace": 4.2 }
+    ],
+    "mostApplications": [
+      { "name": "Budownictwo", "count": 524 },
+      { "name": "Cyberbezpieczeństwo", "count": 494 },
+      { "name": "Inżynieria i analiza danych", "count": 377 },
+      { "name": "Informatyka", "count": 353 },
+      { "name": "Finanse i rachunkowość", "count": 341 },
+      { "name": "Elektrotechnika", "count": 326 },
+      { "name": "Mechatronika", "count": 314 }
+    ],
+    "source": "https://pollub.pl/rekrutacja/aktualnosci/chetnych-do-studiowania-na-politechnice-lubelskiej-wiecej-niz-rok-temu-pierwsze-statystyki-rekrutacyjne-1777.html"
+  },
+  "sources": [
+    { "url": "https://pollub.pl/rekrutacja/harmonogram-rekrutacji-2026-2027", "title": "Harmonogram rekrutacji 2026/2027" },
+    { "url": "https://pl.wikipedia.org/wiki/Politechnika_Lubelska", "title": "Wikipedia" }
+  ],
+  "verifiedAt": "2026-10-17"
+}
